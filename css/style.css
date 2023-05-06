@@ -118,3 +118,16 @@ a:hover{
     overflow: scroll;
     overflow-x: hidden;
 }
+
+/*
+
+Gestion des membres
+
+*/
+.icon{
+    font-size: 12pt;
+}
+.profile-pic{
+    width: 51px;
+    height: 51px;
+}
