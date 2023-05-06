@@ -1,0 +1,127 @@
+body{
+    overflow: hidden;
+}
+#main1{
+    position: relative;
+    height: 15vh;
+    background-color: #2099C1;
+    box-shadow: 2px 6px 2px gainsboro;
+}
+#menu{
+    background-color: #2099C1;
+}
+#main2{
+    position: relative;
+    height: 85vh;
+   
+}
+#box-content{
+    position: relative;
+    height: 20vh;
+    border: 2px solid gainsboro;
+    box-shadow: 1px 3px gainsboro;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#box-content2{
+    position: relative;
+    height: 25vh;
+    border: 2px solid gainsboro;
+    box-shadow: 1px 3px gainsboro;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#box-content1{
+    position: relative;
+    height: 40vh;
+    border: 2px solid gainsboro;
+    box-shadow: 1px 3px gainsboro;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: gray;
+}
+#btn-open{
+    width: 100%;
+    height: 6vh;
+    border: none;
+    border-radius: 10px;
+    background-color: #2099C1;
+    background-image: linear-gradient(#78cce8, #0f7698);
+}
+.img-thumbnail{
+    border: none;
+    width: 50%;
+}
+#img-thumbnail1{
+    width: 20%;
+}
+#img-thumbnail2{
+    width: 30%;
+}
+a{
+    text-decoration: none;
+    font-size: 120%;
+    font-weight: bold;
+    color: white;
+}
+#items:hover{
+    color: white;
+}
+.nbr{
+    color: #FFA500;
+}
+
+/* le style de la table */
+
+/* #thead{
+    border: 2px solid gainsboro;
+    box-shadow: 1px 3px gainsboro;
+    background-color: white;
+
+} */
+#logo{
+    width: 40%;
+    background: transparent;
+    border-radius: 100%;
+}
+
+/* le menu */
+
+li{
+    text-align: start;
+    list-style: none;
+    width: 250%;
+    font-weight: normal;
+}
+ul{
+    text-align: center;
+}
+#list-menu{
+    width: 250%;
+    height: 15%;
+    font-size: 14px;  
+}
+#list-menu:hover{
+    width: 250%;
+    height: 15%;
+    font-size: 14px;
+    background-color: white;
+    font-weight: bold;
+    border-radius: 10px;  
+}
+a:hover{
+    color: orange; 
+}
+/* scrolling table */
+
+.tbodyDiv{
+    max-height: clamp(5em,40vh,250px);
+    overflow: scroll;
+    overflow-x: hidden;
+}
