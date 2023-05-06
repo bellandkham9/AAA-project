@@ -77,17 +77,9 @@ a{
     color: #FFA500;
 }
 
-/* le style de la table */
-
-/* #thead{
-    border: 2px solid gainsboro;
-    box-shadow: 1px 3px gainsboro;
-    background-color: white;
-
-} */
 #logo{
-    width: 500%;
-    /* width: 40%; */
+    
+    width: 40%;
     background: transparent;
     border-radius: 100%;
 }
