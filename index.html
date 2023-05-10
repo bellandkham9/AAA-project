@@ -1,287 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css.map">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js.map"></script>
-    <script src="js/bootstrap.js"></script>
-    <title>Dashboard</title>
-</head>
-<body>
-    <!-- main container -->
-    <div id="main" class="container-fluid">
-        <!-- nav bar -->
-        <div id="main1" class="row gx-5 gy-3 justify-content-between">
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg">
-                <!-- Container wrapper -->
-                <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Navbar brand -->
-                    <a class="navbar-brand pb-1">
-                    <img style="border-radius: 100%; top: -10px; position: relative;"
-                        src="img/logo.jpg"
-                        height="80"
-                        alt="logo AAA"
-                        loading="lazy"
-                    />
-                    </a>
-                    <!-- Left links -->
-                    <p style="color: white; font-size: 16px;">Association Avenir Assuré</p>
-                </div>
-                <!-- Collapsible wrapper -->
-            
-                <!-- Right elements -->
-                <div class="d-flex align-items-center">
-                    
-                    <!-- Avatar -->
-                    <div class="dropdown">
-                        <div class="container">
-                            <ul style="display: flex; position: relative;">
-                                <li>
-                                    <div class="container">
-                                        <img style="width: 40px; height: auto;;" src="img/add-user-2-xxl.png" alt="">
-                                    </div>
-                                </li>
-                                <li>
-                                    <img src="img/Doorbell.png" alt="">
-                                </li>
-                                <li>
-                                    <div class="container d-flex">
-                                        <a>
-                                            <img
-                                            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                                            class="rounded-circle"
-                                            height="60"
-                                            alt="Black and White Portrait of a Man"
-                                            loading="lazy"
-                                            />
-                                        </a>
-                                        <p style="position: relative; left: 4%; font-size: 16px; font-weight: bold; color: white;"><span>emitek</span> <br> <span>Fondateur</span></p>
-                                    </div>
-                                </li>
-                            </ul>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Dashboard - AAA</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css.map">
+        <!--Datatable plugin CSS file -->
+	    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+        <!--jQuery library file -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <!--Datatable plugin JS library file -->
+        <script type="text/javascript"src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav id="nav" class="sb-topnav navbar navbar-expand">
+            <!-- Navbar Brand-->
+            <a id="nom_AAA" class="navbar-brand ps-3"><img id="logo"  class="img-thumbnail" src="img/logo.jpg" alt=""> Association Avenir Assuré</a>
+            <!-- Sidebar Toggle-->
+            <button style="color: white;" class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group me-5">
+                    <!-- Button trigger modal -->
+                    <button class="button"  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: transparent; border: none;">
+                        <img id="icons" src="img/addUser.png" alt="" style="width: 70%;">
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" style="position: relative; right: 5%; width: 25%; height: 70vh;">
+                        <div class="modal-content"> 
+                            <div id="box-register" class="modal-body">
+                                <div class="container  pt-3" style="position: relative; left: 5%;">
+                                    <form id="form" class="pt-5">
+                                        <img id="user_logo" style="position: relative; left: 20%; background-color: #2099C1;" src="img/🦆 icon _profile circle_.png" class="img-thumbnail" alt="">
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <p class="pt-2">
+                                                    <label  for="">Nom d'utilisateur</label>
+                                                    <input id="input" class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
+                                                </p>
+                                                <p>
+                                                    <label  for="">Mot de Passe</label>
+                                                    <input id="input" class="form-control" type="password" placeholder="entrer mot de passe" required>
+                                                </p>
+                                                <p>
+                                                    <label for="">Staut</label>
+                                                    <select id="input" class="form-select" aria-label="Default select example">
+                                                        <option selected>choose your status</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                      </select>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <button id="btn-register" style="position: relative; left: 20%;"  class="btn btn-primary btn-block" type="sumbit">Creer</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
-                        
-                    <ul
-                        class="dropdown-menu dropdown-menu-end"
-                        aria-labelledby="navbarDropdownMenuAvatar"
-                    >
-                        <li>
-                        <a class="dropdown-item" href="#">My profile</a>
-                        </li>
-                        <li>
-                        <a class="dropdown-item" href="#">Settings</a>
-                        </li>
-                        <li>
-                        <a class="dropdown-item" href="#">Logout</a>
-                        </li>
-                    </ul>
+                        </div>
                     </div>
+
+
+                    <button class="button" data-bs-toggle="modal" data-bs-target="#myModal2" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
+                        <img  style="position: relative; left: 15%; width: 70%;" id="icons" src="img/Doorbell.png" alt="">
+                    </button>
+                    <div class="container demo">
+                        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+                            <div class="modal-dialog" style="height: 80vh;">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="background-color: #FFA500;">
+                                    <h5 class="modal-title" id="exampleModalLabel">Notifications</h5>
+                                    </div>
+                                    <div class="modal-body" style="color: black; overflow: scroll; overflow-x: hidden; height: 13vh;">
+                                    <ul style="font-style: normal;">
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                      </div>
+                      
                 </div>
-                <!-- Right elements -->
-                </div>
-                <!-- Container wrapper -->
-            </nav>
-  <!-- Navbar -->
-            
-        </div>
-         <!-- the second main container -->
-        <div id="main2" class="row pt-2" style="position: relative;">
-            <div id="menu" class="col-2">
-                
-                <div class="container m-0 pt-4">
-                    <div id="list-menu" class="container-fluid pt-4 pb-4">
-                        <a href="#Dashboard.html">Dashboard</a>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown d-flex">
+                    <a  id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div id="container-profile"  class="container d-flex">
+                            <img id="profile" src="img/emitek.png" alt="">
+                            <div id="nom_role" class="container ">
+                                <p>emitek<br>Collaborators</p>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#!">Modifier photo de profil</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Notification</a></li>
+                            <li><a class="dropdown-item" href="#!">Historique</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Langue:
+                                <select name="" id="" style="border: none;">
+                                    <option value="" selected>français</option>
+                                    <option value="" >englais</option>
+                                </select>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#!">Aide</a></li>
+                            <li><a class="dropdown-item" href="#!">Parametre</a></li>
+                            <li><a class="dropdown-item" href="#!">Déconnexion</a></li>
+                        </ul>
+                    </a>
+                   
+                </li>
+            </ul>
+        </nav>
+        <section id="navigation">
+
+        
+        <section id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <a class="nav-link" href="#Dashboard">
+                                <div class="sb-nav-link-icon"></div>
+                                <i class="fa fa-tachometer" aria-hidden="true"></i>
+                                <span style="position: relative; left: 8px; font-size: 15px;" >Dashboard</span>
+                            </a>
+                            <a class="nav-link" href="#Membres">
+                                <div class="sb-nav-link-icon"></i></div>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <span style="position: relative; left: 8px; font-size: 15px;">Gestion des Membres</span>
+                            </a>
+                            <a class="nav-link" href="#caisses">
+                                <div class="sb-nav-link-icon"></i></div>
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                <span style="position: relative; left: 8px; font-size: 15px;" >Gestion de caisses</span>
+                            </a>
+                            <a class="nav-link" href="#evenementts">
+                                <div class="sb-nav-link-icon"></div>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <span style="position: relative; left: 8px; font-size: 15px;" >Gestion des événements</span>
+                            </a>
+                        </div>
                     </div>
-                    <div id="list-menu" class="container-fluid pt-4 pb-4">
-                        <a href="gestion des membres.html">Gestion des Membres</a>
-                    </div>
-                    <div id="list-menu" class="container-fluid pt-4 pb-4">
-                        <a href="gestion de la caisse.html">Gestion de la caise</a
-                    </div>
-                    <div id="list-menu" class="container-fluid pt-4 pb-4">
-                        <a href="#Dashboard.html">Gestion des événement</a>
-                    </div>
-                </div>
+                    
+                </nav>
             </div>
-            <div class="col-10 bg-light p-0 " style="overflow: scroll; overflow-x: hidden; height: 85vh;">
-                <div class="container-fluid pt-2">
-                    <h3 class="nbr">Dashboard</h3>
-                </div>
-                <div class="container px-4 pt-3">
-                    <div class="row gx-5 gy-3 justify-content-center">
-                        <div class="col-6 d-flex">
-                            <div class="col-lg-12">
-                                <div id="box-content">
+           
+            <div id="layoutSidenav_content" class="page-section pt-2">
+                <main id="Dashboard" class="bg-light pt-5">
+                    <div class="container-fluid px-4 pt-5">
+                        <h3 style="color: #FFA500;" class="mt-4">Dashboard</h3>
+                        <div class="row">
+                            <div class="col-xl-6 col-md-6">
+                                <div id="box-main" class="card  text-white shadow p-3 mb-3 bg-white">
                                     <div class="row p-1 m-1">
-                                        <div class="col-3">
+                                        <div  id="box-name" class="col-lg-4 text-center justify-content-center">
                                             <div class="row">
-                                                <div class="col-lg">
+                                                <div class="col-12-lg">
                                                     <h3 class="nbr">Membres</h3>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-lg-12 pt-3">
+                                                <div class="col-lg-12 pt-1">
                                                     <img src="img/People.png" class="img-thumbnail" alt="" srcset="">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6 text-center align-self-center">
-                                            <h1 class="nbr">25</h1>    
+                                        <div  class="col-lg-5 text-center align-self-center">
+                                            <h1 id="valu_nbr" class="nbr">25</h1>    
                                         </div>
                                         <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
                                             <button id="btn-open" class="button pb-2">
                                                 <a id='items' href="#">Ouvrir</a>   
                                             </button> 
                                         </div>
-                                    </div>  
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-1">
-                                <div style="width: 15px; height: 10vh; background-color: orange; border-top-right-radius: 10px; border-bottom-right-radius: 10px; box-shadow: 2px 3px gainsboro;">
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                       
-                        <div class="col-lg-6 d-flex">
-                            <div class="col-lg-12">
-                                <div id="box-content" class="">
+                            <div class="col-xl-6 col-md-6">
+                                <div id="box-main" class="card  text-white shadow p-3 mb-3 bg-white">
                                     <div class="row p-1 m-1">
-                                        <div class="col-3">
+                                        <div  id="box-name" class="col-lg-4 text-center justify-content-center">
                                             <div class="row">
-                                                <div class="col">
-                                                    <h3 class="nbr">Caises</h3>
+                                                <div class="col-12-lg">
+                                                    <h3 class="nbr">Caisses</h3>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col pt-3">
+                                                <div class="col-lg-12 pt-1">
                                                     <img src="img/Cash.png" class="img-thumbnail" alt="" srcset="">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-6 text-center align-self-center">
-                                            <h1 class="nbr">540000</h1>    
-                                        </div>
-                                        <div class="col-3 position-absolute bottom-0 end-0 pb-2 ">
-                                            <button id="btn-open" class="button pb-2">
-                                                <a id='items' href="#">Ouvrir</a>    
-                                            </button> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-1">
-                                <div style="width: 15px; height: 10vh; background-color: orange; border-top-right-radius: 10px; border-bottom-right-radius: 10px; box-shadow: 2px 3px gainsboro;">
-    
-                                </div>
-    
-                            </div>
-                        </div>
-                    </div>
-                    <!-- deuxieme ligne -->
-                    <div class="row gx-5 gy-3 justify-content-center mt-2">
-                        <div class="col-lg-6 d-flex">
-                            <div class="col-lg-12">
-                                <div id="box-content">
-                                    <div class="row p-1 m-1">
-                                        <div class="col-3">
-                                            <div class="row">
-                                                <div class="col-lg">
-                                                    <h3 class="nbr">Amendes</h3>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-12 pt-3">
-                                                    <img src="img/Bribery.png" class="img-thumbnail" alt="" srcset="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6 text-center align-self-center">
-                                            <h1 class="nbr">5252</h1>    
+                                        <div  class="col-lg-5 text-center align-self-center">
+                                            <h1 id="valu_nbr" class="nbr">54000000</h1>    
                                         </div>
                                         <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
                                             <button id="btn-open" class="button pb-2">
                                                 <a id='items' href="#">Ouvrir</a>   
                                             </button> 
                                         </div>
-                                    </div>  
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-1">
-                                <div style="width: 15px; height: 10vh; background-color: orange; border-top-right-radius: 10px; border-bottom-right-radius: 10px; box-shadow: 2px 3px gainsboro;">
-    
-                                </div>
-    
-                            </div>
+                            
                         </div>
-                        <div class="col-lg-6 d-flex">
-                            <div class="col-lg-12">
-                                <div id="box-content">
+                        <div class="row pt-2 gx-4">
+                            <div class="col-xl-6 col-md-6">
+                                <div id="box-main" class="card  text-white shadow p-3 mb-3 bg-white">
                                     <div class="row p-1 m-1">
-                                        <div class="col-3">
+                                        <div  id="box-name" class="col-lg-4 text-center justify-content-center">
                                             <div class="row">
-                                                <div class="col">
-                                                    <h3 class="nbr">Evenement</h3>
+                                                <div class="col-12-lg">
+                                                    <h3 class="nbr">Amendes</h3>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col pt-3">
-                                                    <img src="img/Denied.png" class="img-thumbnail" alt="" srcset="">
+                                                <div class="col-lg-12 pt-1">
+                                                    <img src="img/Bribery.png" class="img-thumbnail" alt="" srcset="">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-6 text-center align-self-center">
-                                            <h1 class="nbr">15</h1>    
+                                        <div  class="col-lg-5 text-center align-self-center">
+                                            <h1 id="valu_nbr" class="nbr">5252</h1>    
                                         </div>
-                                        <div class="col-3 position-absolute bottom-0 end-0 pb-2 ">
+                                        <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
                                             <button id="btn-open" class="button pb-2">
-                                                <a id='items' href="#">Ouvrir</a>    
+                                                <a id='items' href="#">Ouvrir</a>   
                                             </button> 
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-1">
-                                <div style="width: 15px; height: 10vh; background-color: orange; border-top-right-radius: 10px; border-bottom-right-radius: 10px; box-shadow: 2px 3px gainsboro;">
-    
-                                </div>
-    
-                            </div>   
-                        </div>
-                        
-                    </div>
-                    <!-- troisieme ligne -->
-                    <div class="row gx-5 gy-3 justify-content-center mt-2">
-                        <div class="col-lg-12 d-flex">
-                            <div class="col-lg-12">
-                                <div id="box-content2">
+                            <div class="col-xl-6 col-md-6">
+                                <div id="box-main" class="card  text-white shadow p-3 mb-3 bg-white">
                                     <div class="row p-1 m-1">
-                                        <div class="col-3">
+                                        <div  id="box-name" class="col-lg-4 text-center justify-content-center">
                                             <div class="row">
-                                                <div class="col-lg">
-                                                    <h3 class="nbr">Evenement à venir</h3>
+                                                <div class="col-12-lg">
+                                                    <h3 class="nbr">Evenements</h3>
                                                 </div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-lg-12 pt-3">
+                                                <div class="col-lg-12 pt-1">
+                                                    <img src="img/Event Accepted Tentatively_90px.png" class="img-thumbnail" alt="" srcset="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div  class="col-lg-5 text-center align-self-center">
+                                            <h1 id="valu_nbr" class="nbr">25</h1>    
+                                        </div>
+                                        <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
+                                            <button id="btn-open" class="button pb-2">
+                                                <a id='items' href="#">Ouvrir</a>   
+                                            </button> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pt-2 gx-4">
+                            <div class="col-xl-12 col-md-6">
+                                <div id="box-main1" class="card  text-white shadow p-3 mb-3 bg-white">
+                                    <div class="row p-0 m-0">
+                                        <div class="col-lg-3">
+                                            <div class="row">
+                                                <div class="col-lg">
+                                                    <h3 id="nbr" class="nbr">Evenement à venir</h3>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12 pt-1">
                                                     <img id="img-thumbnail2" src="img/Meeting Room.png" class="img-thumbnail" alt="" srcset="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-9 text-center align-self-center">
                                             <div class="row">
-                                                <h3 class="nbr">Réunion annuelle de l'association</h3>
+                                                <h3 id="nbr" class="nbr">Réunion annuelle de l'association</h3>
                                             </div>
-                                            <div class="row">
+                                            <div id="evenements" style="color: grey;" class="row">
                                                 <div class="col-4">
                                                     <img id="img-thumbnail1" src="img/Place Marker.png" class="img-thumbnail" alt="">
                                                     <p>Lorem ipsum dolor sit amet</p>
@@ -296,109 +322,164 @@
                                                 </div>
                                             </div>   
                                         </div>
-                                        
-                                    </div>  
-                                </div>
-                            </div>
-                            <div class="col-lg-1">
-                                <div style="width: 15px; height: 10vh; background-color: orange; border-top-right-radius: 10px; border-bottom-right-radius: 10px; box-shadow: 2px 3px gainsboro;">
-    
-                                </div>
-    
-                            </div>
-                        </div>
-                    </div>
-                    <!-- quatrieme ligne -->
-                    <div class="row gx-5 gy-3 justify-content-center mt-2">
-                        <div class="col-lg-12">
-                            <div id="box-content1">
-                                <div class="row p-1 m-1">
-                                    <div class="col-lg-12">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="tbodyDiv">
-                                                    <table class="table table-bordered table-striped text-center">
-                                                        <thead class="thead">
-                                                            <tr>
-                                                                <div class="row justify-content-between">
-                                                                    <div class="col-6">
-                                                                        <h3 class="nbr">Historique</h3>
-                                                                    </div>
-                                                                    <div class="col-6">
-                                                                        <h3 style="text-align: end;" class="nbr">
-                                                                            <button class="button" style="background-color: transparent; border: none;">
-                                                                                <img style="width: 150%;" src="img/🦆 icon _refresh 2_.png" class="img-thumbnail" alt="">
-                                                                            </button>
-                                                                        </h3>
-                                                                    </div>
-                                                                </div>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>Heure</th>
-                                                                <th>Date</th>
-                                                                <th>Action</th>
-                                                                <th>Description</th>
-                                                                <th>Auteur</th>
-                                                            </tr>
-                                                          </thead>
-                                                            <div class="div">
-                                                                <tbody>
-                                                            <tr style="border: 1px solid gainsboro; height: 5vh; box-shadow: 2px 4px gainsboro;">
-                                                                <td>John</td>
-                                                                <td>Doe</td>
-                                                                <td>john@example.com</td>
-                                                                <td>Doqdqe</td>
-                                                                <td>belland</td>
-                                                            </tr>
-                                                            <tr style="border: 1px solid gainsboro; height: 5vh; box-shadow: 2px 4px gainsboro;">
-                                                                <td>John</td>
-                                                                <td>Doe</td>
-                                                                <td>john@example.com</td>
-                                                                <td>Doqdqe</td>
-                                                                <td>belland</td>
-                                                            </tr>
-                                                            <tr style="border: 1px solid gainsboro; height: 5vh; box-shadow: 2px 4px gainsboro;">
-                                                                <td>John</td>
-                                                                <td>Doe</td>
-                                                                <td>john@example.com</td>
-                                                                <td>Doqdqe</td>
-                                                                <td>belland</td>
-                                                            </tr>
-                                                            <tr style="border: 1px solid gainsboro; height: 5vh; box-shadow: 2px 5px gainsboro;">
-                                                                <td>John</td>
-                                                                <td>Doe</td>
-                                                                <td>john@example.com</td>
-                                                                <td>Doqdqe</td>
-                                                                <td>belland</td>
-                                                            </tr>
-                                                            <tr style="border: 1px solid gainsboro; height: 5vh; box-shadow: 2px 4px gainsboro;">
-                                                                <td>John</td>
-                                                                <td>Doe</td>
-                                                                <td>john@example.com</td>
-                                                                <td>Doqdqe</td>
-                                                                <td>belland</td>
-                                                            </tr>
-                                                            </tbody>
-                                                            </div>
-                                                    </table>
-                                                
-                                                                                             
-                                            </div>
-                                        </div>
-                                        
                                     </div>
-                                    
-                                </div>  
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mb-4">
+                            <div class="row justify-content-between pt-2">
+                                <div class="col-6">
+                                    <h3 id="nbr1">Historique</h3>
+                                </div>
+                                <div class="col-6">
+                                    <h3 style="text-align: end;" >
+                                        <button class="button" style="background-color: transparent; border: none;">
+                                            <img  id="img-thumbnail3" src="img/🦆 icon _refresh 2_.png"  alt="">
+                                        </button>
+                                    </h3>
+                                </div>
+                            </div>
+                            
+                            <div class="card-body">
+                                <table id="" class="display">
+                                    <thead>
+                                        <tr>
+                                            <th>Heure</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
+                                            <th>Desciption</th>
+                                            <th>Auteur</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Heure</th>
+                                            <th>Date</th>
+                                            <th>Action</th>
+                                            <th>Desciption</th>
+                                            <th>Auteur</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>System Architect</td>
+                                            <td>Edinburgh</td>
+                                            <td>61</td>
+                                            <td>2011/04/25</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garrett Winters</td>
+                                            <td>Accountant</td>
+                                            <td>Tokyo</td>
+                                            <td>63</td>
+                                            <td>2011/07/25</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ashton Cox</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>San Francisco</td>
+                                            <td>66</td>
+                                            <td>2009/01/12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cedric Kelly</td>
+                                            <td>Senior Javascript Developer</td>
+                                            <td>Edinburgh</td>
+                                            <td>22</td>
+                                            <td>$433,060</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Airi Satou</td>
+                                            <td>Accountant</td>
+                                            <td>Tokyo</td>
+                                            <td>33</td>
+                                            <td>2008/11/28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Brielle Williamson</td>
+                                            <td>Integration Specialist</td>
+                                            <td>New York</td>
+                                            <td>61</td>
+                                            <td>$372,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Herrod Chandler</td>
+                                            <td>Sales Assistant</td>
+                                            <td>San Francisco</td>
+                                            <td>59</td>
+                                            <td>2012/08/06</td>
+                                        </tr>
+                        
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </main>
+                <!-- voici la fin du dashboard --> 
+
+
+                <!-- ----------------------------------------------------------------------- -->
+                <!-- voici le debut de la partie gestion des membres -->
+
+                <main id="Membres" class="bg-dark pt-5" style="height: 100vh">
+                    <div class="container-fluid  px-4">
+                        <h3 style="color: #FFA500;" class="mt-4 pt-5">Gestion des Membres</h3>
+                       
+                    </div>
+                </main>
+                <!-- voici la fin de la partie gestion des membres -->
+
+
+                 <!-- ----------------------------------------------------------------------- -->
+                <!-- voici le debut de la partie gestion des caisses -->
+
+                <main id="caisses" class="bg-primary pt-5">
+                    <div class="container-fluid  px-4">
+                        <h3 style="color: #FFA500;" class="mt-4 pt-5">Gestion de caisses</h3>
+                       
+                    </div>
+                </main>
+                <!-- voici la fin dela partie gestion des caisses -->
+
+
+                <!-- ----------------------------------------------------------------------- -->
+                <!-- voici le debut dela partie gestion des Evenements -->
+
+                <main id="evenementts" class="bg-danger pt-5">
+                    <div class="container-fluid px-4">
+                        <h3 style="color: #FFA500;" class="mt-4 pt-5">Evenements</h3>
+                    </div>    
+                </main>
+                <!-- voici la fin de la partie gestion des Evenements -->
+   
+
+                <!-- footer -->
+                    <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; AAA 2023</div>
+                            
+                        </div>
+                    </div>
+                </footer>
+            </section>
 
         </div>
+    </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
 
-
-    </div>
-</body>
+        <script>
+            /* Initialization of datatables */
+            $(document).ready(function () {
+                $('table.display').DataTable();
+            });
+        </script>
+    </body>
 </html>
-
