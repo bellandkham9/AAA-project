@@ -5341,7 +5341,6 @@ textarea.form-control-lg {
   border-radius: var(--bs-modal-border-radius);
   outline: 0;
 }
-
 .modal-backdrop {
   --bs-backdrop-zindex: 1050;
   --bs-backdrop-bg: #000;
@@ -5360,7 +5359,7 @@ textarea.form-control-lg {
 .modal-backdrop.show {
   opacity: var(--bs-backdrop-opacity);
 }
-
+ 
 .modal-header {
   display: flex;
   flex-shrink: 0;
@@ -11288,7 +11287,7 @@ body {
 }
 label{
   position: relative;
-  top: -10px;
+  top: -15px;
 }
 #btn_modal{
   border-radius: 15px;
