@@ -5379,6 +5379,7 @@ textarea.form-control-lg {
 .modal-title {
   margin-bottom: 0;
   line-height: var(--bs-modal-title-line-height);
+  text-align: center;
 }
 
 .modal-body {
@@ -11275,6 +11276,24 @@ body {
    padding-left: 20%;
    width: 50px;
 }
+#inputModal{
+  height: 30px; 
+  border-radius: 20px;
+  position: relative;
+  top: -10px;
+}
+.form-group{
+  position: relative;
+  top: -12px;
+}
+label{
+  position: relative;
+  top: -10px;
+}
+#btn_modal{
+  border-radius: 15px;
+  box-shadow: 2px 2px gainsboro;
+}
 #logo{
   width: 40%; 
   height: auto; 
@@ -11293,7 +11312,7 @@ body {
   border-radius: 100%;
 }
 #profile_membre{
-  width: 100%;
+  width: 130%;
   height: 8vh;
   border-radius: 100%;
 
@@ -11433,6 +11452,7 @@ label{
   #container-profile{
     position: relative;
     left: 50%;
+    display: flex;
   }
   #box-main{
     text-align: center;
