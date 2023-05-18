@@ -9,8 +9,7 @@
         <title>Membres - AAA</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css.map">
-        <!--Datatable plugin CSS file -->
-	    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+        <link rel="stylesheet" href="css/jquery.dataTables.min.css">
         <!--jQuery library file -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <!--Datatable plugin JS library file -->
@@ -367,8 +366,8 @@
                 <li class="nav-item dropdown d-flex">
                     <a  id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <div id="container-profile"  class="container d-flex">
+                            <img id="profile" src="img/emitek.png" alt="">
                             <div id="nom_role" class="container ">
-                                <img id="profile" src="img/emitek.png" alt="">
                                 <p>emitek<br>Collaborators</p>
                             </div>
                         </div>
@@ -460,7 +459,7 @@
                                                 
                                             </div>
                                         </div>
-                                        <table class="table  table-hover pt-2" id="myTable">
+                                        <table class="table  table-hover pt-2" id="myTable" cellspacing="5" cellpadding="5">
                                             <thead>
                                                 <tr>
                                                     <th>
@@ -1141,12 +1140,11 @@
                                 </div>
                                 <!-- Delete Modal HTML -->
                                 <div id="deleteEmployeeModal" class="modal fade">
-                                    <div class="modal-dialog" style="height: 40vh;">
+                                    <div class="modal-dialog" style="position: relative; left: -15px; height: 40vh;">
                                         <div class="modal-content">
                                             <form>
                                                 <div class="modal-header">						
                                                     <h4 class="modal-title">Supprimer ce membre</h4>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                                 </div>
                                                 <div class="modal-body">					
                                                     <p>Etes vous sur de vouloir supprimer ce membre?</p>
