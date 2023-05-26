@@ -11,13 +11,38 @@
         <link rel="stylesheet" href="css/bootstrap.min.css.map">
         <!--Datatable plugin CSS file -->
 	    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <link rel="stylesheet" href="css/styleEvent.css">
         <!--jQuery library file -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <!--Datatable plugin JS library file -->
         <script type="text/javascript"src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
         <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+        <style type="text/css">
+
+            .table-scroll tbody {
+                position: absolute;
+                overflow-y: scroll;
+                height: 80vh;
+            }
+            
+            .table-scroll tr {
+                width: 100%;
+                table-layout: fixed;
+                display: inline-table;
+            }
+            
+            .table-scroll thead > tr > th {
+                border: none;
+            }
+            </style>
     </head>
     <body class="sb-nav-fixed">
         <nav id="nav" class="sb-topnav navbar navbar-expand">
@@ -43,15 +68,15 @@
                                         <div class="row">
                                             <div class="col-xl-6">
                                                 <p class="pt-2">
-                                                    <label  for="">Nom d'utilisateur</label>
+                                                    <label  id="label" for="">Nom d'utilisateur</label>
                                                     <input id="input" class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
                                                 </p>
                                                 <p>
-                                                    <label  for="">Mot de Passe</label>
+                                                    <label id="label"  for="">Mot de Passe</label>
                                                     <input id="input" class="form-control" type="password" placeholder="entrer mot de passe" required>
                                                 </p>
                                                 <p>
-                                                    <label for="">Staut</label>
+                                                    <label id="label" for="">Staut</label>
                                                     <select id="input" class="form-select" aria-label="Default select example">
                                                         <option selected>choose your status</option>
                                                         <option value="1">One</option>
@@ -174,10 +199,175 @@
                 </nav>
             </div>
            
-            <div id="layoutSidenav_content" class="page-section pt-2 bg-info">
+            <div id="layoutSidenav_content" class="page-section pt-2">
                 <main id="Dashboard" class="bg-light pt-4">
                     <div class="container-fluid px-4 pt-2">
-                        <h3 style="color: #FFA500;" class="mt-4">Gestion des Evenements</h3>
+                        <h3 style="color: #FFA500;" class="mt-4">Evenements</h3>
+                       <div class="row pt-2" style="height: 100vh;">
+                            <div class="col-md-7">
+                                <table class="table table-scroll">
+                                    <thead style="border: 2px solid whitesmoke; background-color: white;">
+                                        <tr>
+                                            <th colspan="3" rowspan="2">
+                                                <div class="row">
+                                                    <div class="col-md-10">
+                                                        <h4 style="color: #FFA500;">Historique d'événements</h4>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <button   class="button" style="border: none; background-color: transparent;">
+                                                            <img src="img/🦆 icon _refresh 2_.png" alt="">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </th>
+                                            <tr class="text-center justify-content-center">
+                                                <th>Object</th>
+                                                <th>Heure</th>
+                                                <th>Date</th>
+                                                <th>Lieu</th>
+                                                <th></th>
+                                            </tr>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center justify-content-center">
+                                        <tr id="tr" style="background-color: white;"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Edit-1.png" alt=""></td></tr>
+                                        <tr id="tr" style="background-color: white;"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Edit-1.png" alt=""></td></tr>
+                                        <tr id="tr" style="background-color: white;"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Edit-1.png" alt=""></td></tr>
+                                        <tr id="tr"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Document.png" alt=""></td></tr>
+                                        <tr id="tr"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Document.png" alt=""></td></tr>
+                                        <tr id="tr"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Document.png" alt=""></td></tr>
+                                        <tr id="tr"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Document.png" alt=""></td></tr>
+                                        <tr id="tr"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Document.png" alt=""></td></tr>
+                                        <tr id="tr"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Document.png" alt=""></td></tr>
+                                        <tr id="tr"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Document.png" alt=""></td></tr>
+                                        <tr id="tr"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Document.png" alt=""></td></tr>
+                                        <tr id="tr"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Document.png" alt=""></td></tr>
+                                        <tr id="tr"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Document.png" alt=""></td></tr>
+                                        <tr id="tr"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Document.png" alt=""></td></tr>
+                                        <tr id="tr"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Document.png" alt=""></td></tr>
+                                        <tr id="tr"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Document.png" alt=""></td></tr>
+                                        <tr id="tr"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Document.png" alt=""></td></tr>
+                                        <tr id="tr"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Document.png" alt=""></td></tr>
+                                        <tr id="tr"><td>Rencontre</td><td>12h30</td><td>12/04/2023</td><td>Nkolnguet</td><td><img src="img/Document.png" alt=""></td></tr>
+                                    
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="col-md-5">
+                                <div class="row md-4">
+                                    <div class="col-md-12 md-4 px-4" >
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-md-12" style="box-shadow: 2px 5px whitesmoke; border-radius: 7px; background-color: white;">
+                                                        <div class="calendar calendar-first" id="calendar_first">
+                                                        <div class="calendar_header">
+                                                            <button class="switch-month switch-left"> <i class="fa fa-chevron-left"></i></button>
+                                                             <h2 style="color: #FFA500;"></h2>
+                                                            <button class="switch-month switch-right"> <i class="fa fa-chevron-right"></i></button>
+                                                        </div>
+                                                        <div class="calendar_weekdays"></div>
+                                                        <div class="calendar_content"></div>
+                                                        <div class="row pt-1">
+                                                            <div class="col-md-12 pb-2" style="text-align: right;">
+                                                               <button class="button" data-bs-toggle="modal" data-bs-target="#addEvent" style="box-shadow: 2px 4px whitesmoke; width: 10%; height: 5vh; border-radius: 100%; background-color: #0CCE6B; border: none;">
+                                                                   <i class="fa-solid fa-plus" style="color: #ffffff;"></i>    
+                                                               </button>
+    
+                                                            <!-- Modal -->
+                                                            <div class="modal fade pt-4" id="addEvent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal-dialog" style=" height: 45vh;  position: relative; left: -12px;">
+                                                                <div class="modal-content"> 
+                                                            
+                                                                        <div class="container m-0 p-0"  style="border-radius: 15px; background-color: white; box-shadow: 1px 5px gainsboro;">
+                                                                            <div class="row">
+                                                                                <div class="col-md-12">
+                                                                                    <div class="row">
+                                                                                        <div class="col-md-12">
+                                                                                            <div class="row">
+                                                                                                <div class="col-md-12">
+                                                                                                    <div class="container-fluid" style=" background-color: #FFA500; border: none; height: 6vh; border-top-right-radius: 10px; border-top-left-radius: 10px;">
+                                                                                                        <h4 style="text-align: start; color: white;">Creer un événement</h4>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                       <div class="container">
+                                                                                        <form id="form" class="pt-2" style="text-align: start;">
+                                                                                            <div class="row">
+                                                                                                <div class="col-12">
+                                                                                                    <label  for="">Objet</label>
+                                                                                                    <textarea class="form-control" style="border-radius: 12px;" name="" id="" cols="32" rows="2"></textarea>
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-6">
+                                                                                                            <label  for="">Heure</label>
+                                                                                                            <input style="width: 100%;" id="input" class="form-control" type="time"  required>
+                                                                                                        </div>
+                                                                                                        <div class="col-6">
+                                                                                                            <label  for="">Date</label>
+                                                                                                            <input style="width: 100%;" id="input" class="form-control" type="date"  required>
+                                                                                                        </div>
+                                                                                                    </div> 
+            
+                                                                                                    <label for="">Lieu</label>
+                                                                                                    <input type="text" name="" class="form-control"  id="">
+                                                                                                    
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="row pt-4 pb-2 justify-content-between">
+                                                                                                <div class="col-md-6">
+                                                                                                    <button id="" style=" background-image: linear-gradient(#78cce8, #0f7698); border-radius: 6px; border: none; width: 100%; height: 5vh;"  class="button" type="sumbit">Ajouter</button>
+                                                                                                </div>
+                                                                                                <div class="col-md-6">
+                                                                                                    <button id="" style="background-color: #9aa6aa; border-radius: 6px; border: none; width: 100%;height: 5vh;"  class="button" type="sumbit">Annuler</button>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </form>
+                                                                                       </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                            </div>
+                                                       </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="row md-4">
+                                    <div class="col-md-12 md-4 px-4" >
+                                            <div class="container">
+                                                <div class="row pt-4">
+                                                    <div class="col-md-12" style="box-shadow: 2px 5px whitesmoke; border-radius: 7px; background-color: white;">
+                                                        <div class="container md-4" style="text-align: right;">
+                                                            <p>Lorem ipsum dolor sit, amet consectetur.
+                                                                <img src="img/square_r.png" alt="">
+                                                            </p>
+                                                            <p>Lorem ipsum dolor sit, amet consectetur.
+                                                                <img src="img/square_v.png" alt="">
+                                                            </p>
+                                                            <p>Lorem ipsum dolor sit, amet consectetur.
+                                                                <img src="img/square_b.png" alt="">
+                                                            </p>
+                                                            <p>Lorem ipsum dolor sit, amet consectetur.
+                                                                <img src="img/square_o.png" alt="">
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                       </div>
               
                 </main>
  
@@ -200,12 +390,25 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/chart-area-demo.js"></script>
         <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
 
         <script>
             /* Initialization of datatables */
             $(document).ready(function () {
                 $('table.display').DataTable();
             });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $('#dtVerticalScrollExample').DataTable({
+                    "scrollY": "200px",
+                    "scrollCollapse": true,
+                });
+                $('.dataTables_length').addClass('bs-select');
+                });
         </script>
     </body>
 </html>

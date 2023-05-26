@@ -11286,7 +11286,7 @@ body {
   position: relative;
   top: -12px;
 }
-label{
+#label{
   position: relative;
   top: -15px;
 }
@@ -11384,7 +11384,7 @@ ul {
   width: 45%;
 }
 #icons{
-  width: 22%;
+ width: 22%;
 }
 
 #sidenavAccordion, .sb-sidenav-menu{
@@ -11415,7 +11415,6 @@ ul {
   width: 200%;
 }
 #box-register{
-
   box-shadow: 2px 4px ghostwhite;
   border: none;
   background-color: #2099C1;
