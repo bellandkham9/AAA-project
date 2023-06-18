@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Caisses - AAA</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css.map">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/styleMembre.css"> 
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+        
+        <link rel="stylesheet" href="css/css_toggle_caisse/canecode_switch.css">
+        
+        <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+      
+        <script>
+            $(document).ready(function(){
+            $("#datepicker").datepicker({
+                format: "yyyy",
+                viewMode: "years", 
+                minViewMode: "years",
+                autoclose:true
+            });   
+            })
+        // pour le mois
+        $(document).ready(function(){
+            $("#Monthpicker").datepicker({
+                format: "mm",
+                viewMode: "months", 
+                minViewMode: "months",
+                autoclose:true
+            });   
+            })
+       
+          </script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav id="nav" class="sb-topnav navbar navbar-expand">
+            <!-- Navbar Brand-->
+            <a id="nom_AAA" class="navbar-brand ps-3"><img id="logo"  class="img-thumbnail" src="img/logo.jpg" alt=""> Association Avenir Assuré</a>
+            <!-- Sidebar Toggle-->
+            <button style="color: white;" class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group me-5">
+                    <!-- Button trigger modal -->
+                    <button class="button"  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: transparent; border: none;">
+                        <img id="icons" src="img/addUser.png" alt="" style="width: 70%;">
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" style="position: relative; right: 5%; width: 25%; height: 70vh;">
+                        <div class="modal-content"> 
+                            <div id="box-register" class="modal-body">
+                                <div class="container  pt-3" style="position: relative; left: 5%;">
+                                    <form id="form" class="pt-5">
+                                        <img id="user_logo" style="position: relative; left: 20%; background-color: #2099C1;" src="img/🦆 icon _profile circle_.png" class="img-thumbnail" alt="">
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <p class="pt-2">
+                                                    <label  for="">Nom d'utilisateur</label>
+                                                    <input id="input" class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
+                                                </p>
+                                                <p>
+                                                    <label  for="">Mot de Passe</label>
+                                                    <input id="input" class="form-control" type="password" placeholder="entrer mot de passe" required>
+                                                </p>
+                                                <p>
+                                                    <label for="">Staut</label>
+                                                    <select id="input" class="form-select" aria-label="Default select example">
+                                                        <option selected>choose your status</option>
+                                                        <option value="1">One</option>
+                                                        <option value="2">Two</option>
+                                                        <option value="3">Three</option>
+                                                      </select>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <button id="btn-register" style="position: relative; left: 20%;"  class="btn btn-primary btn-block" type="sumbit">Creer</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+
+                    <button class="button" data-bs-toggle="modal" data-bs-target="#myModal2" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
+                        <img  style="position: relative; left: 15%; width: 70%;" id="icons" src="img/Doorbell.png" alt="">
+                    </button>
+                    <div class="container demo">
+                        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+                            <div class="modal-dialog" style="height: 80vh;">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="background-color: #FFA500;">
+                                    <h5 class="modal-title" id="exampleModalLabel">Notifications</h5>
+                                    </div>
+                                    <div class="modal-body" style="color: black; overflow: scroll; overflow-x: hidden; height: 13vh;">
+                                    <ul style="font-style: normal;">
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                      </div>
+                      
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown d-flex">
+                    <a  id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div id="container-profile"  class="container d-flex">
+                            <img id="profile" src="img/emitek.png" alt="">
+                            <div id="nom_role" class="container ">
+                                <p>emitek<br>Collaborators</p>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#!">Modifier photo de profil</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Notification</a></li>
+                            <li><a class="dropdown-item" href="#!">Historique</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Langue:
+                                <select name="" id="" style="border: none;">
+                                    <option value="" selected>français</option>
+                                    <option value="" >englais</option>
+                                </select>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#!">Aide</a></li>
+                            <li><a class="dropdown-item" href="#!">Parametre</a></li>
+                            <li><a class="dropdown-item" href="#!">Déconnexion</a></li>
+                        </ul>
+                    </a>
+                   
+                </li>
+            </ul>
+        </nav>
+        <section id="navigation">
+
+        
+        <section id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"></div>
+                                <i class="fa fa-tachometer" aria-hidden="true"></i>
+                                <span style="position: relative; left: 8px; font-size: 15px;" >Dashboard</span>
+                            </a>
+                            <a class="nav-link" href="newMember.html">
+                                <div class="sb-nav-link-icon"></i></div>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <span style="position: relative; left: 8px; font-size: 15px;">Gestion des Membres</span>
+                            </a>
+                            <a class="nav-link" href="caisses.html">
+                                <div class="sb-nav-link-icon"></i></div>
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                <span style="position: relative; left: 8px; font-size: 15px;" >Gestion de caisses</span>
+                            </a>
+                            <a class="nav-link" href="evenements.html">
+                                <div class="sb-nav-link-icon"></div>
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <span style="position: relative; left: 8px; font-size: 15px;" >Gestion des événements</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </nav>
+            </div>
+           
+            <div id="layoutSidenav_content" class="page-section pt-2 bg-light">
+                <main id="Dashboard" class="bg-light pt-4">
+                    <div class="container-fluid px-4 pt-2">
+                        <div class="row pt-1">
+                           <div class="col-md-6">
+                                <h3 style="color: #FFA500;" class="mt-4">Gestion des Membres</h3>
+                           </div>
+                           <div class="col-md-4 ">
+                               <input type="text" name="" id="" placeholder="search..." class="mt-4 form-control">
+                           </div>
+                           <div class="mt-4 col-md-2" style="color: #FFA500; font-size: 13px;line-height: 1.5;">
+                            <P>Total caisses: <span>60000</span> <br>
+                               Total epargne: <span>23000</span>
+                            </P>
+                           </div>
+                        </div>
+                        <div class="row pt-3">
+                                <div class="col-md-2">
+                                    <h4 style="color: #FFA500;">Membres</h4>
+                                </div>
+                                
+                                <div class="col-md-2 p-1 p-1">
+                                    <button class="button" style="width: 60%; height: 5vh; background-color: #2099C1; border: none; border-radius: 20px;">
+                                        <a  style="text-decoration: none; color: white; font-size: 14px;"   href="#addEmployeeModal"  data-toggle="modal"><span style="font-weight: bold;">Ajouter</span></a>
+                                    </button>                                
+                                </div>
+                                <div class="col-md-5 p-1">
+                                    <button class="button" style="width: 30%; height: 5vh; background-color: #2099C1; border: none; border-radius: 20px;">
+                                        <a  style="text-decoration: none; color: white; font-size: 16px;"   href="#addEmployeeModal"  data-toggle="modal"><span style="font-weight: bold;">Bilan financier</span></a>
+                                    </button>   
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="button d-flex" style="background-color: transparent; border: none;">
+                                        <img src="img/Filter.png" alt="" srcset="">
+                                        <span>filter</span>
+                                    </button>
+                                </div>
+                         </div>
+                         <div class="row pt-2">
+                            <div class="col-md-12">
+                                <div class="container-fluid  this_shows_when_switch_is_on">
+                                    <table class="table table-scroll">
+                                        <thead>
+                                            <th>Profil</th>
+                                            <th>Nom</th>
+                                            <th>Prénom</th>
+                                            <th>Profession</th>
+                                            <th>Situation</th>
+                                            <th>Ville</th>
+                                            <th>Date Naissance</th>
+                                            <th>Date adhésion</th>
+                                            <th>Actions</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr style="box-shadow: 3px 3px 4px gainsboro; background-color: white;">
+                                                <td><img id="profile_membre1"  src="img/belland.jpg" alt=""></td>
+                                                <td>Belland KHAM</td>
+                                                <td>5000</td>
+                                                <td>4000</td>
+                                                <td>2000</td>
+                                                <td>5000</td>
+                                                <td>4000</td>
+                                                <td>2000</td>
+                                                <td>
+                                                    <div class="container d-flex">
+                                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i></a>
+                                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                                        <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
+                                                            <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                                <li><a class="dropdown-item" href="#!">etat</a></li>
+                                                                <li><a class="dropdown-item" href="#!">Malade</a></li>
+                                                                <li><hr class="dropdown-divider" /></li>
+                                                                <li><a class="dropdown-item" href="#!">Supprimer</a></li>
+                                                            </ul>
+                                                        </a>
+                                                    
+                                                    </div>
+                                                  
+                                                </td> 
+                                            </tr>
+                                            <tr style="box-shadow: 3px 3px 4px gainsboro; background-color: white;">
+                                                <td><img id="profile_membre1"  src="img/belland.jpg" alt=""></td>
+                                                <td>Belland KHAM</td>
+                                                <td>5000</td>
+                                                <td>4000</td>
+                                                <td>2000</td>
+                                                <td>5000</td>
+                                                <td>4000</td>
+                                                <td>2000</td>
+                                                <td>
+                                                    <div class="container d-flex">
+                                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i></a>
+                                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                                        <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
+                                                            <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                                <li><a class="dropdown-item" href="#!">etat</a></li>
+                                                                <li><a class="dropdown-item" href="#!">Malade</a></li>
+                                                                <li><hr class="dropdown-divider" /></li>
+                                                                <li><a class="dropdown-item" href="#!">Supprimer</a></li>
+                                                            </ul>
+                                                        </a>
+                                                    
+                                                    </div>
+                                                  
+                                                </td> 
+                                            </tr>
+                                            <tr style="box-shadow: 3px 3px 4px gainsboro; background-color: white;">
+                                                <td><img id="profile_membre1"  src="img/belland.jpg" alt=""></td>
+                                                <td>Belland KHAM</td>
+                                                <td>5000</td>
+                                                <td>4000</td>
+                                                <td>2000</td>
+                                                <td>5000</td>
+                                                <td>4000</td>
+                                                <td>2000</td>
+                                                <td>
+                                                    <div class="container d-flex">
+                                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i></a>
+                                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                                        <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
+                                                            <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                                <li><a class="dropdown-item" href="#!">etat</a></li>
+                                                                <li><a class="dropdown-item" href="#!">Malade</a></li>
+                                                                <li><hr class="dropdown-divider" /></li>
+                                                                <li><a class="dropdown-item" href="#!">Supprimer</a></li>
+                                                            </ul>
+                                                        </a>
+                                                    
+                                                    </div>
+                                                  
+                                                </td> 
+                                            </tr>
+                                            <tr style="box-shadow: 3px 3px 4px gainsboro; background-color: white;">
+                                                <td><img id="profile_membre1"  src="img/belland.jpg" alt=""></td>
+                                                <td>Belland KHAM</td>
+                                                <td>5000</td>
+                                                <td>4000</td>
+                                                <td>2000</td>
+                                                <td>5000</td>
+                                                <td>4000</td>
+                                                <td>2000</td>
+                                                <td>
+                                                    <div class="container d-flex">
+                                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i></a>
+                                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                                        <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
+                                                            <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                                <li><a class="dropdown-item" href="#!">etat</a></li>
+                                                                <li><a class="dropdown-item" href="#!">Malade</a></li>
+                                                                <li><hr class="dropdown-divider" /></li>
+                                                                <li><a class="dropdown-item" href="#!">Supprimer</a></li>
+                                                            </ul>
+                                                        </a>
+                                                    
+                                                    </div>
+                                                  
+                                                </td> 
+                                            </tr>
+                                            <tr style="box-shadow: 3px 3px 4px gainsboro; background-color: white;">
+                                                <td><img id="profile_membre1"  src="img/belland.jpg" alt=""></td>
+                                                <td>Belland KHAM</td>
+                                                <td>5000</td>
+                                                <td>4000</td>
+                                                <td>2000</td>
+                                                <td>5000</td>
+                                                <td>4000</td>
+                                                <td>2000</td>
+                                                <td>
+                                                    <div class="container d-flex">
+                                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i></a>
+                                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                                        <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
+                                                            <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                                <li><a class="dropdown-item" href="#!">etat</a></li>
+                                                                <li><a class="dropdown-item" href="#!">Malade</a></li>
+                                                                <li><hr class="dropdown-divider" /></li>
+                                                                <li><a class="dropdown-item" href="#!">Supprimer</a></li>
+                                                            </ul>
+                                                        </a>
+                                                    
+                                                    </div>
+                                                  
+                                                </td>                                             </tr>
+                                            <tr style="box-shadow: 3px 3px 4px gainsboro; background-color: white;">
+                                                <td><img id="profile_membre1"  src="img/belland.jpg" alt=""></td>
+                                                <td>Belland KHAM</td>
+                                                <td>5000</td>
+                                                <td>4000</td>
+                                                <td>2000</td>
+                                                <td>5000</td>
+                                                <td>4000</td>
+                                                <td>2000</td>
+                                                <td>
+                                                    <div class="container d-flex">
+                                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i></a>
+                                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                                        <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
+                                                            <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                                <li><a class="dropdown-item" href="#!">etat</a></li>
+                                                                <li><a class="dropdown-item" href="#!">Malade</a></li>
+                                                                <li><hr class="dropdown-divider" /></li>
+                                                                <li><a class="dropdown-item" href="#!">Supprimer</a></li>
+                                                            </ul>
+                                                        </a>
+                                                    
+                                                    </div>
+                                                  
+                                                </td> 
+                                            </tr>
+                                            <tr style="box-shadow: 3px 3px 4px gainsboro; background-color: white;">
+                                                <td><img id="profile_membre1"  src="img/belland.jpg" alt=""></td>
+                                                <td>Belland KHAM</td>
+                                                <td>5000</td>
+                                                <td>4000</td>
+                                                <td>2000</td>
+                                                <td>5000</td>
+                                                <td>4000</td>
+                                                <td>2000</td>
+                                                <td>
+                                                    <div class="container d-flex">
+                                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i></a>
+                                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                                        <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
+                                                            <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                                <li><a class="dropdown-item" href="#!">etat</a></li>
+                                                                <li><a class="dropdown-item" href="#!">Malade</a></li>
+                                                                <li><hr class="dropdown-divider" /></li>
+                                                                <li><a class="dropdown-item" href="#!">Supprimer</a></li>
+                                                            </ul>
+                                                        </a>
+                                                    
+                                                    </div>
+                                                  
+                                                </td>                                             
+                                            </tr>
+                                            <tr style="box-shadow: 3px 3px 4px gainsboro; background-color: white;">
+                                                <td><img id="profile_membre1"  src="img/belland.jpg" alt=""></td>
+                                                <td>Belland KHAM</td>
+                                                <td>5000</td>
+                                                <td>4000</td>
+                                                <td>2000</td>
+                                                <td>5000</td>
+                                                <td>4000</td>
+                                                <td>2000</td>
+                                                <td>
+                                                    <div class="container d-flex">
+                                                        <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i></a>
+                                                        <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                                                        <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
+                                                            <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                                <li><a class="dropdown-item" href="#!">etat</a></li>
+                                                                <li><a class="dropdown-item" href="#!">Malade</a></li>
+                                                                <li><hr class="dropdown-divider" /></li>
+                                                                <li><a class="dropdown-item" href="#!">Supprimer</a></li>
+                                                            </ul>
+                                                        </a>
+                                                    
+                                                    </div>
+                                                  
+                                                </td>                                             
+                                            </tr>
+                                        </tbody>
+
+                                    </table>
+                                  
+                      
+                                </div>
+
+                            </div>
+                         </div>
+                       
+                </main>
+                </div>
+            </section>
+        </div>
+    </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/js_toggle_caisse/canecode_switch.js"></script>
+
+    </body>
+</html>
