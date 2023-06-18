@@ -38,6 +38,7 @@
                 }
                 .responsive-table .table-header {
                 font-size: 14px;
+                color: gray;
                 }
                 .responsive-table .table-row {
                 background-color: #ffffff;
@@ -71,13 +72,6 @@
             color: #404040;
             background: #f2f2f2;
             }
-            
-            p {
-            font-size: 10px;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #999;
-            }
             i {
             position: absolute;
             z-index: 1;
@@ -85,12 +79,12 @@
             left: 9px;
             color: #999;
             }
-            .container {
+            /* .container {
             margin: 50px auto;
             width: 280px;
             text-align: center;
                 background-color: #f2f2f2;
-            }
+            } */
             .container > .switch {
             display: block;
             margin: 22px auto;
@@ -370,10 +364,10 @@
                     <div class="container-fluid px-4 pt-2">
                         <div class="row pt-3">
                            <div class="col-md-6">
-                                <h3 style="color: #FFA500;" class="mt-4">Gestion des Caisses</h3>
+                                <h3 style="color: #FFA500;" class="mt-4 mx-5" >Gestion des Caisses</h3>
                            </div>
                            <div class="col-md-4 ">
-                               <input type="text" name="" id="" class="form-control mt-4">
+                               <input style="height: 5vh;" type="text" name="" id="" class="form-control mt-4">
                            </div>
                            <div class="mt-4 col-md-2" style="color: #FFA500; font-size: 13px;line-height: 1.5;">
                             <P>Total caisses: <span>60000</span> <br>
@@ -415,7 +409,7 @@
                                 <div id="is_off">
                                     <div  class="container-fluid  this_shows_when_switch_is_off">
                                             <ul class="responsive-table" style="overflow: scroll; overflow-x: hidden; height: 70vh;">
-                                              <li class="table-header">
+                                              <li class="table-header text-center align-items-center">
                                                 <div class="col col-1">Profil</div>
                                                 <div class="col col-2">Noms et Prénoms</div>
                                                 <div class="col col-1">Scours</div>
@@ -426,7 +420,7 @@
                                                 <div class="col col-2">Total</div>
                                          
                                               </li>
-                                              <li class="table-row">
+                                              <li class="table-row text-center align-items-center">
                                                 <div class="col col-1" data-label="Profil">
                                                     <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
                                                 </div>
@@ -438,7 +432,7 @@
                                                 <div class="col col-1" data-label="Cot att">$350</div>
                                                 <div class="col col-2" data-label="Total">Pending</div>
                                               </li>
-                                              <li class="table-row">
+                                              <li class="table-row text-center align-items-center">
                                                 <div class="col col-1" data-label="Profil">
                                                     <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
                                                 </div>
@@ -450,7 +444,7 @@
                                                 <div class="col col-1" data-label="Cot att">$350</div>
                                                 <div class="col col-2" data-label="Total">Pending</div>
                                               </li>
-                                              <li class="table-row">
+                                              <li class="table-row text-center align-items-center">
                                                 <div class="col col-1" data-label="Profil">
                                                     <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
                                                 </div>
@@ -462,7 +456,7 @@
                                                 <div class="col col-1" data-label="Cot att">$350</div>
                                                 <div class="col col-2" data-label="Total">Pending</div>
                                               </li>
-                                              <li class="table-row">
+                                              <li class="table-row text-center align-items-center">
                                                 <div class="col col-1" data-label="Profil">
                                                     <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
                                                 </div>
@@ -474,7 +468,7 @@
                                                 <div class="col col-1" data-label="Cot att">$350</div>
                                                 <div class="col col-2" data-label="Total">Pending</div>
                                               </li>
-                                              <li class="table-row">
+                                              <li class="table-row text-center align-items-center">
                                                 <div class="col col-1" data-label="Profil">
                                                     <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
                                                 </div>
@@ -486,7 +480,7 @@
                                                 <div class="col col-1" data-label="Cot att">$350</div>
                                                 <div class="col col-2" data-label="Total">Pending</div>
                                               </li>
-                                              <li class="table-row">
+                                              <li class="table-row text-center align-items-center">
                                                 <div class="col col-1" data-label="Profil">
                                                     <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
                                                 </div>
@@ -505,18 +499,19 @@
                                 <div id="is_on" style="display: none;">
                                     <div class="container-fluid  this_shows_when_switch_is_on">
                                         <ul class="responsive-table" style="overflow: scroll; overflow-x: hidden; height: 70vh;">
-                                            <li class="table-header">
+                                            <li class="table-header text-center align-items-center">
                                               <div class="col col-1">Profil</div>
                                               <div class="col col-2">Noms et Prénoms</div>
-                                              <div class="col col-1">Scours</div>
-                                              <div class="col col-2">Epargne</div>
-                                              <div class="col col-2">Interet</div>
-                                              <div class="col col-1">Aide att</div>
-                                              <div class="col col-1">Cot att</div>
-                                              <div class="col col-2">Total</div>
+                                              <div class="col col-1">Assur</div>
+                                              <div class="col col-2">Cp</div>
+                                              <div class="col col-2">R.A</div>
+                                              <div class="col col-1">Aide due</div>
+                                              <div class="col col-1">Coll due</div>
+                                              <div class="col col-1">Sanc</div>
+                                              <div class="col col-1">Total</div>
                                        
                                             </li>
-                                            <li class="table-row">
+                                            <li class="table-row text-center align-items-center">
                                               <div class="col col-1" data-label="Profil">
                                                   <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
                                               </div>
@@ -526,9 +521,10 @@
                                               <div class="col col-2" data-label="Interet">42235</div>
                                               <div class="col col-1" data-label="Aide att">John Doe</div>
                                               <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-2" data-label="Total">Pending</div>
+                                              <div class="col col-1" data-label="Cot att">$350</div>
+                                              <div class="col col-1" data-label="Total">Pending</div>
                                             </li>
-                                            <li class="table-row">
+                                            <li class="table-row text-center align-items-center">
                                               <div class="col col-1" data-label="Profil">
                                                   <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
                                               </div>
@@ -538,9 +534,10 @@
                                               <div class="col col-2" data-label="Interet">42235</div>
                                               <div class="col col-1" data-label="Aide att">John Doe</div>
                                               <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-2" data-label="Total">Pending</div>
+                                              <div class="col col-1" data-label="Cot att">$350</div>
+                                              <div class="col col-1" data-label="Total">Pending</div>
                                             </li>
-                                            <li class="table-row">
+                                            <li class="table-row text-center align-items-center">
                                               <div class="col col-1" data-label="Profil">
                                                   <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
                                               </div>
@@ -550,9 +547,10 @@
                                               <div class="col col-2" data-label="Interet">42235</div>
                                               <div class="col col-1" data-label="Aide att">John Doe</div>
                                               <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-2" data-label="Total">Pending</div>
+                                              <div class="col col-1" data-label="Cot att">$350</div>
+                                              <div class="col col-1" data-label="Total">Pending</div>
                                             </li>
-                                            <li class="table-row">
+                                            <li class="table-row text-center align-items-center">
                                               <div class="col col-1" data-label="Profil">
                                                   <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
                                               </div>
@@ -562,9 +560,10 @@
                                               <div class="col col-2" data-label="Interet">42235</div>
                                               <div class="col col-1" data-label="Aide att">John Doe</div>
                                               <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-2" data-label="Total">Pending</div>
+                                              <div class="col col-1" data-label="Cot att">$350</div>
+                                              <div class="col col-1" data-label="Total">Pending</div>
                                             </li>
-                                            <li class="table-row">
+                                            <li class="table-row text-center align-items-center">
                                               <div class="col col-1" data-label="Profil">
                                                   <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
                                               </div>
@@ -574,9 +573,10 @@
                                               <div class="col col-2" data-label="Interet">42235</div>
                                               <div class="col col-1" data-label="Aide att">John Doe</div>
                                               <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-2" data-label="Total">Pending</div>
+                                              <div class="col col-1" data-label="Cot att">$350</div>
+                                              <div class="col col-1" data-label="Total">Pending</div>
                                             </li>
-                                            <li class="table-row">
+                                            <li class="table-row text-center align-items-center">
                                               <div class="col col-1" data-label="Profil">
                                                   <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
                                               </div>
@@ -586,7 +586,8 @@
                                               <div class="col col-2" data-label="Interet">42235</div>
                                               <div class="col col-1" data-label="Aide att">John Doe</div>
                                               <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-2" data-label="Total">Pending</div>
+                                              <div class="col col-1" data-label="Cot att">$350</div>
+                                              <div class="col col-1" data-label="Total">Pending</div>
                                             </li>
                                           </ul>
                                     </div>
