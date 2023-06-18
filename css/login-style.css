@@ -1,0 +1,78 @@
+#element{
+  background: linear-gradient(-45deg, #2099C1 50%, #ffffff 50%);
+  height: 100vh;
+}
+#logo{
+    background-color: white;
+    width: 85%;
+    border: 1px solid white;
+}
+.img-thumbnail{
+    border-radius: 100%;
+    background-color: white;
+    border: 1px soid white;
+}
+#input{
+    width: 100%;
+}
+label{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 28px;
+    text-align: start;
+    justify-content: start;
+}
+.vertical-center {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+ }
+ #btn-login{
+    width: 30%;
+    background-color: #0CCE6B;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+ }
+@media (max-width: 576px) {
+    #element{
+        background: linear-gradient(-0deg, #5390D9 75%, #ffffff 35%);
+        height: 100vh;
+    }
+    #logo{
+        position: relative;
+        left: -35%;
+        top: -35%;
+        background-color: transparent;
+        width: 35%;
+        border-radius: 100%;
+    }
+    #user_logo{
+        width: 40%;
+    }
+    #box-1{
+        padding-bottom: 4%; 
+    }
+    #form{
+        position: relative;
+        top: -30%; 
+    }
+    #input{
+        position: relative;
+        width: 50%;
+        left: 25%;
+    }
+    label{
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+        font-size: 16px;
+    }
+    #btn-login{
+        width: 30%;
+        background-color: #0CCE6B;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+}
