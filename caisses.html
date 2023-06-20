@@ -204,19 +204,28 @@
             }
         </style>
     </head>
+
+
     <body class="sb-nav-fixed">
         <nav id="nav" class="sb-topnav navbar navbar-expand">
-            <!-- Navbar Brand-->
-            <a id="nom_AAA" class="navbar-brand ps-3"><img id="logo"  class="img-thumbnail" src="img/logo.jpg" alt=""> Association Avenir Assuré</a>
-            <!-- Sidebar Toggle-->
-            <button style="color: white;" class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-            <!-- Navbar Search-->
+
+            
+            <!-- Bouton derière le logo -->
+            <a id="nom_AAA" class="navbar-brand ps-3">
+                <button style="color: transparent; border: none; background-color: transparent;"  id="sidebarToggle" href="#!">
+                    <img id="logo"  class="img-thumbnail" src="img/logo.jpg" alt="">
+                </button>
+                Association Avenir Assuré
+            </a>
+
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group me-5">
                     <!-- Button trigger modal -->
                     <button class="button"  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: transparent; border: none;">
                         <img id="icons" src="img/addUser.png" alt="" style="width: 70%;">
                     </button>
+
+
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" style="position: relative; right: 5%; width: 25%; height: 70vh;">
@@ -295,6 +304,7 @@
                 </div>
             </form>
             <!-- Navbar-->
+            <!-- Option derière profiLes -->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown d-flex">
                     <a  id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -307,18 +317,16 @@
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#!">Modifier photo de profil</a></li>
                             <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="#!">Notification</a></li>
-                            <li><a class="dropdown-item" href="#!">Historique</a></li>
-                            <li><hr class="dropdown-divider" /></li>
                             <li><a class="dropdown-item" href="#!">Langue:
                                 <select name="" id="" style="border: none;">
                                     <option value="" selected>français</option>
-                                    <option value="" >englais</option>
+                                    <option value="" >anglais</option>
                                 </select>
-                            </a></li>
+                            </a>
+                            </li>
                             <li><a class="dropdown-item" href="#!">Aide</a></li>
-                            <li><a class="dropdown-item" href="#!">Parametre</a></li>
-                            <li><a class="dropdown-item" href="#!">Déconnexion</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="index.html">Déconnexion</a></li>
                         </ul>
                     </a>
                    
@@ -336,7 +344,7 @@
                             <a class="nav-link" href="dashboard.html">
                                 <div class="sb-nav-link-icon"></div>
                                 <i class="fa fa-tachometer" aria-hidden="true"></i>
-                                <span style="position: relative; left: 8px; font-size: 15px;" >Dashboard</span>
+                                <span style="position: relative; left: 8px; font-size: 15px;" >Tableaux de bord</span>
                             </a>
                             <a class="nav-link" href="newMember.html">
                                 <div class="sb-nav-link-icon"></i></div>

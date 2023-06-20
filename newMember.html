@@ -92,9 +92,17 @@
     <body class="sb-nav-fixed">
         <nav id="nav" class="sb-topnav navbar navbar-expand">
             <!-- Navbar Brand-->
-            <a id="nom_AAA" class="navbar-brand ps-3"><img id="logo"  class="img-thumbnail" src="img/logo.jpg" alt=""> Association Avenir Assuré</a>
+
+            <!-- Bouton derière le logo -->
+            <a id="nom_AAA" class="navbar-brand ps-3">
+                <button style="color: transparent; border: none; background-color: transparent;"  id="sidebarToggle" href="#!">
+                    <img id="logo"  class="img-thumbnail" src="img/logo.jpg" alt="">
+                </button>
+                Association Avenir Assuré
+            </a>
+
+            
             <!-- Sidebar Toggle-->
-            <button style="color: white;" class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group me-5">
@@ -192,18 +200,16 @@
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#!">Modifier photo de profil</a></li>
                             <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="#!">Notification</a></li>
-                            <li><a class="dropdown-item" href="#!">Historique</a></li>
-                            <li><hr class="dropdown-divider" /></li>
                             <li><a class="dropdown-item" href="#!">Langue:
                                 <select name="" id="" style="border: none;">
                                     <option value="" selected>français</option>
-                                    <option value="" >englais</option>
+                                    <option value="" >anglais</option>
                                 </select>
-                            </a></li>
+                            </a>
+                            </li>
                             <li><a class="dropdown-item" href="#!">Aide</a></li>
-                            <li><a class="dropdown-item" href="#!">Parametre</a></li>
-                            <li><a class="dropdown-item" href="#!">Déconnexion</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="index.html">Déconnexion</a></li>
                         </ul>
                     </a>
                    
@@ -221,7 +227,7 @@
                             <a class="nav-link" href="dashboard.html">
                                 <div class="sb-nav-link-icon"></div>
                                 <i class="fa fa-tachometer" aria-hidden="true"></i>
-                                <span style="position: relative; left: 8px; font-size: 15px;" >Dashboard</span>
+                                <span style="position: relative; left: 8px; font-size: 15px;" >Tableaux de bord</span>
                             </a>
                             <a class="nav-link" href="newMember.html">
                                 <div class="sb-nav-link-icon"></i></div>
@@ -247,7 +253,7 @@
             <div id="layoutSidenav_content" class="page-section pt-2 bg-light">
                 <main id="Dashboard" class="bg-light pt-4">
                     <div class="container-fluid px-4 pt-2">
-                        <div class="row pt-1">
+                        <div class="row pt-3">
                            <div class="col-md-6">
                                 <h3 style="color: #FFA500;" class="mt-4">Gestion des Membres</h3>
                            </div>
@@ -256,7 +262,7 @@
                            </div>
                            <div class="mt-4 col-md-2" style="color: #FFA500; font-size: 13px;line-height: 1.5;">
                             <P>Total caisses: <span>60000</span> <br>
-                               Total epargne: <span>23000</span>
+                               Total Membres: <span>23000</span>
                             </P>
                            </div>
                         </div>
@@ -266,9 +272,9 @@
                                 </div>
                                 
                                 <div class="col-md-2 p-1 p-1">
-                                    <button class="button" style="width: 60%; height: 5vh; background-color: #2099C1; border: none; border-radius: 20px;">
-                                        <a  style="text-decoration: none; color: white; font-size: 14px;"   href="#addEmployeeModal"  data-toggle="modal"><span style="font-weight: bold;">Ajouter</span></a>
-                                    </button>                                
+                                    <button style="width: 60%; height: 5vh; background-color: #2099C1;color: white; font-weight: bold; border: none; border-radius: 20px;" class="button" data-bs-toggle="modal" data-bs-target="#addEmployeeModal" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
+                                        Ajouter
+                                    </button>                               
                                 </div>
                                 <div class="col-md-5 p-1">
                                     <button class="button" style="width: 30%; height: 5vh; background-color: #2099C1; border: none; border-radius: 20px;">
@@ -282,6 +288,150 @@
                                     </button>
                                 </div>
                          </div>
+
+                         <!-- les popup -->
+                         <!-- add Modal HTML -->
+                         <div id="addEmployeeModal" class="modal fade">
+                            <div class="modal-dialog" style="height: 60vh;position: relative;">
+                                <div class="modal-content">
+                                    <form>
+                                        <div class="modal-header text-center justify-content-center" style="background-color: #FFA500; color: white; font-size: 18px;">
+                                            <P class="modal-title"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i>  Ajouter un membre</P>						
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-xl-3 d-flex"> 
+                                                    <img id="profile_membre" src="img/belland.jpg" alt="">
+                                                </div>
+                                                <div class="col-xl-1">
+                                                    <div class="d-flex justify-content-center" style="left: -35px; top: 40px; position: relative;">
+                                                        <div class="button" style="box-shadow: 2px 2px rgb(233, 233, 233); border-radius: 100%; margin: 0px; padding: 0px; position: absolute; background-color: whitesmoke; width: 20px; height: 20px; border: none;">
+                                                            <label class="form-label text-white m-1 pt-2" for="customFile2"><i class="fas fa-camera" style="color: #d6d6d6;"></i></label>
+                                                            <input type="file" class="form-control d-none" id="customFile2" />
+                                                        </div>
+                                                    </div>   
+                                                </div>
+                                            </div>					
+                                            <div class="form-group pt-4">
+                                                <input id="inputModal"  type="text" class="form-control" placeholder="Nom" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="inputModal" type="text" class="form-control" placeholder="Prénom" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="inputModal" type="text" class="form-control" placeholder="Profession" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <select name="" id="inputModal" class="form-select" placeholder="Situation" required>
+                                                    <option selected value=""></option>
+                                                    <option value="">opt1</option>
+                                                    <option value="">opt1</option>
+                                                </select>
+                                            </div>
+                                            					
+                                        </div>
+                                        <div class="container" style="position: relative; top: -20px;">
+                                            <div class="row justify-content-center">
+                                                <div class="col-xl-4">
+                                                    <input style="background-color: #2099C1;"   id="btn_modal" type="submit" class="btn btn-success" value="Ajouter">
+                                                </div>
+                                                <div class="col-xl-4">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                            <!-- Edit Modal HTML -->
+                            <div id="editEmployeeModal" class="modal fade">
+                                <div class="modal-dialog" style="height: 80vh;position: relative;">
+                                    <div class="modal-content">
+                                        <form>
+                                            <div class="modal-header text-center justify-content-center" style="background-color: #FFA500; color: white; font-size: 18px;">
+                                                <P class="modal-title"><i class="fa-sharp fa-light fa-pen" style="color: #ffffff;"></i>  Modifier les informations</P>						
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-xl-3 d-flex"> 
+                                                        <img id="profile_membre" src="img/belland.jpg" alt="">
+                                                    </div>
+                                                    <div class="col-xl-1">
+                                                        <div class="d-flex justify-content-center" style="left: -35px; top: 40px; position: relative;">
+                                                            <div class="button" style="box-shadow: 2px 2px rgb(233, 233, 233); border-radius: 100%; margin: 0px; padding: 0px; position: absolute; background-color: whitesmoke; width: 20px; height: 20px; border: none;">
+                                                                <label class="form-label text-white m-1 pt-2" for="customFile2"><i class="fas fa-camera" style="color: #d6d6d6;"></i></label>
+                                                                <input type="file" class="form-control d-none" id="customFile2" />
+                                                            </div>
+                                                        </div>   
+                                                    </div>
+                                                </div>					
+                                                <div class="form-group pt-4">
+                                                    <label>Nom</label>
+                                                    <input id="inputModal"  type="text" class="form-control" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Prénom</label>
+                                                    <input id="inputModal" type="text" class="form-control" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Pofession</label>
+                                                    <input id="inputModal" type="text" class="form-control" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Situaion</label>
+                                                    <select name="" id="inputModal" class="form-select" required>
+                                                        <option selected value=""></option>
+                                                        <option value="">opt1</option>
+                                                        <option value="">opt1</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Ville</label>
+                                                    <input id="inputModal" type="text" class="form-control" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Date de Naissance</label>
+                                                    <input id="inputModal" type="date" class="form-control" required>
+                                                </div>					
+                                            </div>
+                                            <div class="container" style="position: relative; top: -20px;">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-xl-4">
+                                                        <input style="background-color: #2099C1;"   id="btn_modal" type="submit" class="btn btn-success" value="valider">
+                                                    </div>
+                                                    <div class="col-xl-4">
+                                                        <input type="button" class="btn btn-default bg-light" data-dismiss="modal" value="Annuler">
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Delete Modal HTML -->
+                            <div id="deleteEmployeeModal" class="modal fade">
+                                <div class="modal-dialog" style="position: relative; left: -15px; height: 40vh;">
+                                    <div class="modal-content">
+                                        <form>
+                                            <div class="modal-header">						
+                                                <h4 class="modal-title">Supprimer ce membre</h4>
+                                            </div>
+                                            <div class="modal-body">					
+                                                <p>Etes vous sur de vouloir supprimer ce membre?</p>
+                                                <p class="text-warning"><small>Cette action est irreversible!</small></p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Annuler">
+                                                <input type="submit" class="btn btn-danger" value="Delete">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                         <!-- end popup -->
                          <div class="row pt-2">
                             <div class="col-md-12">
                                 <div class="container-fluid">

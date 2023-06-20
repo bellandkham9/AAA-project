@@ -114,6 +114,8 @@
                 </div>
             </form>
             <!-- Navbar-->
+
+            <!-- Option derière profiLes -->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown d-flex">
                     <a  id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -126,18 +128,16 @@
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#!">Modifier photo de profil</a></li>
                             <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="#!">Notification</a></li>
-                            <li><a class="dropdown-item" href="#!">Historique</a></li>
-                            <li><hr class="dropdown-divider" /></li>
                             <li><a class="dropdown-item" href="#!">Langue:
                                 <select name="" id="" style="border: none;">
                                     <option value="" selected>français</option>
-                                    <option value="" >englais</option>
+                                    <option value="" >anglais</option>
                                 </select>
-                            </a></li>
+                            </a>
+                            </li>
                             <li><a class="dropdown-item" href="#!">Aide</a></li>
-                            <li><a class="dropdown-item" href="#!">Parametre</a></li>
-                            <li><a class="dropdown-item" href="#!">Déconnexion</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="index.html">Déconnexion</a></li>
                         </ul>
                     </a>
                    
@@ -155,7 +155,7 @@
                             <a class="nav-link" href="dashboard.html">
                                 <div class="sb-nav-link-icon"></div>
                                 <i class="fa fa-tachometer" aria-hidden="true"></i>
-                                <span style="position: relative; left: 8px; font-size: 15px;" >Dashboard</span>
+                                <span style="position: relative; left: 8px; font-size: 15px;">Tableaux de bord</span>
                             </a>
                             <a class="nav-link" href="newMember.html">
                                 <div class="sb-nav-link-icon"></i></div>
@@ -170,7 +170,7 @@
                             <a class="nav-link" href="evenements.html">
                                 <div class="sb-nav-link-icon"></div>
                                 <i class="fa fa-calendar" aria-hidden="true"></i>
-                                <span style="position: relative; left: 8px; font-size: 15px;" >Gestion des événements</span>
+                                <span style="position: relative; left: 8px; font-size: 15px;" >Gestion des évènements</span>
                             </a>
                         </div>
                     </div>
@@ -181,7 +181,7 @@
             <div id="layoutSidenav_content" class="page-section pt-2">
                 <main id="Dashboard" class="bg-light pt-5">
                     <div class="container-fluid px-4 pt-2">
-                        <h3 style="color: #FFA500;" class="mt-4">Dashboard</h3>
+                        <h3 style="color: #FFA500;" class="mt-4">Tableaux de bord</h3>
                         <div class="row">
                             <div class="col-xl-6 col-md-6">
                                 <div id="box-main" class="card  text-white shadow p-3 mb-3 bg-white">
@@ -203,7 +203,7 @@
                                         </div>
                                         <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
                                             <button id="btn-open" class="button pb-2">
-                                                <a id='items' href="#">Ouvrir</a>   
+                                                <a id='items' href="newMember.html">Ouvrir</a>   
                                             </button> 
                                         </div>
                                     </div>
@@ -229,7 +229,7 @@
                                         </div>
                                         <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
                                             <button id="btn-open" class="button pb-2">
-                                                <a id='items' href="#">Ouvrir</a>   
+                                                <a id='items' href="caisses.html">Ouvrir</a>   
                                             </button> 
                                         </div>
                                     </div>
@@ -244,7 +244,7 @@
                                         <div  id="box-name" class="col-lg-4 text-center justify-content-center">
                                             <div class="row">
                                                 <div class="col-12-lg">
-                                                    <h3 class="nbr">Amendes</h3>
+                                                    <h3 class="nbr">Amandes</h3>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -258,7 +258,7 @@
                                         </div>
                                         <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
                                             <button id="btn-open" class="button pb-2">
-                                                <a id='items' href="#">Ouvrir</a>   
+                                                <a id='items' href="caisses.html">Ouvrir</a>   
                                             </button> 
                                         </div>
                                     </div>
@@ -270,7 +270,7 @@
                                         <div  id="box-name" class="col-lg-4 text-center justify-content-center">
                                             <div class="row">
                                                 <div class="col-12-lg">
-                                                    <h3 class="nbr">Evenements</h3>
+                                                    <h3 class="nbr">Évènements</h3>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -284,7 +284,7 @@
                                         </div>
                                         <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
                                             <button id="btn-open" class="button pb-2">
-                                                <a id='items' href="#">Ouvrir</a>   
+                                                <a id='items' href="evenements.html">Ouvrir</a>   
                                             </button> 
                                         </div>
                                     </div>
@@ -298,7 +298,7 @@
                                         <div class="col-lg-3">
                                             <div class="row">
                                                 <div class="col-lg">
-                                                    <h3 id="nbr" class="nbr">Evenement à venir</h3>
+                                                    <h3 id="nbr" class="nbr">Évènement à venir</h3>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -334,7 +334,7 @@
                         <div class="card mb-4">
                             <div class="row justify-content-between pt-2">
                                 <div class="col-6">
-                                    <h3 id="nbr1">Historique</h3>
+                                    <h3 id="nbr1">Historiques</h3>
                                 </div>
                                 <div class="col-6">
                                     <h3 style="text-align: end;" >
