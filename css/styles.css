@@ -11267,15 +11267,10 @@ body {
 }
 #nav{
   height: 15vh;
-  box-shadow: 2px 4px whitesmoke;
+  box-shadow: 2px 4px 4px #127393;
   background-color: #2099C1;
   color: white;
 }
-
-/* #sidebarToggle{
-   padding-left: 20%;
-   width: 50px;
-} */
 #inputModal{
   height: 30px; 
   border-radius: 20px;
@@ -11304,7 +11299,6 @@ body {
   font-family: 'Dancing Script';
   font-size: 32px;
   color: white;
-
 }
 #profile{
   width: 30%;

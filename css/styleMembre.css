@@ -31,12 +31,16 @@ table {
 .table-scroll tbody {
     position: absolute;
     overflow-y: scroll;
-    height: 52vh;
-    
+    height: 52vh;  
 }
-
 .table-scroll tr {
     width: 98%;
     table-layout: fixed;
     display: inline-table;
 }
+#nom_AAA{
+    font-family: 'Dancing Script';
+    font-size: 32px;
+    color: white;
+  
+  }

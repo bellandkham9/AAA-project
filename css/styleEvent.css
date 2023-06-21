@@ -8292,8 +8292,8 @@ button.switch-month:hover {
 #input{
   width: 50px;
 }
-/* #box-register1{
-  box-shadow: 2px 4px ghostwhite;
-  border: none;
-  background-color: white;
-} */
+#nom_AAA{
+  font-family: 'Dancing Script';
+  font-size: 32px;
+  color: white;
+}
