@@ -218,20 +218,25 @@
                 <nav class="sb-sidenav accordion" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="dashboard.html">
                                 <div class="sb-nav-link-icon"></div>
                                 <i class="fa fa-tachometer" aria-hidden="true"></i>
-                                <span style="position: relative; left: 8px; font-size: 15px;" >Dashboard</span>
+                                <span style="position: relative; left: 8px; font-size: 15px;" >Tableaux de bord</span>
                             </a>
-                            <a class="nav-link" href="newMember.html">
+                            <a class="nav-link" href="membres.html">
                                 <div class="sb-nav-link-icon"></i></div>
                                 <i class="fa fa-users" aria-hidden="true"></i>
                                 <span style="position: relative; left: 8px; font-size: 15px;">Gestion des Membres</span>
                             </a>
-                            <a class="nav-link" href="caisses.html">
+                            <a class="nav-link" href="bilan.html">
                                 <div class="sb-nav-link-icon"></i></div>
                                 <i class="fa fa-credit-card" aria-hidden="true"></i>
                                 <span style="position: relative; left: 8px; font-size: 15px;" >Gestion de caisses</span>
+                            </a>
+                            <a class="nav-link" href="caisses.html">
+                                <div class="sb-nav-link-icon"></i></div>
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                <span style="position: relative; left: 8px; font-size: 15px;" >Bilan financier</span>
                             </a>
                             <a class="nav-link" href="evenements.html">
                                 <div class="sb-nav-link-icon"></div>
@@ -244,8 +249,72 @@
                 </nav>
             </div>
            
-            <div id="layoutSidenav_content" class="page-section pt-2 bg-light">
-                <main id="bilan" class="bg-light pt-4">
+            <div id="layoutSidenav_content" class="page-section pt-5 bg-light">
+                <main id="bilan" class="pt-4 bg-light">
+                    <div class="row">
+                        <div  class="col-12 justify-content-center">
+                            <div style="width: 40%; height: 6vh; box-shadow: 2px 5px 5px gainsboro; border: none; border-radius: 7px; background-color: white;" class="container text-center justify-content-center pt-2">
+                                <p style="color: gray;">Mardi 18 janvier 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div class="row p-2 m-5">
+                        <div  class="col-6 justify-content-center">
+                            <div style="box-shadow: 2px 5px 5px gainsboro; border: none; border-radius: 7px; background-color: white;" class="card">
+                                <div style="border-top-left-radius: 7px; color: white; border-top-right-radius: 7px; background-color: #FFA500;" class="card-header text-center">
+                                  <span>Actifs(Encaissements)</span>
+                                </div>
+                                <div class="card-body">
+                                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-indicators">
+                                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                          <div class="carousel-item active">
+                                            <div class="container bg-primary text-center" style="width: 90%; height: 20vh;">
+                                                <h2>svsgvgsgvs</h2>
+                                            </div>
+                                            <div class="carousel-caption d-none d-md-block">
+                                              <h5>First slide label</h5>
+                                              <p>Some representative placeholder content for the first slide.</p>
+                                            </div>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="img/Doorbell.png" class="d-block w-100" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                              <h5>Second slide label</h5>
+                                              <p>Some representative placeholder content for the second slide.</p>
+                                            </div>
+                                          </div>
+                                          <div class="carousel-item">
+                                            <img src="img/Denied.png" class="d-block w-100" alt="...">
+                                            <div class="carousel-caption d-none d-md-block">
+                                              <h5>Third slide label</h5>
+                                              <p>Some representative placeholder content for the third slide.</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                          <span class="visually-hidden">Next</span>
+                                        </button>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div  class="col-6 justify-content-center">
+                            <div style="box-shadow: 2px 5px 5px gainsboro; border: none; border-radius: 7px; background-color: white;" class="container text-center justify-content-center pt-2">
+                                <p style="color: gray;">Mardi 18 janvier 2023</p>
+                            </div>
+                        </div>
+                    </div>
 
                 </main>
                 </div>

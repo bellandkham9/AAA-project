@@ -33,6 +33,12 @@ label{
     border: none;
     border-radius: 8px;
     font-weight: bold;
+    text-decoration: none;
+    color: white;
+ }
+ #lien-login{
+    color: white;
+    text-decoration: none;
  }
 @media (max-width: 576px) {
     #element{
@@ -73,6 +79,8 @@ label{
         border: none;
         border-radius: 8px;
         font-weight: bold;
+        text-decoration: none;
+        color: white;
     }
 
 }
