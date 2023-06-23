@@ -11,7 +11,8 @@
         <link rel="stylesheet" href="css/bootstrap.min.css.map">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/styleMembre.css"> 
+        <link rel="stylesheet" href="css/styleMembre.css">
+        <link rel="stylesheet" href="css/bilan.css"> 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
         
@@ -254,69 +255,287 @@
             <div id="layoutSidenav_content" class="page-section pt-5 bg-light">
                 <main id="bilan" class="pt-4 bg-light">
                     <div class="row">
-                        <div  class="col-12 justify-content-center">
+                        <div  class="col-12 justify-content-center d-flex">
+                            <h3 style="position: relative; left: 12%; color: #FFA500;">Gestion de caisses</h3>
                             <div style="width: 40%; height: 6vh; box-shadow: 2px 5px 5px gainsboro; border: none; border-radius: 7px; background-color: white;" class="container text-center justify-content-center pt-2">
                                 <p style="color: gray;">Mardi 18 janvier 2023</p>
                             </div>
                         </div>
                     </div>
-                   
-                    <div class="row p-2 m-5">
-                        <div  class="col-6 justify-content-center">
-                            <div style="box-shadow: 2px 5px 5px gainsboro; border: none; border-radius: 7px; background-color: white;" class="card">
-                                <div style="border-top-left-radius: 7px; color: white; border-top-right-radius: 7px; background-color: #FFA500;" class="card-header text-center">
-                                  <span>Actifs(Encaissements)</span>
-                                </div>
-                                <div class="card-body">
-                                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                                        <div class="carousel-indicators">
-                                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <div class="row p-1 m-4">
+                        <div  class="col-12 justify-content-center">
+                            <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+                                <div class="carousel-inner" style="color: white;">
+                                  <div class="carousel-item active p-3">
+                                    <div class="container">
+                                        <div class="row gx-5">
+                                            <div class="col-3">
+                                                <div class="button p-1 text-center  bg-info">
+                                                    <h4>Caisse Assurance</h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="button p-1 text-center  bg-primary">
+                                                    <h4>Caisse Epargne</h4>
+                                                </div>>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="button p-1 text-center  bg-info">
+                                                    <h4>Caisse Sanction</h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="button p-1 text-center  bg-primary">
+                                                    <h4>Caisse Aide Att</h4>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="carousel-inner">
-                                          <div class="carousel-item active">
-                                            <div class="container bg-primary text-center" style="width: 90%; height: 20vh;">
-                                                <h2>svsgvgsgvs</h2>
+                                    </div>
+                                  </div>
+                                    <div class="carousel-item p-3">
+                                        <div class="container">
+                                            <div class="row gx-5">
+                                                <div class="col-3">
+                                                    <div class="button p-1 text-center  bg-info">
+                                                        <h4>Caisse Assurance</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3 ">
+                                                    <div class="button p-1 text-center  bg-info">
+                                                        <h4>Caisse Assurance</h4>
+                                                    </div>>
+                                                </div>
+                                                <div class="col-3 ">
+                                                    <div class="button p-1 text-center  bg-info">
+                                                        <h4>Caisse Assurance</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="button p-1 text-center  bg-info">
+                                                        <h4>Caisse Assurance</h4>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="carousel-caption d-none d-md-block">
-                                              <h5>First slide label</h5>
-                                              <p>Some representative placeholder content for the first slide.</p>
-                                            </div>
-                                          </div>
-                                          <div class="carousel-item">
-                                            <img src="img/Doorbell.png" class="d-block w-100" alt="...">
-                                            <div class="carousel-caption d-none d-md-block">
-                                              <h5>Second slide label</h5>
-                                              <p>Some representative placeholder content for the second slide.</p>
-                                            </div>
-                                          </div>
-                                          <div class="carousel-item">
-                                            <img src="img/Denied.png" class="d-block w-100" alt="...">
-                                            <div class="carousel-caption d-none d-md-block">
-                                              <h5>Third slide label</h5>
-                                              <p>Some representative placeholder content for the third slide.</p>
-                                            </div>
-                                          </div>
                                         </div>
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                          <span class="visually-hidden">Previous</span>
-                                        </button>
-                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                          <span class="visually-hidden">Next</span>
-                                        </button>
-                                      </div>
-                                </div>
-                            </div>
+                                    </div>
+                                    <div class="carousel-item p-3">
+                                        <div class="container">
+                                            <div class="row gx-5">
+                                                <div class="col-3">
+                                                    <div class="button p-1 text-center  bg-info">
+                                                        <h4>Caisse Assurance</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3 ">
+                                                    <div class="button p-1 text-center  bg-info">
+                                                        <h4>Caisse Assurance</h4>
+                                                    </div>>
+                                                </div>
+                                                <div class="col-3 ">
+                                                    <div class="button p-1 text-center  bg-info">
+                                                        <h4>Caisse Assurance</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="button p-1 text-center  bg-info">
+                                                        <h4>Caisse Assurance</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
                         </div>
-                        <div  class="col-6 justify-content-center">
-                            <div style="box-shadow: 2px 5px 5px gainsboro; border: none; border-radius: 7px; background-color: white;" class="container text-center justify-content-center pt-2">
-                                <p style="color: gray;">Mardi 18 janvier 2023</p>
-                            </div>
-                        </div>
+                        
                     </div>
+                    <!-- la table -->
+                    <div class="row pt-2">
+                        <div class="col-md-12">
+                            <div class="container-fluid">
+                                <ul class="responsive-table" style=" font-size: 12px; overflow: scroll; overflow-x: hidden; height: 70vh;">
+                                    <li style="font-size: 11px;" class="table-header text-center align-items-center">
+                                      <div class="col col-1"></div>
+                                      <div class="col col-2">Profil</div>
+                                      <div class="col col-2">Nom et prénoms</div>
+                                      <div class="col col-1">Montant</div>
+                                      <div class="col col-3">Champ de transaction</div>
+                                      <div class="col col-3">Actions sur la caisse</div>
+                                      </li>
+                                      <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                        <div class="col col-1" data-label="checkbox">
+                                            <input type="checkbox" name="" id="">
+                                        </div>    
+                                        <div class="col col-2" data-label="Profil">
+                                                <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                            </div>
+
+                                            <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                            <div class="col col-1" data-label="Montant">6555</div>
+                                            <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                            <div class="col col-3" data-label="Actions sur la caisse">
+                                         
+                                                <!-- Bouton d'actions -->
+                                                <div class="container text-align justify-content-center d-flex">
+                                                  <button id="btn-entre" class="btn" type="button">Entré</button>
+                                                  <button id="btn-sortie" class="btn" type="button">Sortie</button>
+                                                    <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editEmployeeModal" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
+                                                        <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                    </button>
+                                                </div>
+                                              </div> 
+                                            </li>
+                                            <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                                <div class="col col-1" data-label="checkbox">
+                                                    <input type="checkbox" name="" id="">
+                                                </div>    
+                                                <div class="col col-2" data-label="Profil">
+                                                        <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                                    </div>
+        
+                                                    <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                                    <div class="col col-1" data-label="Montant">6555</div>
+                                                    <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                                    <div class="col col-3" data-label="Actions sur la caisse">
+                                                 
+                                                        <!-- Bouton d'actions -->
+                                                        <div class="container text-align justify-content-center d-flex">
+                                                          <button id="btn-entre" class="btn" type="button">Entré</button>
+                                                          <button id="btn-sortie" class="btn" type="button">Sortie</button>
+                                                            <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editEmployeeModal" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
+                                                                <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                            </button>
+                                                        </div>
+                                                      </div> 
+                                                    </li>
+                                                    <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                                        <div class="col col-1" data-label="checkbox">
+                                                            <input type="checkbox" name="" id="">
+                                                        </div>    
+                                                        <div class="col col-2" data-label="Profil">
+                                                                <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                                            </div>
+                
+                                                            <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                                            <div class="col col-1" data-label="Montant">6555</div>
+                                                            <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                                            <div class="col col-3" data-label="Actions sur la caisse">
+                                                         
+                                                                <!-- Bouton d'actions -->
+                                                                <div class="container text-align justify-content-center d-flex">
+                                                                  <button id="btn-entre" class="btn" type="button">Entré</button>
+                                                                  <button id="btn-sortie" class="btn" type="button">Sortie</button>
+                                                                    <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editEmployeeModal" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
+                                                                        <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                                    </button>
+                                                                </div>
+                                                              </div> 
+                                                            </li>
+                                                            <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                                                <div class="col col-1" data-label="checkbox">
+                                                                    <input type="checkbox" name="" id="">
+                                                                </div>    
+                                                                <div class="col col-2" data-label="Profil">
+                                                                        <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                                                    </div>
+                        
+                                                                    <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                                                    <div class="col col-1" data-label="Montant">6555</div>
+                                                                    <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                                                    <div class="col col-3" data-label="Actions sur la caisse">
+                                                                 
+                                                                        <!-- Bouton d'actions -->
+                                                                        <div class="container text-align justify-content-center d-flex">
+                                                                          <button id="btn-entre" class="btn" type="button">Entré</button>
+                                                                          <button id="btn-sortie" class="btn" type="button">Sortie</button>
+                                                                            <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editEmployeeModal" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
+                                                                                <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                                            </button>
+                                                                        </div>
+                                                                      </div> 
+                                                                    </li>
+                                                                    <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                                                        <div class="col col-1" data-label="checkbox">
+                                                                            <input type="checkbox" name="" id="">
+                                                                        </div>    
+                                                                        <div class="col col-2" data-label="Profil">
+                                                                                <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                                                            </div>
+                                
+                                                                            <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                                                            <div class="col col-1" data-label="Montant">6555</div>
+                                                                            <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                                                            <div class="col col-3" data-label="Actions sur la caisse">
+                                                                         
+                                                                                <!-- Bouton d'actions -->
+                                                                                <div class="container text-align justify-content-center d-flex">
+                                                                                  <button id="btn-entre" class="btn" type="button">Entré</button>
+                                                                                  <button id="btn-sortie" class="btn" type="button">Sortie</button>
+                                                                                    <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editEmployeeModal" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
+                                                                                        <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                                                    </button>
+                                                                                </div>
+                                                                              </div> 
+                                                                            </li>
+                                                                            <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                                                                <div class="col col-1" data-label="checkbox">
+                                                                                    <input type="checkbox" name="" id="">
+                                                                                </div>    
+                                                                                <div class="col col-2" data-label="Profil">
+                                                                                        <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                                                                    </div>
+                                        
+                                                                                    <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                                                                    <div class="col col-1" data-label="Montant">6555</div>
+                                                                                    <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                                                                    <div class="col col-3" data-label="Actions sur la caisse">
+                                                                                 
+                                                                                        <!-- Bouton d'actions -->
+                                                                                        <div class="container text-align justify-content-center d-flex">
+                                                                                          <button id="btn-entre" class="btn" type="button">Entré</button>
+                                                                                          <button id="btn-sortie" class="btn" type="button">Sortie</button>
+                                                                                            <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editEmployeeModal" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
+                                                                                                <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                                                            </button>
+                                                                                        </div>
+                                                                                      </div> 
+                                                                                    </li>
+                                                            <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                                                <div class="col col-1" data-label="checkbox">
+                                                                    <input type="checkbox" name="" id="">
+                                                                </div>    
+                                                                <div class="col col-2" data-label="Profil">
+                                                                        <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                                                    </div>
+                        
+                                                                    <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                                                    <div class="col col-1" data-label="Montant">6555</div>
+                                                                    <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                                                    <div class="col col-3" data-label="Actions sur la caisse">
+                                                                 
+                                                                        <!-- Bouton d'actions -->
+                                                                        <div class="container text-align justify-content-center d-flex">
+                                                                          <button id="btn-entre" class="btn" type="button">Entré</button>
+                                                                          <button id="btn-sortie" class="btn" type="button">Sortie</button>
+                                                                            <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editEmployeeModal" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
+                                                                                <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                                            </button>
+                                                                        </div>
+                                                                      </div> 
+                                                                    </li>
+                                     
+                                  </ul>
+                            </div>
+
+                        </div>
+                     </div>
 
                 </main>
                 </div>

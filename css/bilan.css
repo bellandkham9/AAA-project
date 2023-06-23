@@ -1,0 +1,30 @@
+.caisse-items{
+    width: 30%;
+    height: 12vh;
+}
+.p-1{
+    border-radius: 8px;
+    height: 15vh;
+}
+#profile_membre1{
+    width: 35%;
+}
+.btn{
+    color: white;
+    width: 35%;
+    border-radius: 5px;
+    border: none;
+}
+#btn-entre{
+    background-color: #0CCE6B;
+}
+#btn-sortie{
+    position: relative;
+    left: 4px;
+    background-color: red;
+}
+.input-montant{
+    border-radius: 5px;
+    border: none;
+    background-color: gainsboro;
+}
