@@ -9,11 +9,15 @@
 #profile_membre1{
     width: 35%;
 }
-.btn{
+.button{
     color: white;
     width: 35%;
     border-radius: 5px;
     border: none;
+}
+.btn{
+    width: 100%;
+    color: white;
 }
 #btn-entre{
     background-color: #0CCE6B;
@@ -27,4 +31,7 @@
     border-radius: 5px;
     border: none;
     background-color: gainsboro;
+}
+.img-thumbnail{
+    width: 12%;
 }
