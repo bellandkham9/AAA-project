@@ -11392,7 +11392,7 @@ ul {
 
 /* pour le modal notification */
 
-.modal-dialog {
+/* .modal-dialog {
   position: fixed;
   margin: auto;
   width: 320px;
@@ -11401,7 +11401,7 @@ ul {
 }
 .modal-content {
   height: 100%;
-}
+} */
 
 /* les input de register */
 #input{

@@ -9,6 +9,11 @@
 #profile_membre1{
     width: 35%;
 }
+#profile_membre2{
+    width: 25%;
+    border: 5px solid rgb(209, 208, 208);
+    border-radius: 100%;
+}
 .button{
     color: white;
     width: 35%;
@@ -34,4 +39,17 @@
 }
 .img-thumbnail{
     width: 12%;
+}
+
+/* modal edit */
+
+#modal-edit{
+    height: auto;
+}
+#modal-edit-header{
+    color: white;
+    background-color: orange;
+}
+.modal-content{
+    width: 70%;
 }
