@@ -10,7 +10,8 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css.map">
         <!--Datatable plugin CSS file -->
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 	    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 	   
+         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
         <!--jQuery library file -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <!--Datatable plugin JS library file -->
@@ -22,40 +23,44 @@
     <body class="sb-nav-fixed">
         <nav id="nav" class="sb-topnav navbar navbar-expand">
             <!-- Navbar Brand-->
-            <a id="nom_AAA" class="navbar-brand ps-3">
-                <button style="color: transparent; border: none; background-color: transparent;"  id="sidebarToggle" href="#!">
+            <a id="nom_AAA" class="navbar-brand">
+                <button  id="sidebarToggle" href="#!">
                     <img id="logo"  class="img-thumbnail" src="img/logo.jpg" alt="">
                 </button>
-                <span>Association Avenir Assuré</span>
+                <span id="associ">Association Avenir Assuré</span>
             </a>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group me-5">
                     <!-- Button trigger modal -->
-                    <button class="button"  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: transparent; border: none;">
-                        <img id="icons" src="img/addUser.png" alt="" style="width: 70%;">
+                    <button id="btn-addUser" class="button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img  id="icons" src="img/addUser.png" alt="">
                     </button>
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" style="position: relative; right: 5%; width: 25%; height: 70vh;">
-                        <div class="modal-content"> 
+                        <div class="modal-dialog">
+                        <div id="modal-addUser" class="modal-content"> 
                             <div id="box-register" class="modal-body">
-                                <div class="container  pt-3" style="position: relative; left: 5%;">
+                                <div class="container  pt-3">
                                     <form id="form" class="pt-5">
-                                        <img id="user_logo" style="position: relative; left: 20%; background-color: #2099C1;" src="img/🦆 icon _profile circle_.png" class="img-thumbnail" alt="">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12 text-center justify-content-center">
+                                                <img id="user_logo"  src="img/🦆 icon _profile circle_.png" class="img-thumbnail" alt="">
+                                            </div>
+                                        </div>
                                         <div class="row">
-                                            <div class="col-xl-6">
+                                            <div class="col-12 text-center justify-content-center">
                                                 <p class="pt-2">
                                                     <label  for="">Nom d'utilisateur</label>
-                                                    <input id="input" class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
+                                                    <input class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
                                                 </p>
                                                 <p>
                                                     <label  for="">Mot de Passe</label>
-                                                    <input id="input" class="form-control" type="password" placeholder="entrer mot de passe" required>
+                                                    <input class="form-control" type="password" placeholder="entrer mot de passe" required>
                                                 </p>
                                                 <p>
                                                     <label for="">Staut</label>
-                                                    <select id="input" class="form-select" aria-label="Default select example">
+                                                    <select class="form-select" aria-label="Default select example">
                                                         <option selected>choose your status</option>
                                                         <option value="1">One</option>
                                                         <option value="2">Two</option>
@@ -64,7 +69,11 @@
                                                 </p>
                                             </div>
                                         </div>
-                                        <button id="btn-register" style="position: relative; left: 20%;"  class="btn btn-primary btn-block" type="sumbit">Creer</button>
+                                        <div class="row justify-content-center">
+                                            <div class="col-12 text-center justify-content-center">
+                                                <button id="btn-register"  class="btn btn-primary btn-block" type="sumbit">Creer</button>
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -73,18 +82,18 @@
                     </div>
 
 
-                    <button class="button" data-bs-toggle="modal" data-bs-target="#myModal2" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
-                        <img  style="position: relative; left: 15%; width: 70%;" id="icons" src="img/Doorbell.png" alt="">
+                    <button id="bn-notif" class="button" data-bs-toggle="modal" data-bs-target="#myModal2" aria-expanded="false" aria-controls="collapseExample">
+                        <img  id="icons" src="img/Doorbell.png" alt="">
                     </button>
                     <div class="container demo">
                         <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
-                            <div class="modal-dialog" style="height: 80vh;">
+                            <div id="modal-notification" class="modal-dialog">
                                 <div class="modal-content">
-                                    <div class="modal-header" style="background-color: #FFA500;">
+                                    <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Notifications</h5>
                                     </div>
-                                    <div class="modal-body" style="color: black; overflow: scroll; overflow-x: hidden; height: 13vh;">
-                                    <ul style="font-style: normal;">
+                                    <div id="box-notif" class="modal-body">
+                                    <ul>
                                         <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
                                         <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
                                         <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
@@ -128,7 +137,7 @@
                             <li><a class="dropdown-item" href="#!">Modifier photo de profil</a></li>
                             <li><hr class="dropdown-divider" /></li>
                             <li><a class="dropdown-item" href="#!">Langue:
-                                <select name="" id="" style="border: none;">
+                                <select name="" id="">
                                     <option value="" selected>français</option>
                                     <option value="" >anglais</option>
                                 </select>
@@ -154,27 +163,27 @@
                             <a class="nav-link" href="dashboard.html">
                                 <div class="sb-nav-link-icon"></div>
                                 <i class="fa fa-tachometer" aria-hidden="true"></i>
-                                <span style="position: relative; left: 8px; font-size: 15px;" >Tableaux de bord</span>
+                                <span class="menu-items">Tableaux de bord</span>
                             </a>
                             <a class="nav-link" href="membres.html">
                                 <div class="sb-nav-link-icon"></i></div>
                                 <i class="fa fa-users" aria-hidden="true"></i>
-                                <span style="position: relative; left: 8px; font-size: 15px;">Gestion des Membres</span>
+                                <span class="menu-items">Gestion des Membres</span>
                             </a>
                             <a class="nav-link" href="bilan.html">
                                 <div class="sb-nav-link-icon"></i></div>
                                 <i class="fa fa-credit-card" aria-hidden="true"></i>
-                                <span style="position: relative; left: 8px; font-size: 15px;" >Gestion de caisses</span>
+                                <span class="menu-items">Gestion de caisses</span>
                             </a>
                             <a class="nav-link" href="caisses.html">
                                 <div class="sb-nav-link-icon"></i></div>
-                                <i class="fa fa-money" aria-hidden="true"></i>
-                                <span style="position: relative; left: 8px; font-size: 15px;" >Bilan financier</span>
+                                <i class="fa fa-dollar" aria-hidden="true"></i>
+                                <span class="menu-items">Bilan financier</span>
                             </a>
                             <a class="nav-link" href="evenements.html">
                                 <div class="sb-nav-link-icon"></div>
-                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                                <span style="position: relative; left: 8px; font-size: 15px;" >Gestion des événements</span>
+                                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                <span class="menu-items">Gestion des événements</span>
                             </a>
                         </div>
                     </div>
@@ -185,7 +194,7 @@
             <div id="layoutSidenav_content" class="page-section pt-2">
                 <main id="Dashboard" class="bg-light pt-5">
                     <div class="container-fluid px-4 pt-2">
-                        <h3 style="color: #FFA500;" class="mt-4">Tableaux de bord</h3>
+                        <h3 id="title-page" class="mt-4">Tableaux de bord</h3>
                         <div class="row">
                             <div class="col-xl-6 col-md-6">
                                 <div id="box-main" class="card  text-white shadow p-3 mb-3 bg-white">
@@ -207,7 +216,7 @@
                                         </div>
                                         <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
                                             <button id="btn-open" class="button pb-2">
-                                                <a id='items' href="newMember.html">Ouvrir</a>   
+                                                <a id='items' href="membres.html">Ouvrir</a>   
                                             </button> 
                                         </div>
                                     </div>
@@ -315,7 +324,7 @@
                                             <div class="row">
                                                 <h3 id="nbr" class="nbr">Réunion annuelle de l'association</h3>
                                             </div>
-                                            <div id="evenements" style="color: grey;" class="row">
+                                            <div id="evenements" class="row">
                                                 <div class="col-4">
                                                     <img id="img-thumbnail1" src="img/Place Marker.png" class="img-thumbnail" alt="">
                                                     <p>Lorem ipsum dolor sit amet</p>
@@ -340,9 +349,9 @@
                                 <div class="col-6">
                                     <h3 id="nbr1">Historiques</h3>
                                 </div>
-                                <div class="col-6">
-                                    <h3 style="text-align: end;" >
-                                        <button class="button" style="background-color: transparent; border: none;">
+                                <div class="col-6 px-5 justify-content-end">
+                                    <h3 id="btn-refrech">
+                                        <button id="btn-addUser" class="button">
                                             <img  id="img-thumbnail3" src="img/🦆 icon _refresh 2_.png"  alt="">
                                         </button>
                                     </h3>
@@ -356,7 +365,6 @@
                                             <th>Heure</th>
                                             <th>Date</th>
                                             <th>Action</th>
-                                            <th>Desciption</th>
                                             <th>Auteur</th>
                                         </tr>
                                     </thead>
@@ -365,7 +373,6 @@
                                             <th>Heure</th>
                                             <th>Date</th>
                                             <th>Action</th>
-                                            <th>Desciption</th>
                                             <th>Auteur</th>
                                         </tr>
                                     </tfoot>
@@ -374,7 +381,6 @@
                                             <td>Tiger Nixon</td>
                                             <td>System Architect</td>
                                             <td>Edinburgh</td>
-                                            <td>61</td>
                                             <td>2011/04/25</td>
                                             
                                         </tr>
@@ -382,42 +388,36 @@
                                             <td>Garrett Winters</td>
                                             <td>Accountant</td>
                                             <td>Tokyo</td>
-                                            <td>63</td>
                                             <td>2011/07/25</td>
                                         </tr>
                                         <tr>
                                             <td>Ashton Cox</td>
                                             <td>Junior Technical Author</td>
                                             <td>San Francisco</td>
-                                            <td>66</td>
                                             <td>2009/01/12</td>
                                         </tr>
                                         <tr>
                                             <td>Cedric Kelly</td>
                                             <td>Senior Javascript Developer</td>
                                             <td>Edinburgh</td>
-                                            <td>22</td>
                                             <td>$433,060</td>
                                         </tr>
                                         <tr>
                                             <td>Airi Satou</td>
                                             <td>Accountant</td>
                                             <td>Tokyo</td>
-                                            <td>33</td>
                                             <td>2008/11/28</td>
                                         </tr>
                                         <tr>
                                             <td>Brielle Williamson</td>
                                             <td>Integration Specialist</td>
                                             <td>New York</td>
-                                            <td>61</td>
                                             <td>$372,000</td>
                                         </tr>
                                         <tr>
                                             <td>Herrod Chandler</td>
                                             <td>Sales Assistant</td>
                                             <td>San Francisco</td>
-                                            <td>59</td>
                                             <td>2012/08/06</td>
                                         </tr>
                         
