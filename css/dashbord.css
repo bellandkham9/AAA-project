@@ -1,0 +1,300 @@
+/* ma part commence ici */
+
+#box-main{
+    border-right: 15px solid #FFA500;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 22vh;
+  }
+  #box-main1{
+    border-right: 15px solid #FFA500;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 25vh;
+  }
+  #navbarDropdown:hover{
+    color: white;
+    text-decoration: none;
+  }
+  #nav{
+    height: 15vh;
+    box-shadow: 2px 4px 4px #127393;
+    background-color: #2099C1;
+    color: white;
+  }
+  #inputModal{
+    height: 30px; 
+    border-radius: 20px;
+    position: relative;
+    top: -10px;
+  }
+  .form-group{
+    position: relative;
+    top: -12px;
+  }
+  #label{
+    position: relative;
+    top: -15px;
+  }
+  #btn_modal{
+    border-radius: 15px;
+    box-shadow: 2px 2px gainsboro;
+  }
+  #logo{
+    width: 50%; 
+    height: auto; 
+    border-radius: 100%; 
+    background-color: transparent;
+    border: none;
+    box-shadow: 1px 1px #084298
+  }
+  #nom_AAA{
+    font-family: 'Dancing Script';
+    font-size: 32px;
+    color: white;
+  }
+  #profile{
+    width: 30%;
+    height: 6vh;
+    border-radius: 100%;
+  }
+  #profile_membre{
+    width: 130%;
+    height: 8vh;
+    border-radius: 100%;
+  
+  }
+  #nom_role{
+    position: relative;
+    top: -5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+  }
+  .nbr{
+    color: #FFA500;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 19px;
+  }
+  .number{
+    font-size: 30px;
+    color: orange;
+    font-weight: bold;
+  }
+  #nbr,#nbr1{
+    color: #FFA500;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  #nbr1{
+    font-size: 30px;
+    position: relative;
+    left: 6%;
+  }
+  #box-content2{
+    position: relative;
+    height: 23vh;
+    border: 2px solid gainsboro;
+    box-shadow: 1px 3px gainsboro;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-right: 12px solid #FFA500;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  ul {
+    list-style-type: none;
+  }
+  
+  #btn-open{
+    width: 100%;
+    height: 5vh;
+    border: none;
+    border-radius: 15px;
+    background-color: #2099C1;
+    background-image: linear-gradient(#78cce8, #0f7698);
+  }
+  #items{
+    text-decoration: none;
+    font-size: 120%;
+    font-weight: bold;
+    color: white;
+  }
+  #icons{
+   width: 55%;
+  }
+  
+  #sidenavAccordion, .sb-sidenav-menu{
+    background-color: #2099C1;
+  }
+  
+  #Membres, #caisses, #evenementts{
+    height: 100vh;
+  }
+  
+  /* modal add user */
+  #modal-addUser{
+    width: 60%;
+    height: 50vh;
+  } 
+  
+  #box-register{
+    box-shadow: 2px 4px gainsboro;
+    border: none;
+    background-color: #2099C1;
+  }
+  #btn-register{
+    color: white;
+    background-color: #0CCE6B;
+    border: none;
+  }
+  label{
+    text-align: start;
+  }
+  #user_logo{
+    width: 20%;
+    background-color: #2099C1;
+  }
+  /* modal notification */
+  #modal-notification{
+    position: fixed;
+    right:2px;
+    height: 60vh;
+    display: flex;
+    justify-content: end;
+  }
+  #box-notif{
+    color: black; 
+    overflow: scroll; 
+    overflow-x: hidden;
+    height: 13vh;
+  }
+  #title-page{
+    color: orange;
+  }
+  .menu-items{
+    position: relative; 
+    left: 8px; 
+    font-size: 15px;
+  }
+  @media (max-width: 575px) {
+     
+     #associ, #nom_role{
+      display: none;
+     }
+     #profile{
+      width: 70%;
+     }
+     #btn-open{
+      width: 40%;
+      height: 5vh;
+      border: none;
+      font-size: 14px;
+      border-radius: 8px;
+      background-color: #2099C1;
+      background-image: linear-gradient(#78cce8, #0f7698);
+    }
+  
+    #container-profile{
+      position: relative;
+      left: 30%;
+      display: flex;
+    }
+    #box-main{
+      text-align: center;
+      justify-content: center;
+      height: 30vh;
+    }
+    #box-main1{
+      text-align: center;
+      justify-content: center;
+      height: 50vh;
+    }
+    
+    #img-thumbnail1{
+      width: 40%;
+    }
+    #evenements{
+      font-size: 10px;
+      color: grey;
+  
+    }
+    .nav-link:hover, .nav-link:focus {
+      color: orange;
+      height: 8vh;
+      background-color: white;
+    }
+    #nbr1{
+      font-size: 20px;
+    }
+    #img-thumbnail3{
+      width: 50%;
+    }
+    table{
+      font-size: 40%;
+      font-weight: bold;
+      padding: 0;
+      margin: 0;
+    }
+  }
+  
+  .active{
+    color: orange;
+    background-color: white;
+  }
+  
+  #actions{
+    background-color: transparent;
+    width: 20%;
+    padding-top: 0px;
+    border: none;
+  }
+  #evenements{
+    font-size: 80%;
+    color: grey;
+  
+  }
+  #btn-refrech{
+    text-align: end;
+  }
+  #btn-addUser, #bn-notif{
+    background-color: transparent; 
+    border: none;
+  }
+  
+  #sidebarToggle{
+    color: transparent; 
+    border: none; 
+    background-color: transparent;
+  }
+  
+  /* design scoller */
+  
+  /* width */
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+  .modal-header{
+    background-color: #FFA500;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #2099C1; 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0CCE6B; 
+  }

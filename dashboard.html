@@ -9,6 +9,7 @@
         <title>Dashboard - AAA</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css.map">
+        <link rel="stylesheet" href="css/dashbord.css">
         <!--Datatable plugin CSS file -->
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 	   
          <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
@@ -36,13 +37,13 @@
                     <button id="btn-addUser" class="button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <img  id="icons" src="img/addUser.png" alt="">
                     </button>
-                    <!-- Modal -->
+                    <!-- Modal pour 'aajout d'un utilisateur -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                         <div id="modal-addUser" class="modal-content"> 
                             <div id="box-register" class="modal-body">
                                 <div class="container  pt-3">
-                                    <form id="form" class="pt-5">
+                                    <form id="form"  method="" class="pt-5">
                                         <div class="row justify-content-center">
                                             <div class="col-12 text-center justify-content-center">
                                                 <img id="user_logo"  src="img/🦆 icon _profile circle_.png" class="img-thumbnail" alt="">
@@ -52,19 +53,19 @@
                                             <div class="col-12 text-center justify-content-center">
                                                 <p class="pt-2">
                                                     <label  for="">Nom d'utilisateur</label>
-                                                    <input class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
+                                                    <input id="username" name="username" class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
                                                 </p>
                                                 <p>
                                                     <label  for="">Mot de Passe</label>
-                                                    <input class="form-control" type="password" placeholder="entrer mot de passe" required>
+                                                    <input id class="form-control" type="password" placeholder="entrer mot de passe" required>
                                                 </p>
                                                 <p>
                                                     <label for="">Staut</label>
-                                                    <select class="form-select" aria-label="Default select example">
-                                                        <option selected>choose your status</option>
-                                                        <option value="1">One</option>
-                                                        <option value="2">Two</option>
-                                                        <option value="3">Three</option>
+                                                    <select id="statut" name="statut" class="form-select" aria-label="Default select example">
+                                                        <option  selected>choose your status</option>
+                                                        <option value="Célibataire">Célibataire</option>
+                                                        <option value="Marié">Marié</option>
+                                                        <option value="Divorcé">Divorcé</option>
                                                       </select>
                                                 </p>
                                             </div>
@@ -81,7 +82,7 @@
                         </div>
                     </div>
 
-
+                <!-- fin du modal d'ajout d'utilisateur -->
                     <button id="bn-notif" class="button" data-bs-toggle="modal" data-bs-target="#myModal2" aria-expanded="false" aria-controls="collapseExample">
                         <img  id="icons" src="img/Doorbell.png" alt="">
                     </button>
@@ -193,245 +194,258 @@
            
             <div id="layoutSidenav_content" class="page-section pt-2">
                 <main id="Dashboard" class="bg-light pt-5">
-                    <div class="container-fluid px-4 pt-2">
-                        <h3 id="title-page" class="mt-4">Tableaux de bord</h3>
-                        <div class="row">
-                            <div class="col-xl-6 col-md-6">
-                                <div id="box-main" class="card  text-white shadow p-3 mb-3 bg-white">
-                                    <div class="row p-1 m-1">
-                                        <div  id="box-name" class="col-lg-4 text-center justify-content-center">
-                                            <div class="row">
-                                                <div class="col-12-lg">
-                                                    <h3 class="nbr">Membres</h3>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="container-fluid px-4 pt-2">
+                                <div class="row">
+                                    <div class="col-12 mx-4">
+                                        <h3 id="title-page" class="mt-4 mx-5">Tableaux de bord</h3>
+                                    </div>
+                                </div>
+                                <div class="row text-center justify-content-center">
+                                    <div class="col-xl-5 col-md-6">
+                                        <div id="box-main" class="card  text-white shadow p-3 mb-3 bg-white">
+                                            <div class="row p-1 m-1">
+                                                <div  id="box-name" class="col-lg-4 text-center justify-content-center">
+                                                    <div class="row">
+                                                        <div class="col-12-lg">
+                                                            <h3 class="nbr">Membres</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-12 pt-1">
+                                                            <img src="img/People.png" class="img-thumbnail" alt="" srcset="">
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-12 pt-1">
-                                                    <img src="img/People.png" class="img-thumbnail" alt="" srcset="">
+                                                <div  class="col-lg-5 text-center align-self-center">
+                                                    <h1  class="number">25</h1>    
+                                                </div>
+                                                <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
+                                                    <button id="btn-open" class="button pb-2">
+                                                        <a id='items' href="membres.html">Ouvrir</a>   
+                                                    </button> 
                                                 </div>
                                             </div>
                                         </div>
-                                        <div  class="col-lg-5 text-center align-self-center">
-                                            <h1 id="valu_nbr" class="nbr">25</h1>    
+                                    </div>
+                                    <div class="col-xl-5 col-md-6">
+                                        <div id="box-main" class="card  text-white shadow p-3 mb-3 bg-white">
+                                            <div class="row p-1 m-1">
+                                                <div  id="box-name" class="col-lg-4 text-center justify-content-center">
+                                                    <div class="row">
+                                                        <div class="col-12-lg">
+                                                            <h3 class="nbr">Caisses</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-12 pt-1">
+                                                            <img src="img/Cash.png" class="img-thumbnail" alt="" srcset="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div  class="col-lg-5 text-center align-self-center">
+                                                    <h1 class="number">5400000</h1>    
+                                                </div>
+                                                <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
+                                                    <button id="btn-open" class="button pb-2">
+                                                        <a id='items' href="caisses.html">Ouvrir</a>   
+                                                    </button> 
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
-                                            <button id="btn-open" class="button pb-2">
-                                                <a id='items' href="membres.html">Ouvrir</a>   
-                                            </button> 
+                                    </div>
+                                    
+                                </div>
+                                <div class="row pt-2 gx-4 text-center justify-content-center">
+                                    <div class="col-xl-5 col-md-6">
+                                        <div id="box-main" class="card  text-white shadow p-3 mb-3 bg-white">
+                                            <div class="row p-1 m-1">
+                                                <div  id="box-name" class="col-lg-4 text-center justify-content-center">
+                                                    <div class="row">
+                                                        <div class="col-12-lg">
+                                                            <h3 class="nbr">Amandes</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-12 pt-1">
+                                                            <img src="img/Bribery.png" class="img-thumbnail" alt="" srcset="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div  class="col-lg-5 text-center align-self-center">
+                                                    <h1 class="number">5252</h1>    
+                                                </div>
+                                                <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
+                                                    <button id="btn-open" class="button pb-2">
+                                                        <a id='items' href="caisses.html">Ouvrir</a>   
+                                                    </button> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-5 col-md-6">
+                                        <div id="box-main" class="card  text-white shadow p-3 mb-3 bg-white">
+                                            <div class="row p-1 m-1">
+                                                <div  id="box-name" class="col-lg-4 text-center justify-content-center">
+                                                    <div class="row">
+                                                        <div class="col-12-lg">
+                                                            <h3 class="nbr">Évènements</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-12 pt-1">
+                                                            <img src="img/Event Accepted Tentatively_90px.png" class="img-thumbnail" alt="" srcset="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div  class="col-lg-5 text-center align-self-center">
+                                                    <h1 id="valu_nbr" class="number">25</h1>    
+                                                </div>
+                                                <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
+                                                    <button id="btn-open" class="button pb-2">
+                                                        <a id='items' href="evenements.html">Ouvrir</a>   
+                                                    </button> 
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-xl-6 col-md-6">
-                                <div id="box-main" class="card  text-white shadow p-3 mb-3 bg-white">
-                                    <div class="row p-1 m-1">
-                                        <div  id="box-name" class="col-lg-4 text-center justify-content-center">
-                                            <div class="row">
-                                                <div class="col-12-lg">
-                                                    <h3 class="nbr">Caisses</h3>
+                                <div class="row pt-2 gx-4 text-center justify-content-center">
+                                    <div class="col-xl-10 col-md-6">
+                                        <div id="box-main1" class="card  text-white shadow p-3 mb-3 bg-white">
+                                            <div class="row p-0 m-0">
+                                                <div class="col-lg-3">
+                                                    <div class="row">
+                                                        <div class="col-lg">
+                                                            <h3 id="nbr" class="nbr">Évènement à venir</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-lg-12 pt-1">
+                                                            <img id="img-thumbnail2" src="img/Meeting Room.png" class="img-thumbnail" alt="" srcset="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-9 text-center align-self-center">
+                                                    <div class="row">
+                                                        <h3 id="nbr" class="nbr">Réunion annuelle de l'association</h3>
+                                                    </div>
+                                                    <div id="evenements" class="row">
+                                                        <div class="col-4">
+                                                            <img id="img-thumbnail1" src="img/Place Marker.png" class="img-thumbnail" alt="">
+                                                            <p>Lorem ipsum dolor sit amet</p>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <img id="img-thumbnail1" src="img/Time Machine.png" class="img-thumbnail" alt="">
+                                                            <p>Lorem ipsum dolor sit amet</p>
+                                                        </div>
+                                                        <div class="col-4">
+                                                            <img id="img-thumbnail1" src="img/Timeline Week.png" class="img-thumbnail" alt="">
+                                                            <p>Lorem ipsum dolor sit amet</p>
+                                                        </div>
+                                                    </div>   
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-lg-12 pt-1">
-                                                    <img src="img/Cash.png" class="img-thumbnail" alt="" srcset="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div  class="col-lg-5 text-center align-self-center">
-                                            <h1 id="valu_nbr" class="nbr">54000000</h1>    
-                                        </div>
-                                        <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
-                                            <button id="btn-open" class="button pb-2">
-                                                <a id='items' href="caisses.html">Ouvrir</a>   
-                                            </button> 
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            
-                        </div>
-                        <div class="row pt-2 gx-4">
-                            <div class="col-xl-6 col-md-6">
-                                <div id="box-main" class="card  text-white shadow p-3 mb-3 bg-white">
-                                    <div class="row p-1 m-1">
-                                        <div  id="box-name" class="col-lg-4 text-center justify-content-center">
-                                            <div class="row">
-                                                <div class="col-12-lg">
-                                                    <h3 class="nbr">Amandes</h3>
+                                <div class="row p-3 text-center justify-content-center">
+                                    <div class="col-10">
+                                        <div class="card mb-4">
+                                            <div class="row justify-content-between pt-2">
+                                                <div class="col-6">
+                                                    <h3 id="nbr1">Historiques</h3>
+                                                </div>
+                                                <div class="col-6 px-5 justify-content-end">
+                                                    <h3 id="btn-refrech">
+                                                        <button id="btn-addUser" class="button">
+                                                            <img  id="img-thumbnail3" src="img/🦆 icon _refresh 2_.png"  alt="">
+                                                        </button>
+                                                    </h3>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-lg-12 pt-1">
-                                                    <img src="img/Bribery.png" class="img-thumbnail" alt="" srcset="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div  class="col-lg-5 text-center align-self-center">
-                                            <h1 id="valu_nbr" class="nbr">5252</h1>    
-                                        </div>
-                                        <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
-                                            <button id="btn-open" class="button pb-2">
-                                                <a id='items' href="caisses.html">Ouvrir</a>   
-                                            </button> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-md-6">
-                                <div id="box-main" class="card  text-white shadow p-3 mb-3 bg-white">
-                                    <div class="row p-1 m-1">
-                                        <div  id="box-name" class="col-lg-4 text-center justify-content-center">
-                                            <div class="row">
-                                                <div class="col-12-lg">
-                                                    <h3 class="nbr">Évènements</h3>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-12 pt-1">
-                                                    <img src="img/Event Accepted Tentatively_90px.png" class="img-thumbnail" alt="" srcset="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div  class="col-lg-5 text-center align-self-center">
-                                            <h1 id="valu_nbr" class="nbr">25</h1>    
-                                        </div>
-                                        <div class="col-lg-3 position-absolute bottom-0 end-0 pb-2 ">
-                                            <button id="btn-open" class="button pb-2">
-                                                <a id='items' href="evenements.html">Ouvrir</a>   
-                                            </button> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row pt-2 gx-4">
-                            <div class="col-xl-12 col-md-6">
-                                <div id="box-main1" class="card  text-white shadow p-3 mb-3 bg-white">
-                                    <div class="row p-0 m-0">
-                                        <div class="col-lg-3">
-                                            <div class="row">
-                                                <div class="col-lg">
-                                                    <h3 id="nbr" class="nbr">Évènement à venir</h3>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-12 pt-1">
-                                                    <img id="img-thumbnail2" src="img/Meeting Room.png" class="img-thumbnail" alt="" srcset="">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-9 text-center align-self-center">
-                                            <div class="row">
-                                                <h3 id="nbr" class="nbr">Réunion annuelle de l'association</h3>
-                                            </div>
-                                            <div id="evenements" class="row">
-                                                <div class="col-4">
-                                                    <img id="img-thumbnail1" src="img/Place Marker.png" class="img-thumbnail" alt="">
-                                                    <p>Lorem ipsum dolor sit amet</p>
-                                                </div>
-                                                <div class="col-4">
-                                                    <img id="img-thumbnail1" src="img/Time Machine.png" class="img-thumbnail" alt="">
-                                                    <p>Lorem ipsum dolor sit amet</p>
-                                                </div>
-                                                <div class="col-4">
-                                                    <img id="img-thumbnail1" src="img/Timeline Week.png" class="img-thumbnail" alt="">
-                                                    <p>Lorem ipsum dolor sit amet</p>
-                                                </div>
-                                            </div>   
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="card mb-4">
-                            <div class="row justify-content-between pt-2">
-                                <div class="col-6">
-                                    <h3 id="nbr1">Historiques</h3>
-                                </div>
-                                <div class="col-6 px-5 justify-content-end">
-                                    <h3 id="btn-refrech">
-                                        <button id="btn-addUser" class="button">
-                                            <img  id="img-thumbnail3" src="img/🦆 icon _refresh 2_.png"  alt="">
-                                        </button>
-                                    </h3>
-                                </div>
-                            </div>
-                            
-                            <div class="card-body">
-                                <table id="" class="display">
-                                    <thead>
-                                        <tr>
-                                            <th>Heure</th>
-                                            <th>Date</th>
-                                            <th>Action</th>
-                                            <th>Auteur</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Heure</th>
-                                            <th>Date</th>
-                                            <th>Action</th>
-                                            <th>Auteur</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>2011/04/25</td>
                                             
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>2011/07/25</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>San Francisco</td>
-                                            <td>2009/01/12</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cedric Kelly</td>
-                                            <td>Senior Javascript Developer</td>
-                                            <td>Edinburgh</td>
-                                            <td>$433,060</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Airi Satou</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>2008/11/28</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Brielle Williamson</td>
-                                            <td>Integration Specialist</td>
-                                            <td>New York</td>
-                                            <td>$372,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Herrod Chandler</td>
-                                            <td>Sales Assistant</td>
-                                            <td>San Francisco</td>
-                                            <td>2012/08/06</td>
-                                        </tr>
-                        
-                                    </tbody>
-                                </table>
+                                            <div class="card-body">
+                                                <table id="" class="display">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Heure</th>
+                                                            <th>Date</th>
+                                                            <th>Action</th>
+                                                            <th>Auteur</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th>Heure</th>
+                                                            <th>Date</th>
+                                                            <th>Action</th>
+                                                            <th>Auteur</th>
+                                                        </tr>
+                                                    </tfoot>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Tiger Nixon</td>
+                                                            <td>System Architect</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>2011/04/25</td>
+                                                            
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Garrett Winters</td>
+                                                            <td>Accountant</td>
+                                                            <td>Tokyo</td>
+                                                            <td>2011/07/25</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Ashton Cox</td>
+                                                            <td>Junior Technical Author</td>
+                                                            <td>San Francisco</td>
+                                                            <td>2009/01/12</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Cedric Kelly</td>
+                                                            <td>Senior Javascript Developer</td>
+                                                            <td>Edinburgh</td>
+                                                            <td>$433,060</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Airi Satou</td>
+                                                            <td>Accountant</td>
+                                                            <td>Tokyo</td>
+                                                            <td>2008/11/28</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Brielle Williamson</td>
+                                                            <td>Integration Specialist</td>
+                                                            <td>New York</td>
+                                                            <td>$372,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Herrod Chandler</td>
+                                                            <td>Sales Assistant</td>
+                                                            <td>San Francisco</td>
+                                                            <td>2012/08/06</td>
+                                                        </tr>
+                                        
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
+                    
                 </main>
                 <!-- voici la fin du dashboard --> 
                 <!-- footer -->
                     <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
+                        <div class="d-flex align-items-center justify-content-center small">
                             <div class="text-muted">Copyright &copy; AAA 2023</div>
                             
                         </div>

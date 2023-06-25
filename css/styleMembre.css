@@ -43,4 +43,20 @@ table {
     font-size: 32px;
     color: white;
   
-  }
+}
+#nav{
+    height: 15vh;
+    box-shadow: 2px 4px 4px #127393;
+    background-color: #2099C1;
+    color: white;
+}
+
+.menu-items{
+    position: relative; 
+    left: 8px; 
+    font-size: 15px;
+}
+
+
+ 
+  
