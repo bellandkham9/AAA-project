@@ -6,140 +6,78 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Caisses - AAA</title>
+        <title>Dashboard - AAA</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css.map">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/styleMembre.css"> 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
-        
-        <link rel="stylesheet" href="css/css_toggle_caisse/canecode_switch.css">
-        
+        <link rel="stylesheet" href="css/styleMembre.css">
+        <link rel="stylesheet" href="css/dashbord.css">
+        <!--Datatable plugin CSS file -->
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 	   
+         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+        <!--jQuery library file -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <!--Datatable plugin JS library file -->
+        <script type="text/javascript"src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+        <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-      
-        <style>
-                 h2 {
-                font-size: 26px;
-                margin: 20px 0;
-                text-align: center;
-                }
-                h2 small {
-                font-size: 0.5em;
-                }
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-                .responsive-table li {
-                border-radius: 8px;
-                padding: 5px 10px;
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 5px;
-                }
-                .responsive-table .table-header {
-                font-size: 14px;
-                color: gray;
-                }
-                .responsive-table .table-row {
-                background-color: #ffffff;
-                box-shadow: 2px 5px 5px gray;
-                }
-                @media all and (max-width: 767px) {
-                .responsive-table .table-header {
-                    display: none;
-                }
-                .responsive-table li {
-                    display: block;
-                }
-                .responsive-table .col {
-                    flex-basis: 100%;
-                }
-                .responsive-table .col {
-                    display: flex;
-                    padding: 10px 0;
-                }
-                .responsive-table .col:before {
-                    color: #6C7A89;
-                    padding-right: 10px;
-                    content: attr(data-label);
-                    flex-basis: 50%;
-                    text-align: right;
-                }
-                }
-        </style>
-        <script>
-            $(document).ready(function(){
-            $("#datepicker").datepicker({
-                format: "yyyy",
-                viewMode: "years", 
-                minViewMode: "years",
-                autoclose:true
-            });   
-            })
-        // pour le mois
-        $(document).ready(function(){
-            $("#Monthpicker").datepicker({
-                format: "mm",
-                viewMode: "months", 
-                minViewMode: "months",
-                autoclose:true
-            });   
-            })
-       
-          </script>
     </head>
     <body class="sb-nav-fixed">
         <nav id="nav" class="sb-topnav navbar navbar-expand">
             <!-- Navbar Brand-->
-
-            <!-- Bouton derière le logo -->
-            <a id="nom_AAA" class="navbar-brand ps-3">
-                <button style="color: transparent; border: none; background-color: transparent;"  id="sidebarToggle" href="#!">
+            <a id="nom_AAA" class="navbar-brand">
+                <button  id="sidebarToggle" href="#!">
                     <img id="logo"  class="img-thumbnail" src="img/logo.jpg" alt="">
                 </button>
-                <span>Association Avenir Assuré</span>
+                <span id="associ">Association Avenir Assuré</span>
             </a>
-
-            
-            <!-- Sidebar Toggle-->
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group me-5">
                     <!-- Button trigger modal -->
-                    <button class="button"  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: transparent; border: none;">
-                        <img id="icons" src="img/addUser.png" alt="" style="width: 70%;">
+                    <button id="btn-addUser" class="button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img  id="icons" src="img/addUser.png" alt="">
                     </button>
-                    <!-- Modal -->
+                    <!-- Modal pour 'aajout d'un utilisateur -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" style="position: relative; right: 5%; width: 25%; height: 70vh;">
-                        <div class="modal-content"> 
+                        <div class="modal-dialog">
+                        <div id="modal-addUser" class="modal-content"> 
                             <div id="box-register" class="modal-body">
-                                <div class="container  pt-3" style="position: relative; left: 5%;">
-                                    <form id="form" class="pt-5">
-                                        <img id="user_logo" style="position: relative; left: 20%; background-color: #2099C1;" src="img/🦆 icon _profile circle_.png" class="img-thumbnail" alt="">
+                                <div class="container  pt-3">
+                                    <form id="form"  method="" class="pt-5">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12 text-center justify-content-center">
+                                                <img id="user_logo"  src="img/🦆 icon _profile circle_.png" class="img-thumbnail" alt="">
+                                            </div>
+                                        </div>
                                         <div class="row">
-                                            <div class="col-xl-6">
+                                            <div class="col-12 text-center justify-content-center">
                                                 <p class="pt-2">
                                                     <label  for="">Nom d'utilisateur</label>
-                                                    <input id="input" class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
+                                                    <input id="username" name="username" class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
                                                 </p>
                                                 <p>
                                                     <label  for="">Mot de Passe</label>
-                                                    <input id="input" class="form-control" type="password" placeholder="entrer mot de passe" required>
+                                                    <input id="password" name="password" class="form-control" type="password" placeholder="entrer mot de passe" required>
                                                 </p>
                                                 <p>
                                                     <label for="">Staut</label>
-                                                    <select id="input" class="form-select" aria-label="Default select example">
-                                                        <option selected>choose your status</option>
-                                                        <option value="1">One</option>
-                                                        <option value="2">Two</option>
-                                                        <option value="3">Three</option>
+                                                    <select id="statut" name="statut" class="form-select" aria-label="Default select example">
+                                                        <option  selected>choose your status</option>
+                                                        <option value="Célibataire">Célibataire</option>
+                                                        <option value="Marié">Marié</option>
+                                                        <option value="Divorcé">Divorcé</option>
                                                       </select>
                                                 </p>
                                             </div>
                                         </div>
-                                        <button id="btn-register" style="position: relative; left: 20%;"  class="btn btn-primary btn-block" type="sumbit">Creer</button>
+                                        <div class="row justify-content-center">
+                                            <div class="col-12 text-center justify-content-center">
+                                                <button id="btn-register"  class="btn btn-primary btn-block" type="sumbit">Creer</button>
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -147,19 +85,19 @@
                         </div>
                     </div>
 
-
-                    <button class="button" data-bs-toggle="modal" data-bs-target="#myModal2" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
-                        <img  style="position: relative; left: 15%; width: 70%;" id="icons" src="img/Doorbell.png" alt="">
+                <!-- fin du modal d'ajout d'utilisateur -->
+                    <button id="bn-notif" class="button" data-bs-toggle="modal" data-bs-target="#myModal2" aria-expanded="false" aria-controls="collapseExample">
+                        <img  id="icons" src="img/Doorbell.png" alt="">
                     </button>
                     <div class="container demo">
                         <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
-                            <div class="modal-dialog" style="height: 80vh;">
+                            <div id="modal-notification" class="modal-dialog">
                                 <div class="modal-content">
-                                    <div class="modal-header" style="background-color: #FFA500;">
+                                    <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Notifications</h5>
                                     </div>
-                                    <div class="modal-body" style="color: black; overflow: scroll; overflow-x: hidden; height: 13vh;">
-                                    <ul style="font-style: normal;">
+                                    <div id="box-notif" class="modal-body">
+                                    <ul>
                                         <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
                                         <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
                                         <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
@@ -188,6 +126,8 @@
                 </div>
             </form>
             <!-- Navbar-->
+
+            <!-- Option derière profiLes -->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown d-flex">
                     <a  id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -201,7 +141,7 @@
                             <li><a class="dropdown-item" href="#!">Modifier photo de profil</a></li>
                             <li><hr class="dropdown-divider" /></li>
                             <li><a class="dropdown-item" href="#!">Langue:
-                                <select name="" id="" style="border: none;">
+                                <select name="" id="">
                                     <option value="" selected>français</option>
                                     <option value="" >anglais</option>
                                 </select>
@@ -234,12 +174,12 @@
                                 <i class="fa fa-users" aria-hidden="true"></i>
                                 <span class="menu-items">Gestion des Membres</span>
                             </a>
-                            <a class="nav-link" href="bilan.html">
+                            <a class="nav-link" href="caisses.html">
                                 <div class="sb-nav-link-icon"></i></div>
                                 <i class="fa fa-credit-card" aria-hidden="true"></i>
                                 <span class="menu-items">Gestion de caisses</span>
                             </a>
-                            <a class="nav-link" href="caisses.html">
+                            <a class="nav-link" href="bilan.html">
                                 <div class="sb-nav-link-icon"></i></div>
                                 <i class="fa fa-dollar" aria-hidden="true"></i>
                                 <span class="menu-items">Bilan financier</span>
@@ -255,102 +195,147 @@
                 </nav>
             </div>
            
-            <div id="layoutSidenav_content" class="page-section pt-2 bg-light">
+            <div id="layoutSidenav_content" class="page-section pt-2">
                 <main id="Dashboard" class="bg-light pt-4">
                     <div class="container-fluid px-4 pt-2">
                         <div class="row pt-3">
-                           <div class="col-md-6">
+                            <div class="col-md-6">
                                 <h3 style="color: #FFA500;" class="mt-4">Gestion des Membres</h3>
-                           </div>
-                           <div class="col-md-4 ">
-                               <input type="text" name="" id="" placeholder="search..." class="mt-4 form-control">
-                           </div>
-                           <div class="mt-4 col-md-2" style="color: #FFA500; font-size: 13px;line-height: 1.5;">
-                            <P>Total caisses: <span>60000</span> <br>
-                               Total Membres: <span>23000</span>
-                            </P>
-                           </div>
+                            </div>
+                            <div class="col-md-4 ">
+                                <input type="text" name="search" id="search" placeholder="search..." class="mt-4 form-control">
+                            </div>
+                            <div class="mt-4 col-md-2" style="color: #FFA500; font-size: 13px;line-height: 1.5;">
+                                <P>Total caisses: <span>60000</span> <br>
+                                    Total Membres: <span>23000</span>
+                                </P>
+                            </div>
                         </div>
                         <div class="row pt-3">
-                                <div class="col-md-2 ">
-                                    <h4 style="color: #FFA500;">Membres</h4>
-                                </div>
-                                
-                                <div class="col-md-7 p-1 p-1">
-                                    <button style="width: 30%; height: 5vh; background-color: #2099C1;color: white; font-weight: bold; border: none; border-radius: 20px;" class="button" data-bs-toggle="modal" data-bs-target="#addEmployeeModal" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
-                                        Ajouter
-                                    </button>                               
-                                </div>
-                                <div class="col-md-3">
-                                    <button class="button d-flex" style="background-color: transparent; border: none;">
-                                        <img src="img/Filter.png" alt="" srcset="">
-                                        <span>filter</span>
-                                    </button>
-                                </div>
-                         </div>
+                            <div class="col-md-2 ">
+                                <h4 style="color: #FFA500;">Membres</h4>
+                            </div>
+                            <div class="col-md-7 p-1 p-1">
+                                <button style="width: 30%; height: 5vh; background-color: #2099C1;color: white; font-weight: bold; border: none; border-radius: 20px;" class="button" data-bs-toggle="modal" data-bs-target="#addEmployeeModal" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
+                                    <span>Ajouter</span> 
+                                </button>                               
+                            </div>
+                            <div class="col-md-3">
+                                <button class="button d-flex" style="background-color: transparent; border: none;">
+                                    <img src="img/Filter.png" alt="" srcset="">
+                                    <span>filter</span>
+                                </button>
+                            </div>
+                        </div>
 
-                         <!-- les popup -->
-                          <!-- add Modal HTML -->
-                          <div id="addEmployeeModal" class="modal fade">
-                            <div class="modal-dialog" style="height: 82vh;position: relative;">
+                        <!-- add user modal -->
+
+                        <div id="addEmployeeModal" class="modal fade">
+                            <div class="modal-dialog" style="position: relative;">
                                 <div class="modal-content">
                                     <form>
                                         <div class="modal-header text-center justify-content-center" style="background-color: #FFA500; color: white; font-size: 18px;">
                                             <P class="modal-title"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i>  Ajouter un membre</P>						
                                         </div>
                                         <div class="modal-body">
-                                            <div class="row pb-4">
-                                                <div class="col-md-3 d-flex"> 
-                                                    <img id="profile_membre" src="img/belland.jpg" alt="">
-                                                </div>
-                                                <div class="col-md-1">
-                                                    <div class="d-flex justify-content-center" style="left: -35px; top: 40px; position: relative;">
-                                                        <div class="button" style="box-shadow: 2px 2px rgb(233, 233, 233); border-radius: 100%; margin: 0px; padding: 0px; position: absolute; background-color: whitesmoke; width: 20px; height: 20px; border: none;">
-                                                            <label class="form-label text-white" for="customFile2"><i class="fas fa-camera" style="color: #d6d6d6;"></i></label>
-                                                            <input type="file" class="form-control d-none" id="customFile2" />
+                                            <div class="row pb-1">
+                                                <div class="col-12 text-center justify-content-center">
+                                                    <div>                                                           
+                                                        <div class="avatar-upload">
+                                                            <div class="avatar-edit">
+                                                                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                                                <label for="imageUpload">
+                                                                </label>
+                                                            </div>
+                                                            <div class="avatar-preview">
+                                                                <div id="imagePreview" style="background-image: url(img/emitek.png);">
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>   
+                                                    </div>
+                                                    <script>
+                                                        function readURL(input) {
+                                                            if (input.files && input.files[0]) {
+                                                                var reader = new FileReader();
+                                                                reader.onload = function(e) {
+                                                                    $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+                                                                    $('#imagePreview').hide();
+                                                                    $('#imagePreview').fadeIn(650);
+                                                                }
+                                                                reader.readAsDataURL(input.files[0]);
+                                                            }
+                                                        }
+                                                        $("#imageUpload").change(function() {
+                                                            readURL(this);
+                                                        });
+                                                    </script>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group pt-2">
+                                                        <input id="nom" name="nom"  type="text" class="form-control" placeholder="Nom" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group pt-2">
+                                                        <input id="prenom" name="prenom" type="text" class="form-control" placeholder="Prénom" required>
+                                                    </div>
                                                 </div>
                                             </div>					
-                                            <div class="form-group pt-2">
-                                                <input id="inputModal"  type="text" class="form-control" placeholder="Nom" required>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group pt-2">
+                                                        <input id="dateNais" name="dateNais" type="date" class="form-control" placeholder="Date de naissance" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group pt-2">
+                                                        <input id="sexe" name="sexe" type="text" class="form-control" placeholder="sexe" required>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="form-group pt-2">
-                                                <input id="inputModal" type="text" class="form-control" placeholder="Prénom" required>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group pt-2">
+                                                        <input id="profession" name="profession" type="text" class="form-control" placeholder="Profession" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group pt-2">
+                                                        <input id="dateAdh" name="dateAdh" type="date" class="form-control" placeholder="Date adhésion" required>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="form-group pt-2">
-                                                <input id="inputModal" type="date" class="form-control" placeholder="Date de naissance" required>
-                                            </div>
-                                            <div class="form-group pt-2">
-                                                <input id="inputModal" type="text" class="form-control" placeholder="sexe" required>
-                                            </div>
-                                            <div class="form-group pt-2">
-                                                <select name="" id="inputModal" class="form-select" placeholder="Situation mat" required>
-                                                    <option selected value=""></option>
-                                                        <option value="">Célibataire</option>
-                                                        <option value="">marié</option>
-                                                        <option value="">Divorcé</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group pt-2">
-                                                <input id="inputModal" type="text" class="form-control" placeholder="Profession" required>
-                                            </div>
-                                            <div class="form-group pt-2">
-                                                <input id="inputModal" type="text" class="form-control" placeholder="Ville" required>
-                                            </div>
-                                            <div class="form-group pt-2">
-                                                <input id="inputModal" type="text" class="form-control" placeholder="Numéro" required>
-                                            </div>
-                                            <div class="form-group pt-2">
-                                                <input id="inputModal" type="date" class="form-control" placeholder="Date adhésion" required>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group pt-2">
+                                                        <input id="ville" naaame="ville" type="text" class="form-control" placeholder="Ville" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group pt-2">
+                                                        <input id="numero" name="numero" type="text" class="form-control" placeholder="Numéro" required>
+                                                    </div>
+                                                </div>
+                                            </div>   
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group pt-2">
+                                                        <select name="status" id="status" class="form-select" placeholder="Situation mat" required>
+                                                            <option selected value=""></option>
+                                                                <option value="">Célibataire</option>
+                                                                <option value="">marié</option>
+                                                                <option value="">Divorcé</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>					
                                         </div>
-                                        <div class="container" style="position: relative; top: -20px;">
-                                            <div class="row justify-content-center">
-                                                <div class="col-xl-4">
+                                        <div class="container">
+                                            <div class="row justify-content-between pb-4">
+                                                <div class="col-12 text-center justify-content-center">
                                                     <input style="background-color: #2099C1;"   id="btn_modal" type="submit" class="btn btn-success" value="Ajouter">
-                                                </div>
-                                                <div class="col-xl-4">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                                                 </div>
                                             </div>
@@ -360,67 +345,113 @@
                                 </div>
                             </div>
                         </div>
-                         <!-- edit Modal HTML -->
-                         <div id="editEmployeeModal" class="modal fade">
-                            <div class="modal-dialog" style="height: 82vh;position: relative;">
+                        <!-- edit Modal HTML -->
+                        <div id="editEmployeeModal" class="modal fade">
+                            <div class="modal-dialog" style="position: relative;">
                                 <div class="modal-content">
                                     <form>
                                         <div class="modal-header text-center justify-content-center" style="background-color: #FFA500; color: white; font-size: 18px;">
-                                            <P class="modal-title"><i class="fa-solid fa-pencil" style="color: #ffffff;"></i>  Modifier un membre</P>						
+                                            <P class="modal-title"><i class="fa-solid fa-user-plus" style="color: #ffffff;"></i>  Modifier un membre</P>						
                                         </div>
                                         <div class="modal-body">
-                                            <div class="row pb-4">
-                                                <div class="col-md-3 d-flex"> 
-                                                    <img id="profile_membre" src="img/belland.jpg" alt="">
-                                                </div>
-                                                <div class="col-md-1">
-                                                    <div class="d-flex justify-content-center" style="left: -35px; top: 40px; position: relative;">
-                                                        <div class="button" style="box-shadow: 2px 2px rgb(233, 233, 233); border-radius: 100%; margin: 0px; padding: 0px; position: absolute; background-color: whitesmoke; width: 20px; height: 20px; border: none;">
-                                                            <label class="form-label text-white" for="customFile2"><i class="fas fa-camera" style="color: #d6d6d6;"></i></label>
-                                                            <input type="file" class="form-control d-none" id="customFile2" />
+                                            <div class="row pb-1">
+                                                <div class="col-12 text-center justify-content-center">
+                                                    <div>                                                           
+                                                        <div class="avatar-upload">
+                                                            <div class="avatar-edit">
+                                                                <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                                                <label for="imageUpload">
+                                                                </label>
+                                                            </div>
+                                                            <div class="avatar-preview">
+                                                                <div id="imagePreview" style="background-image: url(img/emitek.png);">
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>   
+                                                    </div>
+                                                    <script>
+                                                        function readURL(input) {
+                                                            if (input.files && input.files[0]) {
+                                                                var reader = new FileReader();
+                                                                reader.onload = function(e) {
+                                                                    $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+                                                                    $('#imagePreview').hide();
+                                                                    $('#imagePreview').fadeIn(650);
+                                                                }
+                                                                reader.readAsDataURL(input.files[0]);
+                                                            }
+                                                        }
+                                                        $("#imageUpload").change(function() {
+                                                            readURL(this);
+                                                        });
+                                                    </script>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group pt-2">
+                                                        <input id="nom_edit" name="nom_edit"  type="text" class="form-control" placeholder="Nom" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group pt-2">
+                                                        <input id="prenom_edit" name="prenom_edit" type="text" class="form-control" placeholder="Prénom" required>
+                                                    </div>
                                                 </div>
                                             </div>					
-                                            <div class="form-group pt-2">
-                                                <input id="inputModal"  type="text" class="form-control" placeholder="Nom" required>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group pt-2">
+                                                        <input id="dateNais_edit" name="dateNais_edit" type="date" class="form-control" placeholder="Date de naissance" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group pt-2">
+                                                        <input id="sexe_edit" name="sexe_edit" type="text" class="form-control" placeholder="sexe" required>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="form-group pt-2">
-                                                <input id="inputModal" type="text" class="form-control" placeholder="Prénom" required>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group pt-2">
+                                                        <input id="profession_edit" name="profession_edit" type="text" class="form-control" placeholder="Profession" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group pt-2">
+                                                        <input id="dateAdh_edit" name="dateAdh_edit" type="date" class="form-control" placeholder="Date adhésion" required>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="form-group pt-2">
-                                                <input id="inputModal" type="date" class="form-control" placeholder="Date de naissance" required>
-                                            </div>
-                                            <div class="form-group pt-2">
-                                                <input id="inputModal" type="text" class="form-control" placeholder="sexe" required>
-                                            </div>
-                                            <div class="form-group pt-2">
-                                                <select name="" id="inputModal" class="form-select" placeholder="Situation mat" required>
-                                                    <option selected value=""></option>
-                                                        <option value="">Célibataire</option>
-                                                        <option value="">marié</option>
-                                                        <option value="">Divorcé</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group pt-2">
-                                                <input id="inputModal" type="text" class="form-control" placeholder="Profession" required>
-                                            </div>
-                                            <div class="form-group pt-2">
-                                                <input id="inputModal" type="text" class="form-control" placeholder="Ville" required>
-                                            </div>
-                                            <div class="form-group pt-2">
-                                                <input id="inputModal" type="text" class="form-control" placeholder="Numéro" required>
-                                            </div>
-                                            <div class="form-group pt-2">
-                                                <input id="inputModal" type="date" class="form-control" placeholder="Date adhésion" required>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group pt-2">
+                                                        <input id="ville_edit" naaame="ville_edit" type="text" class="form-control" placeholder="Ville" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="form-group pt-2">
+                                                        <input id="numero_edit" name="numero_edit" type="text" class="form-control" placeholder="Numéro" required>
+                                                    </div>
+                                                </div>
+                                            </div>   
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="form-group pt-2">
+                                                        <select name="status_edit" id="status_edit" class="form-select" placeholder="Situation mat" required>
+                                                            <option selected value=""></option>
+                                                                <option value="">Célibataire</option>
+                                                                <option value="">marié</option>
+                                                                <option value="">Divorcé</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
                                             </div>					
                                         </div>
-                                        <div class="container" style="position: relative; top: -20px;">
-                                            <div class="row justify-content-center">
-                                                <div class="col-xl-4">
+                                        <div class="container">
+                                            <div class="row justify-content-between pb-4">
+                                                <div class="col-12 text-center justify-content-center">
                                                     <input style="background-color: #2099C1;"   id="btn_modal" type="submit" class="btn btn-success" value="Ajouter">
-                                                </div>
-                                                <div class="col-xl-4">
                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                                                 </div>
                                             </div>
@@ -430,29 +461,8 @@
                                 </div>
                             </div>
                         </div>
-                            <!-- Delete Modal HTML -->
-                            <div id="deleteEmployeeModal" class="modal fade">
-                                <div class="modal-dialog" style="position: relative; left: -15px; height: 40vh;">
-                                    <div class="modal-content">
-                                        <form>
-                                            <div class="modal-header">						
-                                                <h4 class="modal-title">Supprimer ce membre</h4>
-                                            </div>
-                                            <div class="modal-body">					
-                                                <p>Etes vous sur de vouloir supprimer ce membre?</p>
-                                                <p class="text-warning"><small>Cette action est irreversible!</small></p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <input type="button" class="btn btn-default" data-dismiss="modal" value="Annuler">
-                                                <input type="submit" class="btn btn-danger" value="Delete">
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
-                             <!-- view of all member's infos -->
-                         <div id="memberInfos" class="modal fade">
+                        <!-- view of all member's infos -->
+                        <div id="memberInfos" class="modal fade">
                             <div class="modal-dialog" style="height: 80vh;">
                                 <div class="modal-content">
                                         <div class="modal-header text-center justify-content-center" style="background-color: #FFA500; color: white; font-size: 18px;">
@@ -464,26 +474,58 @@
                                 </div>
                             </div>
                         </div>
-                         <!-- end popup -->
-                         <div class="row pt-2">
+                        <!-- end popup -->
+
+                        <div class="row pt-2">
                             <div class="col-md-12">
                                 <div class="container-fluid">
                                     <ul class="responsive-table" style=" font-size: 12px; overflow: scroll; overflow-x: hidden; height: 70vh;">
                                         <li style="font-size: 11px;" class="table-header text-center align-items-center">
                                             <div class="col col-1">Profil</div>
-                                          <div class="col col-1">Nom</div>
-                                          <div class="col col-1">Prénom</div>
-                                          <div class="col col-1">Date Naissance</div>
-                                          <div class="col col-1">Sexe</div>
-                                          <div class="col col-1">Situation Mat</div>
-                                          <div class="col col-1">Profession</div>
-                                          <div class="col col-1">Ville</div>
-                                          <div class="col col-1">Tel</div>
-                                          <div class="col col-1">État</div>
-                                          <div class="col col-1">Date adhésion</div>
-                                          <div class="col col-1">Actions</div>
-                                          </li>
-                                          <li style="font-size:11px;" class="btn   table-row text-center align-items-center" data-bs-toggle="modal" data-bs-target="#memberInfos">
+                                            <div class="col col-1">Nom</div>
+                                            <div class="col col-1">Prénom</div>
+                                            <div class="col col-1">Date Naissance</div>
+                                            <div class="col col-1">Sexe</div>
+                                            <div class="col col-1">Situation Mat</div>
+                                            <div class="col col-1">Profession</div>
+                                            <div class="col col-1">Ville</div>
+                                            <div class="col col-1">Tel</div>
+                                            <div class="col col-1">État</div>
+                                            <div class="col col-1">Date adhésion</div>
+                                            <div class="col col-1">Actions</div>
+                                        </li>
+                                        <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                            <div class="col col-1" data-label="Profil">
+                                                <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                            </div>
+                                            <div class="col col-1" data-label="Nom">emi</div>
+                                            <div class="col col-1" data-label="Prénom">tek</div>
+                                            <div class="col col-1" data-label="Date Naissance">12/07/2003</div>
+                                            <div class="col col-1" data-label="Sexe">M</div>
+                                            <div class="col col-1" data-label="Situation Mat">celibataire</div>
+                                            <div class="col col-1" data-label="Profession">Enseignant</div>
+                                            <div class="col col-1" data-label="Ville">Yaoundé</div>
+                                            <div class="col col-1" data-label="Tel">7655577654</div>
+                                            <div class="col col-1" data-label="Etat">malade</div>
+                                            <div class="col col-1" data-label="Date adhésion">12/07/2003</div>
+                                            <div class="col col-1" data-label="Actions">
+                                            
+                                            <!-- Bouton d'actions -->
+                                            <div class="container d-flex">
+                                                <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editEmployeeModal" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
+                                                    <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                </button>
+                                                <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
+                                                    <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#!">etat</a></li>
+                                                        <li><a class="dropdown-item" href="#!">Malade</a></li>
+                                                        <li><a class="dropdown-item bg-danger" href="#!">Supprimer</a></li>
+                                                    </ul>
+                                                </a>
+                                            </div>
+                                            </div>    
+                                        </li>
+                                        <li style="font-size:11px;" class="table-row text-center align-items-center">
                                             <div class="col col-1" data-label="Profil">
                                                 <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
                                             </div>
@@ -499,27 +541,26 @@
                                             <div class="col col-1" data-label="Etat">malade</div>
                                             <div class="col col-1" data-label="Date adhésion">12/07/2003</div>
                                             <div class="col col-1" data-label="Actions">
-                                             
-                                              <!-- Bouton d'actions -->
-                                              <div class="container d-flex">
+                                            
+                                            <!-- Bouton d'actions -->
+                                            <div class="container d-flex">
                                                 <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editEmployeeModal" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
                                                     <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
                                                 </button>
-                                                  <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
-                                                      <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                                          <li><a class="dropdown-item" href="#!">etat</a></li>
-                                                          <li><a class="dropdown-item" href="#!">Malade</a></li>
-                                                          <li><hr class="dropdown-divider" /></li>
-                                                          <li><a class="dropdown-item" href="#!">Supprimer</a></li>
-                                                      </ul>
-                                                  </a>
-                                              
-                                              </div>
+                                                <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
+                                                    <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#!">etat</a></li>
+                                                        <li><a class="dropdown-item" href="#!">Malade</a></li>
+                                                        <li><a class="dropdown-item bg-danger" href="#!">Supprimer</a></li>
+                                                    </ul>
+                                                </a>
+                                            
+                                            </div>
                                             </div>
     
                                             
-                                          </li>
-                                          <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                        </li>
+                                        <li style="font-size:11px;" class="table-row text-center align-items-center">
                                             <div class="col col-1" data-label="Profil">
                                                 <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
                                             </div>
@@ -535,27 +576,26 @@
                                             <div class="col col-1" data-label="Etat">malade</div>
                                             <div class="col col-1" data-label="Date adhésion">12/07/2003</div>
                                             <div class="col col-1" data-label="Actions">
-                                             
-                                              <!-- Bouton d'actions -->
-                                              <div class="container d-flex">
+                                            
+                                            <!-- Bouton d'actions -->
+                                            <div class="container d-flex">
                                                 <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editEmployeeModal" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
                                                     <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
                                                 </button>
-                                                  <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
-                                                      <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                                          <li><a class="dropdown-item" href="#!">etat</a></li>
-                                                          <li><a class="dropdown-item" href="#!">Malade</a></li>
-                                                          <li><hr class="dropdown-divider" /></li>
-                                                          <li><a class="dropdown-item" href="#!">Supprimer</a></li>
-                                                      </ul>
-                                                  </a>
-                                              
-                                              </div>
+                                                <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
+                                                    <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#!">etat</a></li>
+                                                        <li><a class="dropdown-item" href="#!">Malade</a></li>
+                                                        <li><a class="dropdown-item bg-danger" href="#!">Supprimer</a></li>
+                                                    </ul>
+                                                </a>
+                                            
+                                            </div>
                                             </div>
     
                                             
-                                          </li>
-                                          <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                        </li>
+                                        <li style="font-size:11px;" class="table-row text-center align-items-center">
                                             <div class="col col-1" data-label="Profil">
                                                 <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
                                             </div>
@@ -571,27 +611,26 @@
                                             <div class="col col-1" data-label="Etat">malade</div>
                                             <div class="col col-1" data-label="Date adhésion">12/07/2003</div>
                                             <div class="col col-1" data-label="Actions">
-                                             
-                                              <!-- Bouton d'actions -->
-                                              <div class="container d-flex">
+                                            
+                                            <!-- Bouton d'actions -->
+                                            <div class="container d-flex">
                                                 <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editEmployeeModal" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
                                                     <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
                                                 </button>
-                                                  <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
-                                                      <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                                          <li><a class="dropdown-item" href="#!">etat</a></li>
-                                                          <li><a class="dropdown-item" href="#!">Malade</a></li>
-                                                          <li><hr class="dropdown-divider" /></li>
-                                                          <li><a class="dropdown-item" href="#!">Supprimer</a></li>
-                                                      </ul>
-                                                  </a>
-                                              
-                                              </div>
+                                                <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
+                                                    <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#!">etat</a></li>
+                                                        <li><a class="dropdown-item" href="#!">Malade</a></li>
+                                                        <li><a class="dropdown-item bg-danger" href="#!">Supprimer</a></li>
+                                                    </ul>
+                                                </a>
+                                            
+                                            </div>
                                             </div>
     
                                             
-                                          </li>
-                                          <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                        </li>
+                                        <li style="font-size:11px;" class="table-row text-center align-items-center">
                                             <div class="col col-1" data-label="Profil">
                                                 <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
                                             </div>
@@ -607,76 +646,64 @@
                                             <div class="col col-1" data-label="Etat">malade</div>
                                             <div class="col col-1" data-label="Date adhésion">12/07/2003</div>
                                             <div class="col col-1" data-label="Actions">
-                                             
-                                              <!-- Bouton d'actions -->
-                                              <div class="container d-flex">
+                                            
+                                            <!-- Bouton d'actions -->
+                                            <div class="container d-flex">
                                                 <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editEmployeeModal" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
                                                     <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
                                                 </button>
-                                                  <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
-                                                      <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                                          <li><a class="dropdown-item" href="#!">etat</a></li>
-                                                          <li><a class="dropdown-item" href="#!">Malade</a></li>
-                                                          <li><hr class="dropdown-divider" /></li>
-                                                          <li><a class="dropdown-item" href="#!">Supprimer</a></li>
-                                                      </ul>
-                                                  </a>
-                                              
-                                              </div>
-                                            </div>
-    
+                                                <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
+                                                    <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                                        <li><a class="dropdown-item" href="#!">etat</a></li>
+                                                        <li><a class="dropdown-item" href="#!">Malade</a></li>
+                                                        <li><a class="dropdown-item bg-danger" href="#!">Supprimer</a></li>
+                                                    </ul>
+                                                </a>
                                             
-                                          </li>
-                                                   <li style="font-size:11px;" class="table-row text-center align-items-center">
-                                            <div class="col col-1" data-label="Profil">
-                                                <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                            </div>
-    
-                                            <div class="col col-1" data-label="Nom">emi</div>
-                                            <div class="col col-1" data-label="Prénom">tek</div>
-                                            <div class="col col-1" data-label="Date Naissance">12/07/2003</div>
-                                            <div class="col col-1" data-label="Sexe">M</div>
-                                            <div class="col col-1" data-label="Situation Mat">celibataire</div>
-                                            <div class="col col-1" data-label="Profession">Enseignant</div>
-                                            <div class="col col-1" data-label="Ville">Yaoundé</div>
-                                            <div class="col col-1" data-label="Tel">7655577654</div>
-                                            <div class="col col-1" data-label="Etat">malade</div>
-                                            <div class="col col-1" data-label="Date adhésion">12/07/2003</div>
-                                            <div class="col col-1" data-label="Actions">
-                                             
-                                              <!-- Bouton d'actions -->
-                                              <div class="container d-flex">
-                                                <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editEmployeeModal" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
-                                                    <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
-                                                </button>
-                                                  <a id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="material-icons" style="font-size:22px; font-weight: bold; color: rgb(25, 172, 25);">more_vert</i>
-                                                      <ul style="font-size: 12px; font-family: Arial, Helvetica, sans-serif;" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                                          <li><a class="dropdown-item" href="#!">etat</a></li>
-                                                          <li><a class="dropdown-item" href="#!">Malade</a></li>
-                                                          <li><hr class="dropdown-divider" /></li>
-                                                          <li><a class="dropdown-item" href="#!">Supprimer</a></li>
-                                                      </ul>
-                                                  </a>
-                                              
-                                              </div>
-                                            </div>
-    
-                                            
-                                          </li>
-                                      </ul>
+                                                </div>
+                                            </div>  
+                                        </li>
+                                    </ul>
                                 </div>
 
                             </div>
-                         </div>
-                       
-                </main>
-                </div>
+                        </div> 
+                    </main>
+                <!-- voici la fin du dashboard --> 
+                <!-- footer -->
+                    <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-center small">
+                            <div class="text-muted">Copyright &copy; AAA 2023</div>
+                            
+                        </div>
+                    </div>
+                </footer>
             </section>
+
         </div>
     </section>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-        <script src="js/js_toggle_caisse/canecode_switch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        $(document).ready(function(){
+        $("#datepicker").datepicker({
+            format: "yyyy",
+            viewMode: "years", 
+            minViewMode: "years",
+            autoclose:true
+        });   
+        })
+    // pour le mois
+    $(document).ready(function(){
+        $("#Monthpicker").datepicker({
+            format: "mm",
+            viewMode: "months", 
+            minViewMode: "months",
+            autoclose:true
+        });   
+        })
 
+    </script>
     </body>
 </html>

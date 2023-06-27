@@ -9,225 +9,504 @@
         <title>Caisses - AAA</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css.map">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/styleCaisse.css">
-        <link href="https://netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/styleMembre.css">
+        <link rel="stylesheet" href="css/bilan.css"> 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="https://netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
-         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="css/css_toggle_caisse/canecode_switch.css">
+        
+        <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+      
         <style>
-            /* for the table of caisse  */
-            
-                h2 {
-                font-size: 26px;
-                margin: 20px 0;
-                text-align: center;
-                }
-                h2 small {
-                font-size: 0.5em;
-                }
-
-                .responsive-table li {
-                border-radius: 8px;
-                padding: 5px 10px;
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 5px;
-                }
-                .responsive-table .table-header {
-                font-size: 14px;
-                color: gray;
-                }
-                .responsive-table .table-row {
-                background-color: #ffffff;
-                box-shadow: 2px 5px 5px gray;
-                }
-                @media all and (max-width: 767px) {
-                .responsive-table .table-header {
-                    display: none;
-                }
-                .responsive-table li {
-                    display: block;
-                }
-                .responsive-table .col {
-                    flex-basis: 100%;
-                }
-                .responsive-table .col {
-                    display: flex;
-                    padding: 10px 0;
-                }
-                .responsive-table .col:before {
-                    color: #6C7A89;
-                    padding-right: 10px;
-                    content: attr(data-label);
-                    flex-basis: 50%;
-                    text-align: right;
-                }
-                }
-            /* for the table of end caisse  */
-            body {
-            font: 13px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #404040;
-            background: #f2f2f2;
-            }
-            i {
-            position: absolute;
-            z-index: 1;
-            top: 7px;
-            left: 9px;
-            color: #999;
-            }
-            /* .container {
-            margin: 50px auto;
-            width: 280px;
-            text-align: center;
-                background-color: #f2f2f2;
-            } */
-            .container > .switch {
-            display: block;
-            margin: 22px auto;
-            }
-            
-            .switch {
-            position: relative;
-            display: inline-block;
-            vertical-align: top;
-            width: 96px;
-            height: 36px;
-            padding: 1px;
-            border-radius: 3px;
-            cursor: pointer;
-            }
-            
-            .switch-input {
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            }
-            .switch-label {
-            position: relative;
-            display: block;
-            height: inherit;
-            font-size: 10px;
-            text-transform: uppercase;
-            background: #2099C1;
-            color: white;
-            border-radius: inherit;
-            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
-            -webkit-transition: 0.15s ease-out;
-            -moz-transition: 0.15s ease-out;
-            -o-transition: 0.15s ease-out;
-            transition: 0.15s ease-out;
-            -webkit-transition-property: opacity background;
-            -moz-transition-property: opacity background;
-            -o-transition-property: opacity background;
-            transition-property: opacity background;
-            }
-            .switch-label:before, .switch-label:after {
-            position: absolute;
-            top: 50%;
-            margin-top: -.5em;
-            line-height: 1;
-            -webkit-transition: inherit;
-            -moz-transition: inherit;
-            -o-transition: inherit;
-            transition: inherit;
-            }
-            .switch-label:before {
-            content: attr(data-off);
-            right: 9px;
-            color: white;
-            text-shadow: 0 1px rgba(255, 255, 255, 0.5);
-            }
-            .switch-label:after {
-            content: attr(data-on);
-            left: 11px;
-            color: white;
-            text-shadow: 0 1px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            }
-            .switch-input:checked ~ .switch-label {
-            background: gray;
-            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
-            }
-            .switch-input:checked ~ .switch-label:before {
-            opacity: 0;
-            }
-            .switch-input:checked ~ .switch-label:after {
-            opacity: 1;
-            }
-            
-            .switch-handle {
-            position: absolute;
-            top: 1px;
-            left: -5px;
-            width: 36px;
-            height: 36px;
-            background: white;
-            border-radius: 3px;
-            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-            background-image: -webkit-linear-gradient(top, white 40%, #f0f0f0);
-            background-image: -moz-linear-gradient(top, white 40%, #f0f0f0);
-            background-image: -o-linear-gradient(top, white 40%, #f0f0f0);
-            background-image: linear-gradient(to bottom, white 40%, #f0f0f0);
-            -webkit-transition: left 0.15s ease-out;
-            -moz-transition: left 0.15s ease-out;
-            -o-transition: left 0.15s ease-out;
-            transition: left 0.15s ease-out;
-            }
-            .switch-handle:before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin: -6px 0 0 -6px;
-            width: 12px;
-            height: 12px;
-            background: #f9f9f9;
-            border-radius: 6px;
-            box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
-            background-image: -webkit-linear-gradient(top, #eeeeee, white);
-            background-image: -moz-linear-gradient(top, #eeeeee, white);
-            background-image: -o-linear-gradient(top, #eeeeee, white);
-            background-image: linear-gradient(to bottom, #eeeeee, white);
-            }
-            .switch-input:checked ~ .switch-handle {
-            left: 70px;
-            box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
-            }
-            
-            .switch-green > .switch-input:checked ~ .switch-label {
-            background: #4fb845;
-            }
+              
         </style>
+        <script>
+            $(document).ready(function(){
+            $("#datepicker").datepicker({
+                format: "yyyy",
+                viewMode: "years", 
+                minViewMode: "years",
+                autoclose:true
+            });   
+            })
+        // pour le mois
+        $(document).ready(function(){
+            $("#Monthpicker").datepicker({
+                format: "mm",
+                viewMode: "months", 
+                minViewMode: "months",
+                autoclose:true
+            });   
+            })
+       
+          </script>
     </head>
-
-
     <body class="sb-nav-fixed">
         <nav id="nav" class="sb-topnav navbar navbar-expand">
-
-            
-            <!-- Bouton derière le logo -->
-            <a id="nom_AAA" class="navbar-brand ps-3">
-                <button style="color: transparent; border: none; background-color: transparent;"  id="sidebarToggle" href="#!">
-                    <img id="logo"  class="img-thumbnail" src="img/logo.jpg" alt="">
-                </button>
+            <!-- Navbar Brand-->
+            <a id="nom_AAA" class="navbar-brand ps-3"><img id="logo"  class="img-thumbnail" src="img/logo.jpg" alt="">
                 <span>Association Avenir Assuré</span>
             </a>
-
-            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+            <!-- Sidebar Toggle-->
+            <button style="color: white;" class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
                 <div class="input-group me-5">
-                    <!-- Button trigger modal -->
-                    <button class="button"  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: transparent; border: none;">
-                        <img id="icons" src="img/addUser.png" alt="" style="width: 70%;">
-                    </button>
-
-
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <button class="button" data-bs-toggle="modal" data-bs-target="#myModal2" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
+                        <img  id="icons" src="img/Doorbell.png" alt="">
+                    </button>
+                    <div class="container demo">
+                        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+                            <div id="modal-notification" class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header" style="background-color: #FFA500;">
+                                    <h5 class="modal-title" id="exampleModalLabel">Notifications</h5>
+                                    </div>
+                                    <div class="modal-body" style="color: black; overflow: scroll; overflow-x: hidden; height: 50vh;">
+                                    <ul style="font-style: normal;">
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                                </div>
+                        </div>
+                      </div>
+                      
+                </div>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown d-flex">
+                    <a  id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div id="container-profile"  class="container d-flex">
+                            <img id="profile" src="img/emitek.png" alt="">
+                            <div id="nom_role" class="container ">
+                                <p>emitek<br>Collaborators</p>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#!">Modifier photo de profil</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Notification</a></li>
+                            <li><a class="dropdown-item" href="#!">Historique</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="#!">Langue:
+                                <select name="" id="" style="border: none;">
+                                    <option value="" selected>français</option>
+                                    <option value="" >englais</option>
+                                </select>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#!">Aide</a></li>
+                            <li><a class="dropdown-item" href="#!">Parametre</a></li>
+                            <li><a class="dropdown-item" href="#!">Déconnexion</a></li>
+                        </ul>
+                    </a>
+                   
+                </li>
+            </ul>
+        </nav>
+        <section id="navigation">
+
+        
+        <section id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <a class="nav-link" href="dashboard.html">
+                                <div class="sb-nav-link-icon"></div>
+                                <i class="fa fa-tachometer" aria-hidden="true"></i>
+                                <span class="menu-items">Tableaux de bord</span>
+                            </a>
+                            <a class="nav-link" href="membres.html">
+                                <div class="sb-nav-link-icon"></i></div>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <span class="menu-items">Gestion des Membres</span>
+                            </a>
+                            <a class="nav-link" href="caisses.html">
+                                <div class="sb-nav-link-icon"></i></div>
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                <span class="menu-items">Gestion de caisses</span>
+                            </a>
+                            <a class="nav-link" href="bilan.html">
+                                <div class="sb-nav-link-icon"></i></div>
+                                <i class="fa fa-dollar" aria-hidden="true"></i>
+                                <span class="menu-items">Bilan financier</span>
+                            </a>
+                            <a class="nav-link" href="evenements.html">
+                                <div class="sb-nav-link-icon"></div>
+                                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                <span class="menu-items">Gestion des événements</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </nav>
+            </div>
+           
+            <div id="layoutSidenav_content" class="page-section pt-5 bg-light">
+                <main id="bilan" class="pt-4 bg-light">
+                    <div class="row mx-4">
+                        <div  class="col-8 d-flex">
+                            <div style="color: #FFA500;" class="container text-center justify-content-center pt-2">
+                                <h3 style="text-align: end;">Gestion de caisse</h3>                            
+                            </div>
+                            <div style="width: 70%; height: 8vh; box-shadow: 1px 4px 4px grey; border: none; border-radius: 10px; background-color: white;" class="container text-center  pt-2">
+                                <p style="color: gray;"><span>Mardi 18 janvier 2023</span> <img class="img-thumbnail" src="img/Calendar_32px.png" alt="" srcset="">  </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row p-1 m-4">
+                        <div  class="col-12 justify-content-center">
+                            <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+                                <div class="carousel-inner" style="color: white;">
+                                  <div class="carousel-item active p-3">
+                                    <div class="container">
+                                        <div class="row gx-5">
+                                            <div class="col-3">
+                                                <div class="btn p-1 text-center  bg-info">
+                                                    <h4>Caisse Assurance</h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="btn p-1 text-center  bg-primary">
+                                                    <h4>Caisse Epargne</h4>
+                                                </div>>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="btn p-1 text-center  bg-info">
+                                                    <h4>Caisse Sanction</h4>
+                                                </div>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="btn p-1 text-center  bg-primary">
+                                                    <h4>Caisse Aide Att</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                    <div class="carousel-item p-3">
+                                        <div class="container">
+                                            <div class="row gx-5">
+                                                <div class="col-3">
+                                                    <div class="btn p-1 text-center  bg-info">
+                                                        <h4>Caisse Assurance</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="btn p-1 text-center  bg-primary">
+                                                        <h4>Caisse Epargne</h4>
+                                                    </div>>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="btn p-1 text-center  bg-info">
+                                                        <h4>Caisse Sanction</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="btn p-1 text-center  bg-primary">
+                                                        <h4>Caisse Aide Att</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item p-3">
+                                        <div class="container">
+                                            <div class="row gx-5">
+                                                <div class="col-3">
+                                                    <div class="btn p-1 text-center  bg-info">
+                                                        <h4>Caisse Assurance</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="btn p-1 text-center  bg-primary">
+                                                        <h4>Caisse Epargne</h4>
+                                                    </div>>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="btn p-1 text-center  bg-info">
+                                                        <h4>Caisse Sanction</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="btn p-1 text-center  bg-primary">
+                                                        <h4>Caisse Aide Att</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                        </div>
+                        
+                    </div>
+                    <!-- la table -->
+                    <div class="row pt-2">
+                        <div class="col-md-12">
+                            <div class="container-fluid">
+                                <ul class="responsive-table" style=" font-size: 12px; overflow: scroll; overflow-x: hidden; height: 70vh;">
+                                    <li style="font-size: 11px;" class="table-header text-center align-items-center">
+                                      <div class="col col-1"></div>
+                                      <div class="col col-2">Profil</div>
+                                      <div class="col col-2">Nom et prénoms</div>
+                                      <div class="col col-1">Montant</div>
+                                      <div class="col col-3">Champ de transaction</div>
+                                      <div class="col col-3">Actions sur la caisse</div>
+                                      </li>
+                                      <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                        <div class="col col-1" data-label="checkbox">
+                                            <input type="checkbox" name="" id="">
+                                        </div>    
+                                        <div class="col col-2" data-label="Profil">
+                                                <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                            </div>
+
+                                            <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                            <div class="col col-1" data-label="Montant">6555</div>
+                                            <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                            <div class="col col-3" data-label="Actions sur la caisse">
+                                                 
+                                                <!-- Bouton d'actions -->
+                                                <div class="container text-align justify-content-center d-flex">
+                                                  <button id="btn-entre" class="button" type="button">Entré</button>
+                                                  <button id="btn-sortie" class="button" type="button">Sortie</button>
+                                                    <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
+                                                        <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                    </button>
+                                                </div>
+                                              </div> 
+                                            </li>
+                                            <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                                <div class="col col-1" data-label="checkbox">
+                                                    <input type="checkbox" name="" id="">
+                                                </div>    
+                                                <div class="col col-2" data-label="Profil">
+                                                        <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                                    </div>
+        
+                                                    <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                                    <div class="col col-1" data-label="Montant">6555</div>
+                                                    <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                                    <div class="col col-3" data-label="Actions sur la caisse">
+                                                 
+                                                        <!-- Bouton d'actions -->
+                                                        <div class="container text-align justify-content-center d-flex">
+                                                          <button id="btn-entre" class="button" type="button">Entré</button>
+                                                          <button id="btn-sortie" class="button" type="button">Sortie</button>
+                                                            <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
+                                                                <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                            </button>
+                                                        </div>
+                                                      </div> 
+                                                    </li>
+                                                    <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                                        <div class="col col-1" data-label="checkbox">
+                                                            <input type="checkbox" name="" id="">
+                                                        </div>    
+                                                        <div class="col col-2" data-label="Profil">
+                                                                <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                                            </div>
+                
+                                                            <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                                            <div class="col col-1" data-label="Montant">6555</div>
+                                                            <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                                            <div class="col col-3" data-label="Actions sur la caisse">
+                                                 
+                                                                <!-- Bouton d'actions -->
+                                                                <div class="container text-align justify-content-center d-flex">
+                                                                  <button id="btn-entre" class="button" type="button">Entré</button>
+                                                                  <button id="btn-sortie" class="button" type="button">Sortie</button>
+                                                                    <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
+                                                                        <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                                    </button>
+                                                                </div>
+                                                              </div> 
+                                                            </li>
+                                                            <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                                                <div class="col col-1" data-label="checkbox">
+                                                                    <input type="checkbox" name="" id="">
+                                                                </div>    
+                                                                <div class="col col-2" data-label="Profil">
+                                                                        <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                                                    </div>
+                        
+                                                                    <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                                                    <div class="col col-1" data-label="Montant">6555</div>
+                                                                    <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                                                    <div class="col col-3" data-label="Actions sur la caisse">
+                                                 
+                                                                        <!-- Bouton d'actions -->
+                                                                        <div class="container text-align justify-content-center d-flex">
+                                                                          <button id="btn-entre" class="button" type="button">Entré</button>
+                                                                          <button id="btn-sortie" class="button" type="button">Sortie</button>
+                                                                            <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
+                                                                                <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                                            </button>
+                                                                        </div>
+                                                                      </div> 
+                                                                    </li>
+                                                                    <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                                                        <div class="col col-1" data-label="checkbox">
+                                                                            <input type="checkbox" name="" id="">
+                                                                        </div>    
+                                                                        <div class="col col-2" data-label="Profil">
+                                                                                <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                                                            </div>
+                                
+                                                                            <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                                                            <div class="col col-1" data-label="Montant">6555</div>
+                                                                            <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                                                            <div class="col col-3" data-label="Actions sur la caisse">
+                                                 
+                                                                                <!-- Bouton d'actions -->
+                                                                                <div class="container text-align justify-content-center d-flex">
+                                                                                  <button id="btn-entre" class="button" type="button">Entré</button>
+                                                                                  <button id="btn-sortie" class="button" type="button">Sortie</button>
+                                                                                    <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
+                                                                                        <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                                                    </button>
+                                                                                </div>
+                                                                              </div> 
+                                                                            </li>
+                                                                            <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                                                                <div class="col col-1" data-label="checkbox">
+                                                                                    <input type="checkbox" name="" id="">
+                                                                                </div>    
+                                                                                <div class="col col-2" data-label="Profil">
+                                                                                        <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                                                                    </div>
+                                        
+                                                                                    <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                                                                    <div class="col col-1" data-label="Montant">6555</div>
+                                                                                    <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                                                                    <div class="col col-3" data-label="Actions sur la caisse">
+                                                 
+                                                                                        <!-- Bouton d'actions -->
+                                                                                        <div class="container text-align justify-content-center d-flex">
+                                                                                          <button id="btn-entre" class="button" type="button">Entré</button>
+                                                                                          <button id="btn-sortie" class="button" type="button">Sortie</button>
+                                                                                            <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
+                                                                                                <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                                                            </button>
+                                                                                        </div>
+                                                                                      </div> 
+                                                                                    </li>
+                                                            <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                                                <div class="col col-1" data-label="checkbox">
+                                                                    <input type="checkbox" name="" id="">
+                                                                </div>    
+                                                                <div class="col col-2" data-label="Profil">
+                                                                        <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                                                    </div>
+                        
+                                                                    <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                                                    <div class="col col-1" data-label="Montant">6555</div>
+                                                                    <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                                                    <div class="col col-3" data-label="Actions sur la caisse">
+                                                 
+                                                                        <!-- Bouton d'actions -->
+                                                                        <div class="container text-align justify-content-center d-flex">
+                                                                          <button id="btn-entre" class="button" type="button">Entré</button>
+                                                                          <button id="btn-sortie" class="button" type="button">Sortie</button>
+                                                                            <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
+                                                                                <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                                            </button>
+                                                                        </div>
+                                                                      </div>
+                                                                    </li>
+                                     
+                                  </ul>
+                            </div>
+
+                        </div>
+                     </div>
+                    <!-- modal to edit caisses -->
+                    <!-- Modal -->
+                    <div class="modal" tabindex="-1"  id="editcaisses" tabindex="-1" aria-labelledby="editcaisses" aria-hidden="true">
+                        <div id="modal-edit" class="modal-dialog">
+                          <div class="modal-content">
+                            <div id="modal-edit-header" class="modal-header">
+                              <h5  class="modal-title">Modifier montant caisse</h5>
+                              <button  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <a class="container ">
+                                <div class="row">
+                                    <div class="col-12 justify-content-center text-center" style="position: relative; top: 15px; z-index: 1;">
+                                        <img id="profile_membre2" class="img-thumbnail" src="img/emitek.png" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="modal-body" style="background-color: rgb(209, 208, 208); border-top-right-radius: 10px;border-top-left-radius: 10px;">
+                              <div class="container">
+                                <div class="container">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-2"></div>
+                                            <div class="col-8">
+                                                <h4 style="color: #FFA500;">Caisse Epargne</h4>
+                                                <select style="color: white;" name="" id="" class="form-select form-control text-center bg-primary">
+                                                    <option value="" selected><h3>Entrée</h3></option>
+                                                    <option value="" selected><h3>Sortie</h3></option>
+                                                </select>
+                                            </div>
+                                            <div class="col-2"></div>
+                                        </div>
+                                        <div class="row pt-3" style="color: white;">
+                                            <div class="col-12">
+                                                <label  for="">Montant de la caisse</label>
+                                                <input  class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
+                                            </div>
+                                        </div>
+                                        <div class="row pt-3" style="color: white;">
+                                            <div class="col-12">
+                                                <label  for="">Montant à modifier</label>
+                                                <input  class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">Modifier</button>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    <!-- <div class="modal fade" id="editcaisses" tabindex="-1" aria-labelledby="editcaisses" aria-hidden="true">
                         <div class="modal-dialog" style="position: relative; right: 5%; width: 25%; height: 70vh;">
                         <div class="modal-content"> 
                             <div id="box-register" class="modal-body">
@@ -261,414 +540,16 @@
                             </div>
                         </div>
                         </div>
-                    </div>
+                    </div> -->
 
-
-                    <button class="button" data-bs-toggle="modal" data-bs-target="#myModal2" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
-                        <img  style="position: relative; left: 15%; width: 70%;" id="icons" src="img/Doorbell.png" alt="">
-                    </button>
-                    <div class="container demo">
-                        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
-                            <div class="modal-dialog" style="height: 80vh;">
-                                <div class="modal-content">
-                                    <div class="modal-header" style="background-color: #FFA500;">
-                                    <h5 class="modal-title" id="exampleModalLabel">Notifications</h5>
-                                    </div>
-                                    <div class="modal-body" style="color: black; overflow: scroll; overflow-x: hidden; height: 13vh;">
-                                    <ul style="font-style: normal;">
-                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                        <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
-                                    </ul>
-                                    </div>
-                                </div>
-                                </div>
-                        </div>
-                      </div>
-                      
-                </div>
-            </form>
-            <!-- Navbar-->
-            <!-- Option derière profiLes -->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <li class="nav-item dropdown d-flex">
-                    <a  id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <div id="container-profile"  class="container d-flex">
-                            <img id="profile" src="img/emitek.png" alt="">
-                            <div id="nom_role" class="container ">
-                                <p>emitek<br>Collaborators</p>
-                            </div>
-                        </div>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#!">Modifier photo de profil</a></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="#!">Langue:
-                                <select name="" id="" style="border: none;">
-                                    <option value="" selected>français</option>
-                                    <option value="" >anglais</option>
-                                </select>
-                            </a>
-                            </li>
-                            <li><a class="dropdown-item" href="#!">Aide</a></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="index.html">Déconnexion</a></li>
-                        </ul>
-                    </a>
-                   
-                </li>
-            </ul>
-        </nav>
-        <section id="navigation">
-
-        
-        <section id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <a class="nav-link" href="dashboard.html">
-                                <div class="sb-nav-link-icon"></div>
-                                <i class="fa fa-tachometer" aria-hidden="true"></i>
-                                <span class="menu-items">Tableaux de bord</span>
-                            </a>
-                            <a class="nav-link" href="membres.html">
-                                <div class="sb-nav-link-icon"></i></div>
-                                <i class="fa fa-users" aria-hidden="true"></i>
-                                <span class="menu-items">Gestion des Membres</span>
-                            </a>
-                            <a class="nav-link" href="bilan.html">
-                                <div class="sb-nav-link-icon"></i></div>
-                                <i class="fa fa-credit-card" aria-hidden="true"></i>
-                                <span class="menu-items">Gestion de caisses</span>
-                            </a>
-                            <a class="nav-link" href="caisses.html">
-                                <div class="sb-nav-link-icon"></i></div>
-                                <i class="fa fa-dollar" aria-hidden="true"></i>
-                                <span class="menu-items">Bilan financier</span>
-                            </a>
-                            <a class="nav-link" href="evenements.html">
-                                <div class="sb-nav-link-icon"></div>
-                                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-                                <span class="menu-items">Gestion des événements</span>
-                            </a>
-                        </div>
-                    </div>
-                    
-                </nav>
-            </div>
-           
-            <div id="layoutSidenav_content" class="page-section pt-2 bg-light">
-                <main id="Dashboard" class="bg-light pt-4">
-                    <div class="container-fluid px-4 pt-2">
-                        <div class="row pt-3">
-                           <div class="col-md-6">
-                                <h3 style="color: #FFA500;" class="mt-4 mx-5" >Gestion des Caisses</h3>
-                           </div>
-                           <div class="col-md-4 ">
-                               <input style="height: 5vh;" type="text" name="" id="" class="form-control mt-4">
-                           </div>
-                           <div class="mt-4 col-md-2" style="color: #FFA500; font-size: 13px;line-height: 1.5;">
-                            <P>Total caisses: <span>60000</span> <br>
-                               Total epargne: <span>23000</span>
-                            </P>
-                           </div>
-                        </div>
-                        <div class="row pt-3 mx-4">
-                                <div class="col-md-2">
-                                    <div class="example">
-                                        <label class="switch">
-                                        <input onclick="myFunction()" id="the_checkbox_id" type="checkbox" class="switch-input"><!--<i class="icon-play"></i>-->
-                                        <span class="switch-label" data-on="Sorties" data-off="Entrées"></span>
-                                        <span class="switch-handle"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-md-2">
-                                    <p><input  value="year" type="datepicker" class="form-control form-select" name="datepicker" id="datepicker" /></p>                                
-                                </div>
-                                <div class="col-md-2 d-flex">
-                                    <p><input   value="month" type="datepicker" class="form-control form-select" name="datepicker" id="Monthpicker" /></p>
-                                    
-                                </div>
-                                <div class="col-md-4">
-                                    <button class="button" style=" height: 5vh; background-color: #2099C1; border: none; border-radius: 20px;">
-                                        <a  style="text-decoration: none; color: white; font-size: 16px;"   href="bilan.html"><span style="font-weight: bold;">Bilan financier</span></a>
-                                    </button>
-                                </div>
-                                <div class="col-md-2">
-                                    <button class="button" style="background-color: transparent; border: none;">
-                                        <p><img style="background-color: transparent; width: 32px; height: auto;"  class="img-thumbnail" src="img/Filter.png"  alt=""> Filtrer</p>
-                                    </button>
-                                </div>
- 
-                         </div>
-                         <div class="row pt-2">
-                            <div class="col-md-12">
-                                <div id="is_off">
-                                    <div  class="container-fluid  this_shows_when_switch_is_off">
-                                            <ul class="responsive-table" style="overflow: scroll; overflow-x: hidden; height: 70vh;">
-                                              <li class="table-header text-center align-items-center">
-                                                <div class="col col-1">Profil</div>
-                                                <div class="col col-2">Noms et Prénoms</div>
-                                                <div class="col col-1">Scours</div>
-                                                <div class="col col-2">Epargne</div>
-                                                <div class="col col-2">Interet</div>
-                                                <div class="col col-1">Aide att</div>
-                                                <div class="col col-1">Cot att</div>
-                                                <div class="col col-2">Total</div>
-                                         
-                                              </li>
-                                              <li class="table-row text-center align-items-center">
-                                                <div class="col col-1" data-label="Profil">
-                                                    <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                </div>
-                                                <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                                <div class="col col-1" data-label="Scours">$350</div>
-                                                <div class="col col-2" data-label="Epargne">Pending</div>
-                                                <div class="col col-2" data-label="Interet">42235</div>
-                                                <div class="col col-1" data-label="Aide att">John Doe</div>
-                                                <div class="col col-1" data-label="Cot att">$350</div>
-                                                <div class="col col-2" data-label="Total">Pending</div>
-                                              </li>
-                                              <li class="table-row text-center align-items-center">
-                                                <div class="col col-1" data-label="Profil">
-                                                    <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                </div>
-                                                <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                                <div class="col col-1" data-label="Scours">$350</div>
-                                                <div class="col col-2" data-label="Epargne">Pending</div>
-                                                <div class="col col-2" data-label="Interet">42235</div>
-                                                <div class="col col-1" data-label="Aide att">John Doe</div>
-                                                <div class="col col-1" data-label="Cot att">$350</div>
-                                                <div class="col col-2" data-label="Total">Pending</div>
-                                              </li>
-                                              <li class="table-row text-center align-items-center">
-                                                <div class="col col-1" data-label="Profil">
-                                                    <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                </div>
-                                                <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                                <div class="col col-1" data-label="Scours">$350</div>
-                                                <div class="col col-2" data-label="Epargne">Pending</div>
-                                                <div class="col col-2" data-label="Interet">42235</div>
-                                                <div class="col col-1" data-label="Aide att">John Doe</div>
-                                                <div class="col col-1" data-label="Cot att">$350</div>
-                                                <div class="col col-2" data-label="Total">Pending</div>
-                                              </li>
-                                              <li class="table-row text-center align-items-center">
-                                                <div class="col col-1" data-label="Profil">
-                                                    <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                </div>
-                                                <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                                <div class="col col-1" data-label="Scours">$350</div>
-                                                <div class="col col-2" data-label="Epargne">Pending</div>
-                                                <div class="col col-2" data-label="Interet">42235</div>
-                                                <div class="col col-1" data-label="Aide att">John Doe</div>
-                                                <div class="col col-1" data-label="Cot att">$350</div>
-                                                <div class="col col-2" data-label="Total">Pending</div>
-                                              </li>
-                                              <li class="table-row text-center align-items-center">
-                                                <div class="col col-1" data-label="Profil">
-                                                    <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                </div>
-                                                <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                                <div class="col col-1" data-label="Scours">$350</div>
-                                                <div class="col col-2" data-label="Epargne">Pending</div>
-                                                <div class="col col-2" data-label="Interet">42235</div>
-                                                <div class="col col-1" data-label="Aide att">John Doe</div>
-                                                <div class="col col-1" data-label="Cot att">$350</div>
-                                                <div class="col col-2" data-label="Total">Pending</div>
-                                              </li>
-                                              <li class="table-row text-center align-items-center">
-                                                <div class="col col-1" data-label="Profil">
-                                                    <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                </div>
-                                                <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                                <div class="col col-1" data-label="Scours">$350</div>
-                                                <div class="col col-2" data-label="Epargne">Pending</div>
-                                                <div class="col col-2" data-label="Interet">42235</div>
-                                                <div class="col col-1" data-label="Aide att">John Doe</div>
-                                                <div class="col col-1" data-label="Cot att">$350</div>
-                                                <div class="col col-2" data-label="Total">Pending</div>
-                                              </li>
-                                            </ul>
-                                  
-                                    </div>
-                                </div>
-                                <div id="is_on" style="display: none;">
-                                    <div class="container-fluid  this_shows_when_switch_is_on">
-                                        <ul class="responsive-table" style="overflow: scroll; overflow-x: hidden; height: 70vh;">
-                                            <li class="table-header text-center align-items-center">
-                                              <div class="col col-1">Profil</div>
-                                              <div class="col col-2">Noms et Prénoms</div>
-                                              <div class="col col-1">Assur</div>
-                                              <div class="col col-2">Cp</div>
-                                              <div class="col col-2">R.A</div>
-                                              <div class="col col-1">Aide due</div>
-                                              <div class="col col-1">Coll due</div>
-                                              <div class="col col-1">Sanc</div>
-                                              <div class="col col-1">Total</div>
-                                       
-                                            </li>
-                                            <li class="table-row text-center align-items-center">
-                                              <div class="col col-1" data-label="Profil">
-                                                  <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                              </div>
-                                              <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                              <div class="col col-1" data-label="Scours">$350</div>
-                                              <div class="col col-2" data-label="Epargne">Pending</div>
-                                              <div class="col col-2" data-label="Interet">42235</div>
-                                              <div class="col col-1" data-label="Aide att">John Doe</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Total">Pending</div>
-                                            </li>
-                                            <li class="table-row text-center align-items-center">
-                                              <div class="col col-1" data-label="Profil">
-                                                  <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                              </div>
-                                              <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                              <div class="col col-1" data-label="Scours">$350</div>
-                                              <div class="col col-2" data-label="Epargne">Pending</div>
-                                              <div class="col col-2" data-label="Interet">42235</div>
-                                              <div class="col col-1" data-label="Aide att">John Doe</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Total">Pending</div>
-                                            </li>
-                                            <li class="table-row text-center align-items-center">
-                                              <div class="col col-1" data-label="Profil">
-                                                  <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                              </div>
-                                              <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                              <div class="col col-1" data-label="Scours">$350</div>
-                                              <div class="col col-2" data-label="Epargne">Pending</div>
-                                              <div class="col col-2" data-label="Interet">42235</div>
-                                              <div class="col col-1" data-label="Aide att">John Doe</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Total">Pending</div>
-                                            </li>
-                                            <li class="table-row text-center align-items-center">
-                                              <div class="col col-1" data-label="Profil">
-                                                  <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                              </div>
-                                              <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                              <div class="col col-1" data-label="Scours">$350</div>
-                                              <div class="col col-2" data-label="Epargne">Pending</div>
-                                              <div class="col col-2" data-label="Interet">42235</div>
-                                              <div class="col col-1" data-label="Aide att">John Doe</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Total">Pending</div>
-                                            </li>
-                                            <li class="table-row text-center align-items-center">
-                                              <div class="col col-1" data-label="Profil">
-                                                  <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                              </div>
-                                              <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                              <div class="col col-1" data-label="Scours">$350</div>
-                                              <div class="col col-2" data-label="Epargne">Pending</div>
-                                              <div class="col col-2" data-label="Interet">42235</div>
-                                              <div class="col col-1" data-label="Aide att">John Doe</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Total">Pending</div>
-                                            </li>
-                                            <li class="table-row text-center align-items-center">
-                                              <div class="col col-1" data-label="Profil">
-                                                  <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                              </div>
-                                              <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                              <div class="col col-1" data-label="Scours">$350</div>
-                                              <div class="col col-2" data-label="Epargne">Pending</div>
-                                              <div class="col col-2" data-label="Interet">42235</div>
-                                              <div class="col col-1" data-label="Aide att">John Doe</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Total">Pending</div>
-                                            </li>
-                                          </ul>
-                                    </div>
-                                </div>
-                              
-                            </div>
-                         </div>
-                       
                 </main>
- 
-
-                <!-- footer -->
-                    <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; AAA 2023</div>
-                            
-                        </div>
-                    </div>
-                </footer>
                 </div>
             </section>
         </div>
     </section>
-        
-        <script>
-            function myFunction() {
-            var x = document.getElementById("is_off");
-            var y = document.getElementById("is_on");
-         
-                if (x.style.display === "none") {
-                    x.style.display = "block";
-                } else {
-                    x.style.display = "none";
-                }
-    
-                if (y.style.display === "block") {
-                    y.style.display = "none";
-                } else {
-                    y.style.display = "block";
-                }
-            }
-        </script>
-
-<script>
-// pour le mois
-$(document).ready(function(){
-    $("#Monthpicker").datepicker({
-        format: "mm",
-        viewMode: "months", 
-        minViewMode: "months",
-        autoclose:true
-    });   
-    })
-
-  </script>
-  <script>
-    $(document).ready(function(){
-     
-    
-    var dp= $("#datepicker").datepicker({
-         format: "yyyy",
-         viewMode: "years", 
-         minViewMode: "years",
-         autoclose:true
-      });   
-    })
-  </Script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/js_toggle_caisse/canecode_switch.js"></script>
 
     </body>
 </html>
