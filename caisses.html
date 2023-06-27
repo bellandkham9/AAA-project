@@ -6,68 +6,98 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Caisses - AAA</title>
+        <title>Dashboard - AAA</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css.map">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/styleMembre.css">
-        <link rel="stylesheet" href="css/bilan.css"> 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
-        
-        <link rel="stylesheet" href="css/css_toggle_caisse/canecode_switch.css">
-        
+        <link rel="stylesheet" href="css/dashbord.css">
+        <link rel="stylesheet" href="css/bilan.css">
+        <!--Datatable plugin CSS file -->
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 	   
+         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+        <!--jQuery library file -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <!--Datatable plugin JS library file -->
+        <script type="text/javascript"src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
         <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+        <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-      
-        <style>
-              
-        </style>
-        <script>
-            $(document).ready(function(){
-            $("#datepicker").datepicker({
-                format: "yyyy",
-                viewMode: "years", 
-                minViewMode: "years",
-                autoclose:true
-            });   
-            })
-        // pour le mois
-        $(document).ready(function(){
-            $("#Monthpicker").datepicker({
-                format: "mm",
-                viewMode: "months", 
-                minViewMode: "months",
-                autoclose:true
-            });   
-            })
-       
-          </script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     </head>
     <body class="sb-nav-fixed">
         <nav id="nav" class="sb-topnav navbar navbar-expand">
             <!-- Navbar Brand-->
-            <a id="nom_AAA" class="navbar-brand ps-3"><img id="logo"  class="img-thumbnail" src="img/logo.jpg" alt="">
-                <span>Association Avenir Assuré</span>
+            <a id="nom_AAA" class="navbar-brand">
+                <button  id="sidebarToggle" href="#!">
+                    <img id="logo"  class="img-thumbnail" src="img/logo.jpg" alt="">
+                </button>
+                <span id="associ">Association Avenir Assuré</span>
             </a>
-            <!-- Sidebar Toggle-->
-            <button style="color: white;" class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group me-5">
-                    <!-- Modal -->
-                    <button class="button" data-bs-toggle="modal" data-bs-target="#myModal2" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
+                    <!-- Button trigger modal -->
+                    <button id="btn-addUser" class="button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img  id="icons" src="img/addUser.png" alt="">
+                    </button>
+                    <!-- Modal pour 'aajout d'un utilisateur -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div id="modal-addUser" class="modal-content"> 
+                            <div id="box-register" class="modal-body">
+                                <div class="container  pt-3">
+                                    <form id="form"  method="" class="pt-5">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12 text-center justify-content-center">
+                                                <img id="user_logo"  src="img/🦆 icon _profile circle_.png" class="img-thumbnail" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 text-center justify-content-center">
+                                                <p class="pt-2">
+                                                    <label  for="">Nom d'utilisateur</label>
+                                                    <input id="username" name="username" class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
+                                                </p>
+                                                <p>
+                                                    <label  for="">Mot de Passe</label>
+                                                    <input id="password" name="password" class="form-control" type="password" placeholder="entrer mot de passe" required>
+                                                </p>
+                                                <p>
+                                                    <label for="">Staut</label>
+                                                    <select id="statut" name="statut" class="form-select" aria-label="Default select example">
+                                                        <option  selected>choose your status</option>
+                                                        <option value="Célibataire">Célibataire</option>
+                                                        <option value="Marié">Marié</option>
+                                                        <option value="Divorcé">Divorcé</option>
+                                                      </select>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col-12 text-center justify-content-center">
+                                                <button id="btn-register"  class="btn btn-primary btn-block" type="sumbit">Creer</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                <!-- fin du modal d'ajout d'utilisateur -->
+                    <button id="bn-notif" class="button" data-bs-toggle="modal" data-bs-target="#myModal2" aria-expanded="false" aria-controls="collapseExample">
                         <img  id="icons" src="img/Doorbell.png" alt="">
                     </button>
                     <div class="container demo">
                         <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
                             <div id="modal-notification" class="modal-dialog">
                                 <div class="modal-content">
-                                    <div class="modal-header" style="background-color: #FFA500;">
+                                    <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Notifications</h5>
                                     </div>
-                                    <div class="modal-body" style="color: black; overflow: scroll; overflow-x: hidden; height: 50vh;">
-                                    <ul style="font-style: normal;">
+                                    <div id="box-notif" class="modal-body">
+                                    <ul>
                                         <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
                                         <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
                                         <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
@@ -94,7 +124,10 @@
                       </div>
                       
                 </div>
+            </form>
             <!-- Navbar-->
+
+            <!-- Option derière profiLes -->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown d-flex">
                     <a  id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -107,18 +140,16 @@
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#!">Modifier photo de profil</a></li>
                             <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="#!">Notification</a></li>
-                            <li><a class="dropdown-item" href="#!">Historique</a></li>
-                            <li><hr class="dropdown-divider" /></li>
                             <li><a class="dropdown-item" href="#!">Langue:
-                                <select name="" id="" style="border: none;">
+                                <select name="" id="">
                                     <option value="" selected>français</option>
-                                    <option value="" >englais</option>
+                                    <option value="" >anglais</option>
                                 </select>
-                            </a></li>
+                            </a>
+                            </li>
                             <li><a class="dropdown-item" href="#!">Aide</a></li>
-                            <li><a class="dropdown-item" href="#!">Parametre</a></li>
-                            <li><a class="dropdown-item" href="#!">Déconnexion</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item" href="index.html">Déconnexion</a></li>
                         </ul>
                     </a>
                    
@@ -126,8 +157,6 @@
             </ul>
         </nav>
         <section id="navigation">
-
-        
         <section id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion" id="sidenavAccordion">
@@ -164,9 +193,9 @@
                 </nav>
             </div>
            
-            <div id="layoutSidenav_content" class="page-section pt-5 bg-light">
-                <main id="bilan" class="pt-4 bg-light">
-                    <div class="row mx-4">
+            <div id="layoutSidenav_content" class="page-section pt-2 bg-light">
+                <main id="Dashboard" class="bg-light pt-5">
+                    <div class="row mx-4 pt-2">
                         <div  class="col-8 d-flex">
                             <div style="color: #FFA500;" class="container text-center justify-content-center pt-2">
                                 <h3 style="text-align: end;">Gestion de caisse</h3>                            
@@ -179,8 +208,8 @@
                     <div class="row p-1 m-4">
                         <div  class="col-12 justify-content-center">
                             <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-                                <div class="carousel-inner" style="color: white;">
-                                  <div class="carousel-item active p-3">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active p-3 bg-light">
                                     <div class="container">
                                         <div class="row gx-5">
                                             <div class="col-3">
@@ -191,7 +220,7 @@
                                             <div class="col-3">
                                                 <div class="btn p-1 text-center  bg-primary">
                                                     <h4>Caisse Epargne</h4>
-                                                </div>>
+                                                </div>
                                             </div>
                                             <div class="col-3">
                                                 <div class="btn p-1 text-center  bg-info">
@@ -276,175 +305,160 @@
                             <div class="container-fluid">
                                 <ul class="responsive-table" style=" font-size: 12px; overflow: scroll; overflow-x: hidden; height: 70vh;">
                                     <li style="font-size: 11px;" class="table-header text-center align-items-center">
-                                      <div class="col col-1"></div>
-                                      <div class="col col-2">Profil</div>
-                                      <div class="col col-2">Nom et prénoms</div>
-                                      <div class="col col-1">Montant</div>
-                                      <div class="col col-3">Champ de transaction</div>
-                                      <div class="col col-3">Actions sur la caisse</div>
-                                      </li>
-                                      <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                        <div class="col col-1"></div>
+                                        <div class="col col-2">Profil</div>
+                                        <div class="col col-2">Nom et prénoms</div>
+                                        <div class="col col-1">Montant</div>
+                                        <div class="col col-3">Champ de transaction</div>
+                                        <div class="col col-3">Actions sur la caisse</div>
+                                    </li>
+                                    <li style="font-size:11px;" class="table-row text-center align-items-center">
                                         <div class="col col-1" data-label="checkbox">
                                             <input type="checkbox" name="" id="">
                                         </div>    
                                         <div class="col col-2" data-label="Profil">
-                                                <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                            </div>
+                                            <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                        </div>
 
-                                            <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
-                                            <div class="col col-1" data-label="Montant">6555</div>
-                                            <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
-                                            <div class="col col-3" data-label="Actions sur la caisse">
-                                                 
-                                                <!-- Bouton d'actions -->
-                                                <div class="container text-align justify-content-center d-flex">
-                                                  <button id="btn-entre" class="button" type="button">Entré</button>
-                                                  <button id="btn-sortie" class="button" type="button">Sortie</button>
-                                                    <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
-                                                        <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
-                                                    </button>
-                                                </div>
-                                              </div> 
-                                            </li>
-                                            <li style="font-size:11px;" class="table-row text-center align-items-center">
-                                                <div class="col col-1" data-label="checkbox">
-                                                    <input type="checkbox" name="" id="">
-                                                </div>    
-                                                <div class="col col-2" data-label="Profil">
-                                                        <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                    </div>
-        
-                                                    <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
-                                                    <div class="col col-1" data-label="Montant">6555</div>
-                                                    <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
-                                                    <div class="col col-3" data-label="Actions sur la caisse">
-                                                 
-                                                        <!-- Bouton d'actions -->
-                                                        <div class="container text-align justify-content-center d-flex">
-                                                          <button id="btn-entre" class="button" type="button">Entré</button>
-                                                          <button id="btn-sortie" class="button" type="button">Sortie</button>
-                                                            <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
-                                                                <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
-                                                            </button>
-                                                        </div>
-                                                      </div> 
-                                                    </li>
-                                                    <li style="font-size:11px;" class="table-row text-center align-items-center">
-                                                        <div class="col col-1" data-label="checkbox">
-                                                            <input type="checkbox" name="" id="">
-                                                        </div>    
-                                                        <div class="col col-2" data-label="Profil">
-                                                                <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                            </div>
-                
-                                                            <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
-                                                            <div class="col col-1" data-label="Montant">6555</div>
-                                                            <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
-                                                            <div class="col col-3" data-label="Actions sur la caisse">
-                                                 
-                                                                <!-- Bouton d'actions -->
-                                                                <div class="container text-align justify-content-center d-flex">
-                                                                  <button id="btn-entre" class="button" type="button">Entré</button>
-                                                                  <button id="btn-sortie" class="button" type="button">Sortie</button>
-                                                                    <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
-                                                                        <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
-                                                                    </button>
-                                                                </div>
-                                                              </div> 
-                                                            </li>
-                                                            <li style="font-size:11px;" class="table-row text-center align-items-center">
-                                                                <div class="col col-1" data-label="checkbox">
-                                                                    <input type="checkbox" name="" id="">
-                                                                </div>    
-                                                                <div class="col col-2" data-label="Profil">
-                                                                        <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                                    </div>
-                        
-                                                                    <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
-                                                                    <div class="col col-1" data-label="Montant">6555</div>
-                                                                    <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
-                                                                    <div class="col col-3" data-label="Actions sur la caisse">
-                                                 
-                                                                        <!-- Bouton d'actions -->
-                                                                        <div class="container text-align justify-content-center d-flex">
-                                                                          <button id="btn-entre" class="button" type="button">Entré</button>
-                                                                          <button id="btn-sortie" class="button" type="button">Sortie</button>
-                                                                            <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
-                                                                                <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
-                                                                            </button>
-                                                                        </div>
-                                                                      </div> 
-                                                                    </li>
-                                                                    <li style="font-size:11px;" class="table-row text-center align-items-center">
-                                                                        <div class="col col-1" data-label="checkbox">
-                                                                            <input type="checkbox" name="" id="">
-                                                                        </div>    
-                                                                        <div class="col col-2" data-label="Profil">
-                                                                                <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                                            </div>
-                                
-                                                                            <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
-                                                                            <div class="col col-1" data-label="Montant">6555</div>
-                                                                            <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
-                                                                            <div class="col col-3" data-label="Actions sur la caisse">
-                                                 
-                                                                                <!-- Bouton d'actions -->
-                                                                                <div class="container text-align justify-content-center d-flex">
-                                                                                  <button id="btn-entre" class="button" type="button">Entré</button>
-                                                                                  <button id="btn-sortie" class="button" type="button">Sortie</button>
-                                                                                    <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
-                                                                                        <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
-                                                                                    </button>
-                                                                                </div>
-                                                                              </div> 
-                                                                            </li>
-                                                                            <li style="font-size:11px;" class="table-row text-center align-items-center">
-                                                                                <div class="col col-1" data-label="checkbox">
-                                                                                    <input type="checkbox" name="" id="">
-                                                                                </div>    
-                                                                                <div class="col col-2" data-label="Profil">
-                                                                                        <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                                                    </div>
-                                        
-                                                                                    <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
-                                                                                    <div class="col col-1" data-label="Montant">6555</div>
-                                                                                    <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
-                                                                                    <div class="col col-3" data-label="Actions sur la caisse">
-                                                 
-                                                                                        <!-- Bouton d'actions -->
-                                                                                        <div class="container text-align justify-content-center d-flex">
-                                                                                          <button id="btn-entre" class="button" type="button">Entré</button>
-                                                                                          <button id="btn-sortie" class="button" type="button">Sortie</button>
-                                                                                            <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
-                                                                                                <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
-                                                                                            </button>
-                                                                                        </div>
-                                                                                      </div> 
-                                                                                    </li>
-                                                            <li style="font-size:11px;" class="table-row text-center align-items-center">
-                                                                <div class="col col-1" data-label="checkbox">
-                                                                    <input type="checkbox" name="" id="">
-                                                                </div>    
-                                                                <div class="col col-2" data-label="Profil">
-                                                                        <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                                    </div>
-                        
-                                                                    <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
-                                                                    <div class="col col-1" data-label="Montant">6555</div>
-                                                                    <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
-                                                                    <div class="col col-3" data-label="Actions sur la caisse">
-                                                 
-                                                                        <!-- Bouton d'actions -->
-                                                                        <div class="container text-align justify-content-center d-flex">
-                                                                          <button id="btn-entre" class="button" type="button">Entré</button>
-                                                                          <button id="btn-sortie" class="button" type="button">Sortie</button>
-                                                                            <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
-                                                                                <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
-                                                                            </button>
-                                                                        </div>
-                                                                      </div>
-                                                                    </li>
-                                     
+                                        <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                        <div class="col col-1" data-label="Montant">6555</div>
+                                        <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                        <div class="col col-3" data-label="Actions sur la caisse">
+                                           <div class="container text-align justify-content-center d-flex">
+                                                <button id="btn-entre" class="button" type="button">Entré</button>
+                                                <button id="btn-sortie" class="button" type="button">Sortie</button>
+                                                <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
+                                                    <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                </button>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                        <div class="col col-1" data-label="checkbox">
+                                            <input type="checkbox" name="" id="">
+                                        </div>    
+                                        <div class="col col-2" data-label="Profil">
+                                            <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                        </div>
+
+                                        <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                        <div class="col col-1" data-label="Montant">6555</div>
+                                        <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                        <div class="col col-3" data-label="Actions sur la caisse">
+                                           <div class="container text-align justify-content-center d-flex">
+                                                <button id="btn-entre" class="button" type="button">Entré</button>
+                                                <button id="btn-sortie" class="button" type="button">Sortie</button>
+                                                <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
+                                                    <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                </button>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                        <div class="col col-1" data-label="checkbox">
+                                            <input type="checkbox" name="" id="">
+                                        </div>    
+                                        <div class="col col-2" data-label="Profil">
+                                            <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                        </div>
+
+                                        <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                        <div class="col col-1" data-label="Montant">6555</div>
+                                        <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                        <div class="col col-3" data-label="Actions sur la caisse">
+                                           <div class="container text-align justify-content-center d-flex">
+                                                <button id="btn-entre" class="button" type="button">Entré</button>
+                                                <button id="btn-sortie" class="button" type="button">Sortie</button>
+                                                <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
+                                                    <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                </button>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                        <div class="col col-1" data-label="checkbox">
+                                            <input type="checkbox" name="" id="">
+                                        </div>    
+                                        <div class="col col-2" data-label="Profil">
+                                            <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                        </div>
+
+                                        <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                        <div class="col col-1" data-label="Montant">6555</div>
+                                        <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                        <div class="col col-3" data-label="Actions sur la caisse">
+                                           <div class="container text-align justify-content-center d-flex">
+                                                <button id="btn-entre" class="button" type="button">Entré</button>
+                                                <button id="btn-sortie" class="button" type="button">Sortie</button>
+                                                <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
+                                                    <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                </button>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                        <div class="col col-1" data-label="checkbox">
+                                            <input type="checkbox" name="" id="">
+                                        </div>    
+                                        <div class="col col-2" data-label="Profil">
+                                            <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                        </div>
+
+                                        <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                        <div class="col col-1" data-label="Montant">6555</div>
+                                        <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                        <div class="col col-3" data-label="Actions sur la caisse">
+                                           <div class="container text-align justify-content-center d-flex">
+                                                <button id="btn-entre" class="button" type="button">Entré</button>
+                                                <button id="btn-sortie" class="button" type="button">Sortie</button>
+                                                <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
+                                                    <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                </button>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                        <div class="col col-1" data-label="checkbox">
+                                            <input type="checkbox" name="" id="">
+                                        </div>    
+                                        <div class="col col-2" data-label="Profil">
+                                            <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                        </div>
+
+                                        <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                        <div class="col col-1" data-label="Montant">6555</div>
+                                        <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                        <div class="col col-3" data-label="Actions sur la caisse">
+                                           <div class="container text-align justify-content-center d-flex">
+                                                <button id="btn-entre" class="button" type="button">Entré</button>
+                                                <button id="btn-sortie" class="button" type="button">Sortie</button>
+                                                <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
+                                                    <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                </button>
+                                            </div>
+                                        </div> 
+                                    </li>
+                                    <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                        <div class="col col-1" data-label="checkbox">
+                                            <input type="checkbox" name="" id="">
+                                        </div>    
+                                        <div class="col col-2" data-label="Profil">
+                                            <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                        </div>
+
+                                        <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                        <div class="col col-1" data-label="Montant">6555</div>
+                                        <div class="col col-3" data-label="Champ de transaction"><input class="input-montant" type="text" name="" id=""></div>
+                                        <div class="col col-3" data-label="Actions sur la caisse">
+                                           <div class="container text-align justify-content-center d-flex">
+                                                <button id="btn-entre" class="button" type="button">Entré</button>
+                                                <button id="btn-sortie" class="button" type="button">Sortie</button>
+                                                <button style="background-color: transparent; color: white;border: none;" class="button" data-bs-toggle="modal" data-bs-target="#editcaisses" style="background-color: transparent; border: none;">
+                                                    <i class="material-icons" style="font-size:22px; color: grey;">mode_edit</i>
+                                                </button>
+                                            </div>
+                                        </div> 
+                                    </li>
                                   </ul>
                             </div>
 
@@ -474,7 +488,7 @@
                                             <div class="col-2"></div>
                                             <div class="col-8">
                                                 <h4 style="color: #FFA500;">Caisse Epargne</h4>
-                                                <select style="color: white;" name="" id="" class="form-select form-control text-center bg-primary">
+                                                <select style="color: white;" name="type_caisse" id="type_caisse" class="form-select form-control text-center bg-primary">
                                                     <option value="" selected><h3>Entrée</h3></option>
                                                     <option value="" selected><h3>Sortie</h3></option>
                                                 </select>
@@ -484,13 +498,13 @@
                                         <div class="row pt-3" style="color: white;">
                                             <div class="col-12">
                                                 <label  for="">Montant de la caisse</label>
-                                                <input  class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
+                                                <input id="mantant_actu" name="mantant_actu" class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
                                             </div>
                                         </div>
                                         <div class="row pt-3" style="color: white;">
                                             <div class="col-12">
                                                 <label  for="">Montant à modifier</label>
-                                                <input  class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
+                                                <input id="montant_edit" name="montant_edit" class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
@@ -506,50 +520,24 @@
                           </div>
                         </div>
                       </div>
-                    <!-- <div class="modal fade" id="editcaisses" tabindex="-1" aria-labelledby="editcaisses" aria-hidden="true">
-                        <div class="modal-dialog" style="position: relative; right: 5%; width: 25%; height: 70vh;">
-                        <div class="modal-content"> 
-                            <div id="box-register" class="modal-body">
-                                <div class="container  pt-3" style="position: relative; left: 5%;">
-                                    <form id="form" class="pt-5">
-                                        <img id="user_logo" style="position: relative; left: 20%; background-color: #2099C1;" src="img/🦆 icon _profile circle_.png" class="img-thumbnail" alt="">
-                                        <div class="row">
-                                            <div class="col-xl-6">
-                                                <p class="pt-2">
-                                                    <label  for="">Nom d'utilisateur</label>
-                                                    <input id="input" class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
-                                                </p>
-                                                <p>
-                                                    <label  for="">Mot de Passe</label>
-                                                    <input id="input" class="form-control" type="password" placeholder="entrer mot de passe" required>
-                                                </p>
-                                                <p>
-                                                    <label for="">Staut</label>
-                                                    <select id="input" class="form-select" aria-label="Default select example">
-                                                        <option selected>choose your status</option>
-                                                        <option value="1">One</option>
-                                                        <option value="2">Two</option>
-                                                        <option value="3">Three</option>
-                                                      </select>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <button id="btn-register" style="position: relative; left: 20%;"  class="btn btn-primary btn-block" type="sumbit">Creer</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div> -->
-
+                   
                 </main>
-                </div>
+                
             </section>
+
         </div>
     </section>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
-        <script src="js/js_toggle_caisse/canecode_switch.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
 
+        <script>
+            /* Initialization of datatables */
+            $(document).ready(function () {
+                $('table.display').DataTable();
+            });
+        </script>
     </body>
 </html>
