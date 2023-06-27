@@ -1,70 +1,62 @@
-
+h4{
+    color: white;
+}
+.caisse-items{
+    width: 30%;
+    height: 12vh;   
+}
+.p-1{
+    border-radius: 8px;
+    height: 15vh;
+}
 #profile_membre1{
-    width: 90%;
-    height: auto;
+    width: 35%;
     border-radius: 100%;
 }
-th{
+#profile_membre2{
+    width: 25%;
+    border: 5px solid rgb(209, 208, 208);
+    border-radius: 100%;
+}
+.button{
+    color: white;
+    width: 35%;
+    border-radius: 5px;
     border: none;
-    padding: 3px;
-    margin: 3px;
-    justify-content: center;
-    text-align: center;
-    font-size: 14px;
-    color: gray;
 }
-td{
-    padding: 3px;
-    margin: 3px;
-    justify-content: center;
-    text-align: center;
-    font-size: 14px;
-}
-table {
-    border-collapse: separate;
-    border-spacing: 0 5px;
-}
-.table th ,.table td{
-    border-top: none;
-}
-/* comment */
-.table-scroll tbody {
-    position: absolute;
-    overflow-y: scroll;
-    height: 52vh;
-    
-}
-#modal-notification{
-    position: fixed;
-    right:2px;
-    height: 60vh;
-    display: flex;
-    justify-content: end;
-  }
-.table-scroll tr {
-    width: 98%;
-    table-layout: fixed;
-    display: inline-table;
-}
-.form-control{
-    border-radius: 15px;
-    background-color: #2099C1; 
+.btn{
+    width: 100%;
     color: white;
 }
-#nom_AAA{
-    font-family: 'Dancing Script';
-    font-size: 32px;
-    color: white;
-  
-  }
-
-#user_logo{
-    background-color: #2099C1;
-} 
-#icons{
-    width: 16%;
+#btn-entre{
+    background-color: #0CCE6B;
+}
+#btn-sortie{
+    position: relative;
+    left: 4px;
+    background-color: red;
+}
+.input-montant{
+    border-radius: 5px;
+    border: none;
+    background-color: gainsboro;
+}
+.img-thumbnail{
+    width: 12%;
 }
 
+/* modal edit */
+
+#modal-edit{
+    height: auto;
+}
+#modal-edit-header{
+    color: white;
+    background-color: orange;
+}
+.modal-content{
+    width: 70%;
+}
 
 h2 {
     font-size: 26px;

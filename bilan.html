@@ -6,256 +6,79 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Caisses - AAA</title>
+        <title>Dashboard - AAA</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css.map">
+        <link rel="stylesheet" href="css/dashbord.css">
+        <link rel="stylesheet" href="css/bilan.css">
+        <!--Datatable plugin CSS file -->
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 	   
+         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+        <!--jQuery library file -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <!--Datatable plugin JS library file -->
+        <script type="text/javascript"src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
         <link href="css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="css/styleCaisse.css">
-        <link href="https://netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="https://netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
-         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <style>
-            /* for the table of caisse  */
-            
-                h2 {
-                font-size: 26px;
-                margin: 20px 0;
-                text-align: center;
-                }
-                h2 small {
-                font-size: 0.5em;
-                }
-
-                .responsive-table li {
-                border-radius: 8px;
-                padding: 5px 10px;
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 5px;
-                }
-                .responsive-table .table-header {
-                font-size: 14px;
-                color: gray;
-                }
-                .responsive-table .table-row {
-                background-color: #ffffff;
-                box-shadow: 2px 5px 5px gray;
-                }
-                @media all and (max-width: 767px) {
-                .responsive-table .table-header {
-                    display: none;
-                }
-                .responsive-table li {
-                    display: block;
-                }
-                .responsive-table .col {
-                    flex-basis: 100%;
-                }
-                .responsive-table .col {
-                    display: flex;
-                    padding: 10px 0;
-                }
-                .responsive-table .col:before {
-                    color: #6C7A89;
-                    padding-right: 10px;
-                    content: attr(data-label);
-                    flex-basis: 50%;
-                    text-align: right;
-                }
-                }
-            /* for the table of end caisse  */
-            body {
-            font: 13px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #404040;
-            background: #f2f2f2;
-            }
-            i {
-            position: absolute;
-            z-index: 1;
-            top: 7px;
-            left: 9px;
-            color: #999;
-            }
-            /* .container {
-            margin: 50px auto;
-            width: 280px;
-            text-align: center;
-                background-color: #f2f2f2;
-            } */
-            .container > .switch {
-            display: block;
-            margin: 22px auto;
-            }
-            
-            .switch {
-            position: relative;
-            display: inline-block;
-            vertical-align: top;
-            width: 96px;
-            height: 36px;
-            padding: 1px;
-            border-radius: 3px;
-            cursor: pointer;
-            }
-            
-            .switch-input {
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            }
-            .switch-label {
-            position: relative;
-            display: block;
-            height: inherit;
-            font-size: 10px;
-            text-transform: uppercase;
-            background: #2099C1;
-            color: white;
-            border-radius: inherit;
-            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
-            -webkit-transition: 0.15s ease-out;
-            -moz-transition: 0.15s ease-out;
-            -o-transition: 0.15s ease-out;
-            transition: 0.15s ease-out;
-            -webkit-transition-property: opacity background;
-            -moz-transition-property: opacity background;
-            -o-transition-property: opacity background;
-            transition-property: opacity background;
-            }
-            .switch-label:before, .switch-label:after {
-            position: absolute;
-            top: 50%;
-            margin-top: -.5em;
-            line-height: 1;
-            -webkit-transition: inherit;
-            -moz-transition: inherit;
-            -o-transition: inherit;
-            transition: inherit;
-            }
-            .switch-label:before {
-            content: attr(data-off);
-            right: 9px;
-            color: white;
-            text-shadow: 0 1px rgba(255, 255, 255, 0.5);
-            }
-            .switch-label:after {
-            content: attr(data-on);
-            left: 11px;
-            color: white;
-            text-shadow: 0 1px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            }
-            .switch-input:checked ~ .switch-label {
-            background: gray;
-            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
-            }
-            .switch-input:checked ~ .switch-label:before {
-            opacity: 0;
-            }
-            .switch-input:checked ~ .switch-label:after {
-            opacity: 1;
-            }
-            
-            .switch-handle {
-            position: absolute;
-            top: 1px;
-            left: -5px;
-            width: 36px;
-            height: 36px;
-            background: white;
-            border-radius: 3px;
-            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-            background-image: -webkit-linear-gradient(top, white 40%, #f0f0f0);
-            background-image: -moz-linear-gradient(top, white 40%, #f0f0f0);
-            background-image: -o-linear-gradient(top, white 40%, #f0f0f0);
-            background-image: linear-gradient(to bottom, white 40%, #f0f0f0);
-            -webkit-transition: left 0.15s ease-out;
-            -moz-transition: left 0.15s ease-out;
-            -o-transition: left 0.15s ease-out;
-            transition: left 0.15s ease-out;
-            }
-            .switch-handle:before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            margin: -6px 0 0 -6px;
-            width: 12px;
-            height: 12px;
-            background: #f9f9f9;
-            border-radius: 6px;
-            box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
-            background-image: -webkit-linear-gradient(top, #eeeeee, white);
-            background-image: -moz-linear-gradient(top, #eeeeee, white);
-            background-image: -o-linear-gradient(top, #eeeeee, white);
-            background-image: linear-gradient(to bottom, #eeeeee, white);
-            }
-            .switch-input:checked ~ .switch-handle {
-            left: 70px;
-            box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
-            }
-            
-            .switch-green > .switch-input:checked ~ .switch-label {
-            background: #4fb845;
-            }
-        </style>
+        
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
-
-
     <body class="sb-nav-fixed">
         <nav id="nav" class="sb-topnav navbar navbar-expand">
-
-            
-            <!-- Bouton derière le logo -->
-            <a id="nom_AAA" class="navbar-brand ps-3">
-                <button style="color: transparent; border: none; background-color: transparent;"  id="sidebarToggle" href="#!">
+            <!-- Navbar Brand-->
+            <a id="nom_AAA" class="navbar-brand">
+                <button  id="sidebarToggle" href="#!">
                     <img id="logo"  class="img-thumbnail" src="img/logo.jpg" alt="">
                 </button>
-                <span>Association Avenir Assuré</span>
+                <span id="associ">Association Avenir Assuré</span>
             </a>
-
+            <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                 <div class="input-group me-5">
                     <!-- Button trigger modal -->
-                    <button class="button"  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: transparent; border: none;">
-                        <img id="icons" src="img/addUser.png" alt="" style="width: 70%;">
+                    <button id="btn-addUser" class="button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img  id="icons" src="img/addUser.png" alt="">
                     </button>
-
-
-                    <!-- Modal -->
+                    <!-- Modal pour 'aajout d'un utilisateur -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" style="position: relative; right: 5%; width: 25%; height: 70vh;">
-                        <div class="modal-content"> 
+                        <div class="modal-dialog">
+                        <div id="modal-addUser" class="modal-content"> 
                             <div id="box-register" class="modal-body">
-                                <div class="container  pt-3" style="position: relative; left: 5%;">
-                                    <form id="form" class="pt-5">
-                                        <img id="user_logo" style="position: relative; left: 20%; background-color: #2099C1;" src="img/🦆 icon _profile circle_.png" class="img-thumbnail" alt="">
+                                <div class="container  pt-3">
+                                    <form id="form"  method="" class="pt-5">
+                                        <div class="row justify-content-center">
+                                            <div class="col-12 text-center justify-content-center">
+                                                <img id="user_logo"  src="img/🦆 icon _profile circle_.png" class="img-thumbnail" alt="">
+                                            </div>
+                                        </div>
                                         <div class="row">
-                                            <div class="col-xl-6">
+                                            <div class="col-12 text-center justify-content-center">
                                                 <p class="pt-2">
                                                     <label  for="">Nom d'utilisateur</label>
-                                                    <input id="input" class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
+                                                    <input id="username" name="username" class="form-control" type="text" placeholder="entrer nom d'utilisateur" required autofocus>
                                                 </p>
                                                 <p>
                                                     <label  for="">Mot de Passe</label>
-                                                    <input id="input" class="form-control" type="password" placeholder="entrer mot de passe" required>
+                                                    <input id="password" name="password" class="form-control" type="password" placeholder="entrer mot de passe" required>
                                                 </p>
                                                 <p>
                                                     <label for="">Staut</label>
-                                                    <select id="input" class="form-select" aria-label="Default select example">
-                                                        <option selected>choose your status</option>
-                                                        <option value="1">One</option>
-                                                        <option value="2">Two</option>
-                                                        <option value="3">Three</option>
+                                                    <select id="statut" name="statut" class="form-select" aria-label="Default select example">
+                                                        <option  selected>choose your status</option>
+                                                        <option value="Célibataire">Célibataire</option>
+                                                        <option value="Marié">Marié</option>
+                                                        <option value="Divorcé">Divorcé</option>
                                                       </select>
                                                 </p>
                                             </div>
                                         </div>
-                                        <button id="btn-register" style="position: relative; left: 20%;"  class="btn btn-primary btn-block" type="sumbit">Creer</button>
+                                        <div class="row justify-content-center">
+                                            <div class="col-12 text-center justify-content-center">
+                                                <button id="btn-register"  class="btn btn-primary btn-block" type="sumbit">Creer</button>
+                                            </div>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -263,19 +86,19 @@
                         </div>
                     </div>
 
-
-                    <button class="button" data-bs-toggle="modal" data-bs-target="#myModal2" aria-expanded="false" aria-controls="collapseExample" style="background-color: transparent; border: none;">
-                        <img  style="position: relative; left: 15%; width: 70%;" id="icons" src="img/Doorbell.png" alt="">
+                <!-- fin du modal d'ajout d'utilisateur -->
+                    <button id="bn-notif" class="button" data-bs-toggle="modal" data-bs-target="#myModal2" aria-expanded="false" aria-controls="collapseExample">
+                        <img  id="icons" src="img/Doorbell.png" alt="">
                     </button>
                     <div class="container demo">
                         <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
-                            <div class="modal-dialog" style="height: 80vh;">
+                            <div id="modal-notification" class="modal-dialog">
                                 <div class="modal-content">
-                                    <div class="modal-header" style="background-color: #FFA500;">
+                                    <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">Notifications</h5>
                                     </div>
-                                    <div class="modal-body" style="color: black; overflow: scroll; overflow-x: hidden; height: 13vh;">
-                                    <ul style="font-style: normal;">
+                                    <div id="box-notif" class="modal-body">
+                                    <ul>
                                         <li><span>Il y a 12 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
                                         <li><span>Il y a 06 min:</span> <span>Lorem ipsum dolor sit amet.</span></li>
                                         <li><span>Il y a 1h:</span> <span>Lorem ipsum dolor sit amet.</span></li>
@@ -304,6 +127,7 @@
                 </div>
             </form>
             <!-- Navbar-->
+
             <!-- Option derière profiLes -->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown d-flex">
@@ -318,7 +142,7 @@
                             <li><a class="dropdown-item" href="#!">Modifier photo de profil</a></li>
                             <li><hr class="dropdown-divider" /></li>
                             <li><a class="dropdown-item" href="#!">Langue:
-                                <select name="" id="" style="border: none;">
+                                <select name="" id="">
                                     <option value="" selected>français</option>
                                     <option value="" >anglais</option>
                                 </select>
@@ -334,8 +158,6 @@
             </ul>
         </nav>
         <section id="navigation">
-
-        
         <section id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion" id="sidenavAccordion">
@@ -351,12 +173,12 @@
                                 <i class="fa fa-users" aria-hidden="true"></i>
                                 <span class="menu-items">Gestion des Membres</span>
                             </a>
-                            <a class="nav-link" href="bilan.html">
+                            <a class="nav-link" href="caisses.html">
                                 <div class="sb-nav-link-icon"></i></div>
                                 <i class="fa fa-credit-card" aria-hidden="true"></i>
                                 <span class="menu-items">Gestion de caisses</span>
                             </a>
-                            <a class="nav-link" href="caisses.html">
+                            <a class="nav-link" href="bilan.html">
                                 <div class="sb-nav-link-icon"></i></div>
                                 <i class="fa fa-dollar" aria-hidden="true"></i>
                                 <span class="menu-items">Bilan financier</span>
@@ -372,7 +194,7 @@
                 </nav>
             </div>
            
-            <div id="layoutSidenav_content" class="page-section pt-2 bg-light">
+            <div id="layoutSidenav_content" class="page-section pt-2">
                 <main id="Dashboard" class="bg-light pt-4">
                     <div class="container-fluid px-4 pt-2">
                         <div class="row pt-3">
@@ -402,13 +224,9 @@
                                     <p><input  value="year" type="datepicker" class="form-control form-select" name="datepicker" id="datepicker" /></p>                                
                                 </div>
                                 <div class="col-md-2 d-flex">
-                                    <p><input   value="month" type="datepicker" class="form-control form-select" name="datepicker" id="Monthpicker" /></p>
-                                    
+                                    <p><input   value="month" type="datepicker" class="form-control form-select" name="datepicker" id="Monthpicker" /></p> 
                                 </div>
                                 <div class="col-md-4">
-                                    <button class="button" style=" height: 5vh; background-color: #2099C1; border: none; border-radius: 20px;">
-                                        <a  style="text-decoration: none; color: white; font-size: 16px;"   href="bilan.html"><span style="font-weight: bold;">Bilan financier</span></a>
-                                    </button>
                                 </div>
                                 <div class="col-md-2">
                                     <button class="button" style="background-color: transparent; border: none;">
@@ -610,23 +428,33 @@
                          </div>
                        
                 </main>
- 
-
+                <!-- voici la fin du dashboard --> 
                 <!-- footer -->
                     <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
+                        <div class="d-flex align-items-center justify-content-center small">
                             <div class="text-muted">Copyright &copy; AAA 2023</div>
                             
                         </div>
                     </div>
                 </footer>
-                </div>
             </section>
+
         </div>
     </section>
-        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+
         <script>
+            /* Initialization of datatables */
+            $(document).ready(function () {
+                $('table.display').DataTable();
+            });
+        </script>
+           <script>
             function myFunction() {
             var x = document.getElementById("is_off");
             var y = document.getElementById("is_on");
@@ -645,30 +473,28 @@
             }
         </script>
 
-<script>
-// pour le mois
-$(document).ready(function(){
-    $("#Monthpicker").datepicker({
-        format: "mm",
-        viewMode: "months", 
-        minViewMode: "months",
-        autoclose:true
-    });   
-    })
+        <script>
+        // pour le mois
+        $(document).ready(function(){
+            $("#Monthpicker").datepicker({
+                format: "mm",
+                viewMode: "months", 
+                minViewMode: "months",
+                autoclose:true
+            });   
+            })
 
-  </script>
-  <script>
-    $(document).ready(function(){
-     
-    
-    var dp= $("#datepicker").datepicker({
-         format: "yyyy",
-         viewMode: "years", 
-         minViewMode: "years",
-         autoclose:true
-      });   
-    })
-  </Script>
+        </script>
+        <script>
+            $(document).ready(function(){
 
+            var dp= $("#datepicker").datepicker({
+                format: "yyyy",
+                viewMode: "years", 
+                minViewMode: "years",
+                autoclose:true
+            });   
+            })
+        </Script>
     </body>
 </html>
