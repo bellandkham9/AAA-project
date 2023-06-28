@@ -242,12 +242,7 @@
       margin: 0;
     }
   }
-  
-  .active{
-    color: orange;
-    background-color: white;
-  }
-  
+
   #actions{
     background-color: transparent;
     width: 20%;
@@ -297,4 +292,8 @@
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #0CCE6B; 
+  }
+
+  body{
+    overflow-x: hidden;
   }
