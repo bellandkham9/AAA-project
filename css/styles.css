@@ -3652,7 +3652,8 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.nav-link:hover, .nav-link:focus {
+
+#active{
   color: orange;
   height: 8vh;
   background-color: white;
