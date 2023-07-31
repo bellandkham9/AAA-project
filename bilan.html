@@ -1,86 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Dashboard - AAA</title>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css.map">
-        <link rel="stylesheet" href="css/dashbord.css">
-        <link rel="stylesheet" href="css/bilan.css">
-        <!--Datatable plugin CSS file -->
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 	   
-         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
-        <!--jQuery library file -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <!--Datatable plugin JS library file -->
-        <script type="text/javascript"src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-        <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
-        <link href="css/styles.css" rel="stylesheet" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
-        
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    </head>
-    <body class="sb-nav-fixed">
-        <section id="nav-id">
-            <!--La barre de menu se place ici au moyen du fichier js qui dans [js/navbar.js] -->
-        </section>
-        <section id="navigation">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Dashboard - AAA</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="css/dashbord.css">
+    <link rel="stylesheet" href="css/bilan.css">
+    <!--Datatable plugin CSS file -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+    <!--jQuery library file -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!--Datatable plugin JS library file -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Dancing Script' rel='stylesheet'>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css"
+        rel="stylesheet">
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
+
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="sb-nav-fixed">
+    <section id="nav-id">
+        <!--La barre de menu se place ici au moyen du fichier js qui dans [js/navbar.js] -->
+    </section>
+    <section id="navigation">
         <section id="layoutSidenav">
             <div id="layoutSidenav_nav">
 
             </div>
-           
             <div id="layoutSidenav_content" class="page-section pt-2">
                 <main id="Dashboard" class="bg-light pt-4">
                     <div class="container-fluid px-4 pt-2">
-                        <div class="row pt-3">
-                           <div class="col-md-6">
-                                <h3 style="color: #FFA500;" class="mt-4 mx-5" >Gestion des Caisses</h3>
-                           </div>
-                           <div class="col-md-4 ">
-                               <input style="height: 5vh;" type="text" name="search" id="search" class="form-control mt-4">
-                           </div>
-                           <div class="mt-4 col-md-2" style="color: #FFA500; font-size: 13px;line-height: 1.5;">
-                            <P>Total caisses: <span>60000</span> <br>
-                               Total epargne: <span>23000</span>
-                            </P>
-                           </div>
+                        <div class="row pt-3 mt-5 mb-5">
+                            <div class="col-md-6">
+                                <h3 style="color: #FFA500;" class="mt-4 mx-5 mt-5">Gestion des Caisses</h3>
+                            </div>
+                            <div class="col-md-4 ">
+                                <input style="height: 3.5vh;" type="text" name="search" id="search" placeholder="Search"
+                                    class="form-control mt-4">
+                            </div>
+                            <div class="mt-4 col-md-2" style="color: #FFA500; font-size: 13px;line-height: 1.5;">
+                                <P>Total caisses: <span>60000</span> <br>
+                                    Total epargne: <span>23000</span>
+                                </P>
+                            </div>
                         </div>
                         <div class="row pt-3 mx-4">
-                                <div class="col-md-2">
-                                    <div class="example">
-                                        <label class="switch">
-                                        <input onclick="myFunction()" id="the_checkbox_id" type="checkbox" class="switch-input">
+                            <div class="col-md-2">
+                                <div class="example">
+                                    <label class="switch">
+                                        <input onclick="myFunction()" id="the_checkbox_id" type="checkbox"
+                                            class="switch-input">
                                         <span class="switch-label" data-on="Sorties" data-off="Entrées"></span>
                                         <span class="switch-handle"></span>
-                                        </label>
-                                    </div>
+                                    </label>
                                 </div>
-                                <div class="col-md-2">
-                                    <p><input  value="year" type="datepicker" class="form-control form-select" name="datepicker" id="datepicker" /></p>                                
-                                </div>
-                                <div class="col-md-2 d-flex">
-                                    <p><input   value="month" type="datepicker" class="form-control form-select" name="datepicker" id="Monthpicker" /></p> 
-                                </div>
-                                <div class="col-md-4">
-                                </div>
-                                <div class="col-md-2">
-                                    <button class="button" style="background-color: transparent; border: none;">
-                                        <p><img style="background-color: transparent; width: 32px; height: auto;"  class="img-thumbnail" src="img/Filter.png"  alt=""> Filtrer</p>
-                                    </button>
-                                </div>
-                         </div>
-                         <div class="row pt-2">
+                            </div>
+                            <div class="col-md-2">
+                                <p><input value="year" type="datepicker" class="form-control form-select"
+                                        name="datepicker" id="datepicker" /></p>
+                            </div>
+                            <div class="col-md-2 d-flex">
+                                <p><input value="month" type="datepicker" class="form-control form-select"
+                                        name="datepicker" id="Monthpicker" /></p>
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="mt-4 col-12 gx-5" style="color: #FFA500; font-size: 13px;line-height: 1.5;">
+                                <h6>NB: Devise utilisée c'est le FCFA </h6>
+                            </div>
+                        </div>
+
+
+                        <div class="row pt-2">
                             <div class="col-md-12">
                                 <div id="is_off">
-                                    <div  class="container-fluid  this_shows_when_switch_is_off">
-                                            <ul class="responsive-table" style="overflow: scroll; overflow-x: hidden; height: 70vh;">
-                                              <li class="table-header text-center align-items-center">
+                                    <div class="container-fluid  this_shows_when_switch_is_off">
+                                        <ul class="responsive-table"
+                                            style="overflow: scroll; overflow-x: hidden; height: 70vh;">
+                                            <li class="table-header text-center align-items-center">
                                                 <div class="col col-1">Profil</div>
                                                 <div class="col col-2">Noms et Prénoms</div>
                                                 <div class="col col-1">Scours</div>
@@ -89,255 +100,150 @@
                                                 <div class="col col-1">Aide att</div>
                                                 <div class="col col-1">Cot att</div>
                                                 <div class="col col-2">Total</div>
-                                         
-                                              </li>
-                                              <li class="table-row text-center align-items-center">
+
+                                            </li>
+                                            <li class="table-row text-center align-items-center">
                                                 <div class="col col-1" data-label="Profil">
-                                                    <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
+                                                    <img id="profile_membre1" class="img-thumbnail" src="img/user.png">
                                                 </div>
                                                 <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                                <div class="col col-1" data-label="Scours">$350</div>
-                                                <div class="col col-2" data-label="Epargne">Pending</div>
-                                                <div class="col col-2" data-label="Interet">42235</div>
-                                                <div class="col col-1" data-label="Aide att">John Doe</div>
-                                                <div class="col col-1" data-label="Cot att">$350</div>
-                                                <div class="col col-2" data-label="Total">Pending</div>
-                                              </li>
-                                              <li class="table-row text-center align-items-center">
-                                                <div class="col col-1" data-label="Profil">
-                                                    <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                </div>
-                                                <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                                <div class="col col-1" data-label="Scours">$350</div>
-                                                <div class="col col-2" data-label="Epargne">Pending</div>
-                                                <div class="col col-2" data-label="Interet">42235</div>
-                                                <div class="col col-1" data-label="Aide att">John Doe</div>
-                                                <div class="col col-1" data-label="Cot att">$350</div>
-                                                <div class="col col-2" data-label="Total">Pending</div>
-                                              </li>
-                                              <li class="table-row text-center align-items-center">
-                                                <div class="col col-1" data-label="Profil">
-                                                    <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                </div>
-                                                <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                                <div class="col col-1" data-label="Scours">$350</div>
-                                                <div class="col col-2" data-label="Epargne">Pending</div>
-                                                <div class="col col-2" data-label="Interet">42235</div>
-                                                <div class="col col-1" data-label="Aide att">John Doe</div>
-                                                <div class="col col-1" data-label="Cot att">$350</div>
-                                                <div class="col col-2" data-label="Total">Pending</div>
-                                              </li>
-                                              <li class="table-row text-center align-items-center">
-                                                <div class="col col-1" data-label="Profil">
-                                                    <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                </div>
-                                                <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                                <div class="col col-1" data-label="Scours">$350</div>
-                                                <div class="col col-2" data-label="Epargne">Pending</div>
-                                                <div class="col col-2" data-label="Interet">42235</div>
-                                                <div class="col col-1" data-label="Aide att">John Doe</div>
-                                                <div class="col col-1" data-label="Cot att">$350</div>
-                                                <div class="col col-2" data-label="Total">Pending</div>
-                                              </li>
-                                              <li class="table-row text-center align-items-center">
-                                                <div class="col col-1" data-label="Profil">
-                                                    <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                </div>
-                                                <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                                <div class="col col-1" data-label="Scours">$350</div>
-                                                <div class="col col-2" data-label="Epargne">Pending</div>
-                                                <div class="col col-2" data-label="Interet">42235</div>
-                                                <div class="col col-1" data-label="Aide att">John Doe</div>
-                                                <div class="col col-1" data-label="Cot att">$350</div>
-                                                <div class="col col-2" data-label="Total">Pending</div>
-                                              </li>
-                                              <li class="table-row text-center align-items-center">
-                                                <div class="col col-1" data-label="Profil">
-                                                    <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                                </div>
-                                                <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                                <div class="col col-1" data-label="Scours">$350</div>
-                                                <div class="col col-2" data-label="Epargne">Pending</div>
-                                                <div class="col col-2" data-label="Interet">42235</div>
-                                                <div class="col col-1" data-label="Aide att">John Doe</div>
-                                                <div class="col col-1" data-label="Cot att">$350</div>
-                                                <div class="col col-2" data-label="Total">Pending</div>
-                                              </li>
-                                            </ul>
-                                  
+                                                <div class="col col-1" data-label="Scours">350</div>
+                                                <div class="col col-2" data-label="Epargne">250</div>
+                                                <div class="col col-2" data-label="Interet">15%</div>
+                                                <div class="col col-1" data-label="Aide att">250</div>
+                                                <div class="col col-1" data-label="Cot att">350</div>
+                                                <div class="col col-2" data-label="Total">2500</div>
+                                            </li>
+
+                                        </ul>
+
                                     </div>
                                 </div>
                                 <div id="is_on" style="display: none;">
                                     <div class="container-fluid  this_shows_when_switch_is_on">
-                                        <ul class="responsive-table" style="overflow: scroll; overflow-x: hidden; height: 70vh;">
+                                        <ul class="responsive-table"
+                                            style="overflow: scroll; overflow-x: hidden; height: 70vh;">
                                             <li class="table-header text-center align-items-center">
-                                              <div class="col col-1">Profil</div>
-                                              <div class="col col-2">Noms et Prénoms</div>
-                                              <div class="col col-1">Assur</div>
-                                              <div class="col col-2">Cp</div>
-                                              <div class="col col-2">R.A</div>
-                                              <div class="col col-1">Aide due</div>
-                                              <div class="col col-1">Coll due</div>
-                                              <div class="col col-1">Sanc</div>
-                                              <div class="col col-1">Total</div>
-                                       
+                                                <div class="col col-1">Profil</div>
+                                                <div class="col col-2">Noms et Prénoms</div>
+                                                <div class="col col-1">Assur</div>
+                                                <div class="col col-2">Cp</div>
+                                                <div class="col col-2">R.A</div>
+                                                <div class="col col-1">Aide due</div>
+                                                <div class="col col-1">Coll due</div>
+                                                <div class="col col-1">Sanc</div>
+                                                <div class="col col-1">Total</div>
+
                                             </li>
                                             <li class="table-row text-center align-items-center">
-                                              <div class="col col-1" data-label="Profil">
-                                                  <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                              </div>
-                                              <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                              <div class="col col-1" data-label="Scours">$350</div>
-                                              <div class="col col-2" data-label="Epargne">Pending</div>
-                                              <div class="col col-2" data-label="Interet">42235</div>
-                                              <div class="col col-1" data-label="Aide att">John Doe</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Total">Pending</div>
+                                                <div class="col col-1" data-label="Profil">
+                                                    <img id="profile_membre1" class="img-thumbnail"
+                                                        src="img/user-female.png" alt="">
+                                                </div>
+                                                <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
+                                                <div class="col col-1" data-label="Scours">$350</div>
+                                                <div class="col col-2" data-label="Epargne">Pending</div>
+                                                <div class="col col-2" data-label="Interet">42235</div>
+                                                <div class="col col-1" data-label="Aide att">John Doe</div>
+                                                <div class="col col-1" data-label="Cot att">$350</div>
+                                                <div class="col col-1" data-label="Cot att">$350</div>
+                                                <div class="col col-1" data-label="Total">Pending</div>
                                             </li>
                                             <li class="table-row text-center align-items-center">
-                                              <div class="col col-1" data-label="Profil">
-                                                  <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                              </div>
-                                              <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                              <div class="col col-1" data-label="Scours">$350</div>
-                                              <div class="col col-2" data-label="Epargne">Pending</div>
-                                              <div class="col col-2" data-label="Interet">42235</div>
-                                              <div class="col col-1" data-label="Aide att">John Doe</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Total">Pending</div>
+                                                <div class="col col-1" data-label="Profil">
+                                                    <img id="profile_membre1" class="img-thumbnail"
+                                                        src="img/user-female.png" alt="">
+                                                </div>
+                                                <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
+                                                <div class="col col-1" data-label="Scours">$350</div>
+                                                <div class="col col-2" data-label="Epargne">Pending</div>
+                                                <div class="col col-2" data-label="Interet">42235</div>
+                                                <div class="col col-1" data-label="Aide att">John Doe</div>
+                                                <div class="col col-1" data-label="Cot att">$350</div>
+                                                <div class="col col-1" data-label="Cot att">$350</div>
+                                                <div class="col col-1" data-label="Total">Pending</div>
                                             </li>
-                                            <li class="table-row text-center align-items-center">
-                                              <div class="col col-1" data-label="Profil">
-                                                  <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                              </div>
-                                              <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                              <div class="col col-1" data-label="Scours">$350</div>
-                                              <div class="col col-2" data-label="Epargne">Pending</div>
-                                              <div class="col col-2" data-label="Interet">42235</div>
-                                              <div class="col col-1" data-label="Aide att">John Doe</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Total">Pending</div>
-                                            </li>
-                                            <li class="table-row text-center align-items-center">
-                                              <div class="col col-1" data-label="Profil">
-                                                  <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                              </div>
-                                              <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                              <div class="col col-1" data-label="Scours">$350</div>
-                                              <div class="col col-2" data-label="Epargne">Pending</div>
-                                              <div class="col col-2" data-label="Interet">42235</div>
-                                              <div class="col col-1" data-label="Aide att">John Doe</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Total">Pending</div>
-                                            </li>
-                                            <li class="table-row text-center align-items-center">
-                                              <div class="col col-1" data-label="Profil">
-                                                  <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                              </div>
-                                              <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                              <div class="col col-1" data-label="Scours">$350</div>
-                                              <div class="col col-2" data-label="Epargne">Pending</div>
-                                              <div class="col col-2" data-label="Interet">42235</div>
-                                              <div class="col col-1" data-label="Aide att">John Doe</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Total">Pending</div>
-                                            </li>
-                                            <li class="table-row text-center align-items-center">
-                                              <div class="col col-1" data-label="Profil">
-                                                  <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg" alt="">
-                                              </div>
-                                              <div class="col col-2" data-label="Noms et Prénoms">John Doe</div>
-                                              <div class="col col-1" data-label="Scours">$350</div>
-                                              <div class="col col-2" data-label="Epargne">Pending</div>
-                                              <div class="col col-2" data-label="Interet">42235</div>
-                                              <div class="col col-1" data-label="Aide att">John Doe</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Cot att">$350</div>
-                                              <div class="col col-1" data-label="Total">Pending</div>
-                                            </li>
-                                          </ul>
+
+                                        </ul>
                                     </div>
                                 </div>
-                              
+
                             </div>
-                         </div>
-                       
+                        </div>
+
                 </main>
-                <!-- voici la fin du dashboard --> 
+                <!-- voici la fin du dashboard -->
                 <!-- footer -->
-                    <footer class="py-4 bg-light mt-auto">
+                <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-center small">
                             <div class="text-muted">Copyright &copy; AAA 2023</div>
-                            
+
                         </div>
                     </div>
                 </footer>
-            </section>
+        </section>
 
         </div>
     </section>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="assets/demo/chart-area-demo.js"></script>
-        <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
 
-          <!-- Script pour la barre de navigation et le sidebar-->
-        <script src="js/navbar.js" type="text/javascript"></script>
-        <script src="js/sidebar.js" type="text/javascript"></script>
-        <script>
-            /* Initialization of datatables */
-            $(document).ready(function () {
-                $('table.display').DataTable();
-            });
-        </script>
-           <script>
-            function myFunction() {
+    <!-- Script pour la barre de navigation et le sidebar-->
+    <script src="js/navbar.js" type="text/javascript"></script>
+    <script src="js/sidebar.js" type="text/javascript"></script>
+    <script>
+        /* Initialization of datatables */
+        $(document).ready(function () {
+            $('table.display').DataTable();
+        });
+    </script>
+    <script>
+        function myFunction() {
             var x = document.getElementById("is_off");
             var y = document.getElementById("is_on");
-         
-                if (x.style.display === "none") {
-                    x.style.display = "block";
-                } else {
-                    x.style.display = "none";
-                }
-    
-                if (y.style.display === "block") {
-                    y.style.display = "none";
-                } else {
-                    y.style.display = "block";
-                }
-            }
-        </script>
 
-        <script>
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+
+            if (y.style.display === "block") {
+                y.style.display = "none";
+            } else {
+                y.style.display = "block";
+            }
+        }
+    </script>
+
+    <script>
         // pour le mois
-        $(document).ready(function(){
+        $(document).ready(function () {
             $("#Monthpicker").datepicker({
                 format: "mm",
-                viewMode: "months", 
+                viewMode: "months",
                 minViewMode: "months",
-                autoclose:true
-            });   
-            })
+                autoclose: true
+            });
+        })
 
-        </script>
-        <script>
-            $(document).ready(function(){
+    </script>
+    <script>
+        $(document).ready(function () {
 
-            var dp= $("#datepicker").datepicker({
+            var dp = $("#datepicker").datepicker({
                 format: "yyyy",
-                viewMode: "years", 
+                viewMode: "years",
                 minViewMode: "years",
-                autoclose:true
-            });   
-            })
-        </Script>
-    </body>
+                autoclose: true
+            });
+        })
+    </Script>
+</body>
+
 </html>

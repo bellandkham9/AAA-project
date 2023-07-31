@@ -1,10 +1,10 @@
-
-#profile_membre1{
-    width: 90%;
+#profile_membre1 {
+    width: 50%;
     height: auto;
     border-radius: 100%;
 }
-th{
+
+th {
     border: none;
     padding: 3px;
     margin: 3px;
@@ -13,55 +13,65 @@ th{
     font-size: 14px;
     color: gray;
 }
-td{
+
+td {
     padding: 3px;
     margin: 3px;
     justify-content: center;
     text-align: center;
     font-size: 14px;
 }
+
 table {
     border-collapse: separate;
     border-spacing: 0 5px;
 }
-.table th ,.table td{
+
+.table th,
+.table td {
     border-top: none;
 }
+
 /* comment */
 .table-scroll tbody {
     position: absolute;
     overflow-y: scroll;
     height: 52vh;
-    
+
 }
-#modal-notification{
+
+#modal-notification {
     position: fixed;
-    right:2px;
+    right: 2px;
     height: 60vh;
     display: flex;
     justify-content: end;
-  }
+}
+
 .table-scroll tr {
     width: 98%;
     table-layout: fixed;
     display: inline-table;
 }
-.form-control{
+
+.form-control {
     border-radius: 15px;
-    background-color: #2099C1; 
+    background-color: #2099C1;
     color: white;
 }
-#nom_AAA{
+
+#nom_AAA {
     font-family: 'Dancing Script';
     font-size: 32px;
     color: white;
-  
-  }
 
-#user_logo{
+}
+
+#user_logo {
     background-color: #2099C1;
-} 
-#icons{
+}
+
+#icons {
     width: 50%;
 }
 
@@ -70,40 +80,48 @@ h2 {
     font-size: 26px;
     margin: 20px 0;
     text-align: center;
-    }
-    h2 small {
-    font-size: 0.5em;
-    }
+}
 
-    .responsive-table li {
+h2 small {
+    font-size: 0.5em;
+}
+
+.responsive-table li {
     border-radius: 8px;
     padding: 5px 10px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 5px;
-    }
-    .responsive-table .table-header {
+}
+
+.responsive-table .table-header {
     font-size: 14px;
     color: gray;
-    }
-    .responsive-table .table-row {
+}
+
+.responsive-table .table-row {
     background-color: #ffffff;
     box-shadow: 2px 5px 5px gray;
-    }
-    @media all and (max-width: 767px) {
+}
+
+@media all and (max-width: 767px) {
     .responsive-table .table-header {
         display: none;
     }
+
     .responsive-table li {
         display: block;
     }
+
     .responsive-table .col {
         flex-basis: 100%;
     }
+
     .responsive-table .col {
         display: flex;
         padding: 10px 0;
     }
+
     .responsive-table .col:before {
         color: #6C7A89;
         padding-right: 10px;
@@ -111,82 +129,93 @@ h2 {
         flex-basis: 50%;
         text-align: right;
     }
+}
+
+
+/* for the table of caisse  */
+
+h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+h2 small {
+    font-size: 0.5em;
+}
+
+.responsive-table li {
+    border-radius: 8px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.responsive-table .table-header {
+    font-size: 14px;
+    color: gray;
+}
+
+.responsive-table .table-row {
+    background-color: #ffffff;
+    box-shadow: 2px 5px 5px gray;
+}
+
+@media all and (max-width: 767px) {
+    .responsive-table .table-header {
+        display: none;
     }
 
+    .responsive-table li {
+        display: block;
+    }
 
-     /* for the table of caisse  */
-            
-     h2 {
-        font-size: 26px;
-        margin: 20px 0;
-        text-align: center;
-        }
-        h2 small {
-        font-size: 0.5em;
-        }
+    .responsive-table .col {
+        flex-basis: 100%;
+    }
 
-        .responsive-table li {
-        border-radius: 8px;
-        padding: 5px 10px;
+    .responsive-table .col {
         display: flex;
-        justify-content: space-between;
-        margin-bottom: 5px;
-        }
-        .responsive-table .table-header {
-        font-size: 14px;
-        color: gray;
-        }
-        .responsive-table .table-row {
-        background-color: #ffffff;
-        box-shadow: 2px 5px 5px gray;
-        }
-        @media all and (max-width: 767px) {
-        .responsive-table .table-header {
-            display: none;
-        }
-        .responsive-table li {
-            display: block;
-        }
-        .responsive-table .col {
-            flex-basis: 100%;
-        }
-        .responsive-table .col {
-            display: flex;
-            padding: 10px 0;
-        }
-        .responsive-table .col:before {
-            color: #6C7A89;
-            padding-right: 10px;
-            content: attr(data-label);
-            flex-basis: 50%;
-            text-align: right;
-        }
-        }
-    /* for the table of end caisse  */
-    body {
+        padding: 10px 0;
+    }
+
+    .responsive-table .col:before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+    }
+}
+
+/* for the table of end caisse  */
+body {
     font: 13px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #404040;
     background: #f2f2f2;
-    }
-    i {
+}
+
+i {
     position: absolute;
     z-index: 1;
     top: 7px;
     left: 9px;
     color: #999;
-    }
-    /* .container {
+}
+
+/* .container {
     margin: 50px auto;
     width: 280px;
     text-align: center;
         background-color: #f2f2f2;
     } */
-    .container > .switch {
+.container>.switch {
     display: block;
     margin: 22px auto;
-    }
-    
-    .switch {
+}
+
+.switch {
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -195,16 +224,17 @@ h2 {
     padding: 1px;
     border-radius: 3px;
     cursor: pointer;
-    }
-    
-    .switch-input {
+}
+
+.switch-input {
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
     border-radius: 7px;
-    }
-    .switch-label {
+}
+
+.switch-label {
     position: relative;
     display: block;
     height: inherit;
@@ -222,8 +252,10 @@ h2 {
     -moz-transition-property: opacity background;
     -o-transition-property: opacity background;
     transition-property: opacity background;
-    }
-    .switch-label:before, .switch-label:after {
+}
+
+.switch-label:before,
+.switch-label:after {
     position: absolute;
     top: 50%;
     margin-top: -.5em;
@@ -232,32 +264,37 @@ h2 {
     -moz-transition: inherit;
     -o-transition: inherit;
     transition: inherit;
-    }
-    .switch-label:before {
+}
+
+.switch-label:before {
     content: attr(data-off);
     right: 9px;
     color: white;
     text-shadow: 0 1px rgba(255, 255, 255, 0.5);
-    }
-    .switch-label:after {
+}
+
+.switch-label:after {
     content: attr(data-on);
     left: 11px;
     color: white;
     text-shadow: 0 1px rgba(0, 0, 0, 0.2);
     opacity: 0;
-    }
-    .switch-input:checked ~ .switch-label {
+}
+
+.switch-input:checked~.switch-label {
     background: gray;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
-    }
-    .switch-input:checked ~ .switch-label:before {
+}
+
+.switch-input:checked~.switch-label:before {
     opacity: 0;
-    }
-    .switch-input:checked ~ .switch-label:after {
+}
+
+.switch-input:checked~.switch-label:after {
     opacity: 1;
-    }
-    
-    .switch-handle {
+}
+
+.switch-handle {
     position: absolute;
     top: 1px;
     left: -5px;
@@ -274,8 +311,9 @@ h2 {
     -moz-transition: left 0.15s ease-out;
     -o-transition: left 0.15s ease-out;
     transition: left 0.15s ease-out;
-    }
-    .switch-handle:before {
+}
+
+.switch-handle:before {
     content: '';
     position: absolute;
     top: 50%;
@@ -290,12 +328,19 @@ h2 {
     background-image: -moz-linear-gradient(top, #eeeeee, white);
     background-image: -o-linear-gradient(top, #eeeeee, white);
     background-image: linear-gradient(to bottom, #eeeeee, white);
-    }
-    .switch-input:checked ~ .switch-handle {
+}
+
+.switch-input:checked~.switch-handle {
     left: 70px;
     box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
-    }
-    
-    .switch-green > .switch-input:checked ~ .switch-label {
+}
+
+.switch-green>.switch-input:checked~.switch-label {
     background: #4fb845;
-    }
+}
+
+.table-row:hover{
+    cursor: pointer;
+    background-color: rgb(236, 231, 231)
+
+}

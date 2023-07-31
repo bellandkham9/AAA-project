@@ -36,18 +36,17 @@
             </div>
 
             <div id="layoutSidenav_content" class="page-section pt-2 bg-light">
-                <main id="Dashboard" class="bg-light pt-5">
+                <main id="Dashboard" class="bg-light pt-5 mt-5">
                     <div class="row mx-4 pt-2 mt-5">
                         <div class="col-8 d-flex">
                             <div style="color: #FFA500;" class="container text-center justify-content-center pt-2">
                                 <h3 style="text-align: end;">Gestion de caisse</h3>
                             </div>
                             <div style="width: 70%; height: 8vh; box-shadow: 1px 4px 4px grey; border: none; border-radius: 10px; background-color: white;"
-                                class="container text-center  pt-4">
+                                class="container text-center  pt-2">
                                 <p style="color: gray;"><span id="today_date" class="fw-bold"></span> <img
                                         class="img-thumbnail" src="img/Calendar_32px.png">
-                                        
-                                </p> 
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -60,49 +59,24 @@
                                         <div class="container">
                                             <div class="row gx-5">
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-info">
-                                                        <h4>Caisse Assurance</h4>
+                                                    <div class="btn p-1 text-center  bg-info" id="ciasse_ass">
+                                                        <h4 class="mt-5">Caisse Assurance</h4>
                                                     </div>
                                                 </div>
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-primary">
-                                                        <h4>Caisse Epargne</h4>
+                                                    <div class="btn p-1 text-center  bg-primary" id="caisse_epar">
+                                                        <h4 class="mt-5">Caisse Epargne</h4>
                                                     </div>
                                                 </div>
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-info">
-                                                        <h4>Caisse Sanction</h4>
+                                                    <div class="btn p-1 text-center  bg-primary"
+                                                        id="caisse_emprunt">
+                                                        <h4 class="mt-5">Caisse emprunt</h4>
                                                     </div>
                                                 </div>
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-primary">
-                                                        <h4>Caisse Aide Att</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item p-3">
-                                        <div class="container">
-                                            <div class="row gx-5">
-                                                <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-info">
-                                                        <h4>Caisse Assurance</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-primary">
-                                                        <h4>Caisse Epargne</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-info">
-                                                        <h4>Caisse Sanction</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-primary">
-                                                        <h4>Caisse Aide Att</h4>
+                                                    <div class="btn p-1 text-center  bg-info" id="caisse_sanc">
+                                                        <h4 class="mt-5">Caisse Sanction</h4>
                                                     </div>
                                                 </div>
                                             </div>
@@ -112,23 +86,49 @@
                                         <div class="container">
                                             <div class="row gx-5">
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-info">
-                                                        <h4>Caisse Assurance</h4>
+                                                    <div class="btn p-1 text-center  bg-info" id="caisse_credit">
+                                                        <h4 class="mt-5">Caisse crédit accordé</h4>
                                                     </div>
                                                 </div>
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-primary">
-                                                        <h4>Caisse Epargne</h4>
+                                                    <div class="btn p-1 text-center  bg-primary" id="caisse_cotisation">
+                                                        <h4 class="mt-5">Caisse cotisation</h4>
                                                     </div>
                                                 </div>
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-info">
-                                                        <h4>Caisse Sanction</h4>
+                                                    <div class="btn p-1 text-center  bg-info" id="caisse_collation">
+                                                        <h4 class="mt-5">Caisse collation</h4>
                                                     </div>
                                                 </div>
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-primary">
-                                                        <h4>Caisse Aide Att</h4>
+                                                    <div class="btn p-1 text-center  bg-primary" id="caisse_aide">
+                                                        <h4 class="mt-5">Caisse Aide</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item p-3">
+                                        <div class="container">
+                                            <div class="row gx-5">
+                                                <div class="col-3">
+                                                    <div class="btn p-1 text-center  bg-info" id="caisse_secours">
+                                                        <h4 class="mt-5">Caisse secours</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="btn p-1 text-center  bg-primary" id="caisse_remb">
+                                                        <h4 class="mt-5">Caisse remboursément</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="btn p-1 text-center  bg-info" id="caissse_projet">
+                                                        <h4 class="mt-5">Caisse projet</h4>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3">
+                                                    <div class="btn p-1 text-center  bg-primary" id="caisse_ration">
+                                                        <h4 class="mt-5">Caisse ration</h4>
                                                     </div>
                                                 </div>
                                             </div>
@@ -148,8 +148,19 @@
                             </div>
 
                         </div>
-                        <!-- la table -->
-                        <div class="row pt-2">
+                    </div>
+
+                    <div id="Contain_caisse" class="container">
+                        <div class="row mt-2 m-4 p-5 justify-content-between">
+                            <div class="col-6" style="color: #FFA500;">
+                                <p>Total caisse: <span>60000</span></p>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" name="" id="" class="form-control" placeholder="search...">
+                            </div>
+                        </div>
+                        <!-- la table de la caisse Assurance-->
+                        <div class="row">
                             <div class="col-md-12">
                                 <div class="container-fluid">
                                     <ul class="responsive-table"
@@ -168,7 +179,7 @@
                                                 <input type="checkbox" name="" id="">
                                             </div>
                                             <div class="col col-2" data-label="Profil">
-                                                <img id="profile_membre1" class="img-thumbnail" src="img/belland.jpg"
+                                                <img id="profile_membre1" class="img-thumbnail" src="img/user.png"
                                                     alt="">
                                             </div>
 
@@ -193,47 +204,222 @@
 
                             </div>
                         </div>
-                        <!-- modal to edit caisses -->
-                        <!-- Modal -->
-                        <div class="modal" tabindex="-1" id="ValidEnter" tabindex="-1" aria-labelledby="editcaisses"
-                            aria-hidden="true">
-                            <div id="modal-edit" class="modal-dialog">
-                                <div class="modal-content">
-                                    <div id="modal-edit-header" class="modal-header">
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="container">
-                                            <div class="container">
-                                                <form action="">
-                                                    <div class="row">
-                                                        <div class="col-12">
-                                                            <h3>Confirmez vous cette transaction ?</h3>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="modal-footer">
-                                                        <div class="row justify-content-between">
-                                                            <div class="col-6">
-                                                                <input id="btn_modal" type="submit"
-                                                                    class="btn btn-success" value="valider">
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <button type="button" class="btn btn-secondary"
-                                                                    data-bs-dismiss="modal">Annuler</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
+                    </div>
+                    <div id="contain_caisse_epargne" class="container">
+                        <!-- la table de la caisse epargne-->
+                        <div class="row mt-2 m-4 p-5 justify-content-between">
+                            <div class="col-4 justify-items-center justify-content-center d-flex"
+                                style="color: #FFA500; font-weight: bold;">
+                                <p class="pt-3">Total caisse: <span>60000</span></p>
+                                <button id="" type="button" data-bs-toggle="modal" data-bs-target="#editTaux"
+                                    class="btn pt-2"
+                                    style=" width: 150px; background-color: white; color: gray; border: none; border-radius: 25px; box-shadow: 2px 4px 4px gainsboro;">
+                                    <p><span>taux: 1.5</span> <img src="img/icons8-edit-16.png" alt="" srcset=""> </p>
+                                </button>
+                            </div>
+                            <div class="col-5"></div>
+                            <div class="col-3">
+                                <input type="text" name="" id="" class="form-control" placeholder="search...">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="container-fluid">
+                                    <ul class="responsive-table"
+                                        style=" font-size: 12px; overflow: scroll; overflow-x: hidden; height: 70vh;">
+                                        <li style="font-size: 11px;"
+                                            class="table-header text-center align-items-center">
+                                            <div class="col col-1"></div>
+                                            <div class="col col-2">Profil</div>
+                                            <div class="col col-2">Nom et prénoms</div>
+                                            <div class="col col-1">Montant</div>
+                                            <div class="col col-1">Montant x <span>1.5</span></div>
+                                            <div class="col col-3">Champ de transaction</div>
+                                            <div class="col col-2">Actions sur la caisse</div>
+                                        </li>
+                                        <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                            <div class="col col-1" data-label="checkbox">
+                                                <input type="checkbox" name="" id="">
                                             </div>
-                                        </div>
-                                    </div>
+                                            <div class="col col-2" data-label="Profil">
+                                                <img id="profile_membre1" class="img-thumbnail" src="img/user.png"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                            <div class="col col-1" data-label="Montant">6555</div>
+                                            <div class="col col-1" data-label="Montant">15555</div>
+                                            <div class="col col-3" data-label="Champ de transaction"><input
+                                                    class="input-montant" type="text" name="" id=""></div>
+                                            <div class="col col-2" data-label="Actions sur la caisse">
+                                                <div class="container text-align justify-content-center d-flex">
+                                                    <button id="btn-entre" class="button" type="button" class="button"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#ValidEnter">Entré</button>
+                                                    <button id="btn-sortie" class="button" type="button"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#ValidEnter">Sortie</button>
+
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
                                 </div>
 
                             </div>
                         </div>
                     </div>
 
-                </main>
+                    <div id="contain_caisse_emprunt" class="container">
+                        <!-- la table de la caisse emprunt-->
+                        <div class="row mt-2 m-4 p-5 justify-content-between">
+                            <div class="col-4 justify-items-center justify-content-center d-flex"
+                                style="color: #FFA500; font-weight: bold;">
+                                <p class="pt-3">Total caisse: <span>60000</span></p>
+                                <button id="" type="button" data-bs-toggle="modal" data-bs-target="#editTaux"
+                                    class="btn"
+                                    style="width: 200px; background-color: #2099C1; color: white; border: none; border-radius: 25px; box-shadow: 2px 4px 4px gainsboro;">
+                                    <h3>Emprunter</h3>
+                                </button>
+                            </div>
+                            <div class="col-5"></div>
+                            <div class="col-3">
+                                <input type="text" name="" id="" class="form-control" placeholder="search...">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="container-fluid">
+                                    <ul class="responsive-table"
+                                        style=" font-size: 12px; overflow: scroll; overflow-x: hidden; height: 70vh;">
+                                        <li style="font-size: 11px;"
+                                            class="table-header text-center align-items-center">
+                                            <div class="col col-1"></div>
+                                            <div class="col col-1">Profil</div>
+                                            <div class="col col-2">Nom et prénoms</div>
+                                            <div class="col col-1">Mnt Emprunter</div>
+                                            <div class="col col-1">Mnt à payer</div>
+                                            <div class="col col-1">Date E</div>
+                                            <div class="col col-1">Date S</div>
+                                            <div class="col col-2">Champ de transaction</div>
+                                            <div class="col col-1">Actions sur la caisse</div>
+                                        </li>
+                                        <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                            <div class="col col-1" data-label="checkbox">
+                                                <input type="checkbox" name="" id="">
+                                            </div>
+                                            <div class="col col-1" data-label="Profil">
+                                                <img id="profile_membre1" class="img-thumbnail" src="img/user.png"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                            <div class="col col-1" data-label="Montant">6555</div>
+                                            <div class="col col-1" data-label="Montant">15555</div>
+                                            <div class="col col-1" data-label="Montant">12/05/25</div>
+                                            <div class="col col-1" data-label="Montant">12/02/12</div>
+                                            <div class="col col-2" data-label="Champ de transaction"><input
+                                                    class="input-montant" type="text" name="" id=""></div>
+                                            <div class="col col-1" data-label="Actions sur la caisse">
+                                                <div class="container text-align justify-content-center d-flex">
+                                                    <button id="payer" class="btn" style="color: white; padding: 1px; background-color: rgb(96, 199, 96);">Payer</button>
+
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- modal to confirm transaction -->
+                    <!-- Modal -->
+                    <div class="modal" tabindex="-1" id="editTaux" tabindex="-1" aria-labelledby="editcaisses"
+                        aria-hidden="true">
+                        <div id="modal-edit" class="modal-dialog">
+                            <div class="modal-content">
+                                <div id="modal-edit-header" class="modal-header">
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <div class="container">
+                                            <form action="">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <p>Entrer la novelle valeur du taux</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="modal-body">
+                                                    <input type="text" name="" id="" class="form-control"
+                                                        placeholder="ex: 1.5">
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <div class="row justify-content-between">
+                                                        <div class="col-6">
+                                                            <input id="btn_modal" type="submit" class="btn btn-success"
+                                                                value="valider">
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Annuler</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- modal to edit taux -->
+                    <!-- Modal -->
+                    <div class="modal" tabindex="-1" id="ValidEnter" tabindex="-1" aria-labelledby="editcaisses"
+                        aria-hidden="true">
+                        <div id="modal-edit" class="modal-dialog">
+                            <div class="modal-content">
+                                <div id="modal-edit-header" class="modal-header">
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <div class="container">
+                                            <form action="">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h3>Confirmez vous cette transaction ?</h3>
+                                                    </div>
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <div class="row justify-content-between">
+                                                        <div class="col-6">
+                                                            <input id="btn_modal" type="submit" class="btn btn-success"
+                                                                value="valider">
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Annuler</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+            </div>
+
+            </main>
 
         </section>
 
@@ -248,10 +434,9 @@
     <!-- Script pour la barre de navigation et le sidebar-->
     <script src="js/navbar.js" type="text/javascript"></script>
     <script src="js/sidebar.js" type="text/javascript"></script>
+    <script src="js/caisse.js" type="text/javascript"></script>
     <script type="text/javascript">
-
         var today = new Date(Date.now());
-
         var data_place = document.getElementById('today_date');
         data_place.innerText = today.getDate().toString() + '/' + (today.getMonth() + 1).toString() + '/' + today.getYear().toString().substring(1);
 
