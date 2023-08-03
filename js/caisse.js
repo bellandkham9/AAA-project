@@ -3,7 +3,6 @@ var caisse_assurance = document.getElementById('ciasse_ass');
 var caisse_epargne = document.getElementById('caisse_epar');
 var caisse_sanction = document.getElementById('caisse_sanc');
 var caisse_aide = document.getElementById('caisse_aide');
-var caisse_credit = document.getElementById('caisse_credit');
 var caisse_cotisation = document.getElementById('caisse_cotisation');
 var caisse_collation = document.getElementById('caisse_collation');
 var caisse_emprunt = document.getElementById('caisse_emprunt');
@@ -18,7 +17,6 @@ var elements = [
     caisse_epargne, 
     caisse_sanction, 
     caisse_aide, 
-    caisse_credit,
     caisse_cotisation,
     caisse_collation,
     caisse_emprunt,
@@ -31,6 +29,7 @@ var elements = [
 caisse_assurance.addEventListener('click',(event) => {
     caisse_assurance.style.border = "5px solid orange";
     make_border(caisse_assurance);
+
     var element1=document.getElementById("Contain_caisse");
     element1.style.display="inline";
 
@@ -38,6 +37,9 @@ caisse_assurance.addEventListener('click',(event) => {
     element2.style.display="none";
 
     var element3=document.getElementById("contain_caisse_emprunt");
+    element3.style.display="none";
+
+    var element3=document.getElementById("Contain_rembourssement");
     element3.style.display="none";
 
 });
@@ -55,6 +57,9 @@ caisse_epargne.addEventListener('click',(event) => {
     var element3=document.getElementById("contain_caisse_emprunt");
     element3.style.display="none";
 
+    var element3=document.getElementById("Contain_rembourssement");
+    element3.style.display="none";
+
 });
 
 
@@ -67,6 +72,9 @@ caisse_emprunt.addEventListener('click',(event) => {
 
     var element2=document.getElementById("contain_caisse_epargne");
     element2.style.display="none";
+
+    var element3=document.getElementById("Contain_rembourssement");
+    element3.style.display="none";
     
     var element3=document.getElementById("contain_caisse_emprunt");
     element3.style.display="inline";
@@ -84,12 +92,6 @@ caisse_aide.addEventListener('click',(event) => {
     caisse_aide.style.border = "5px solid orange";
     make_border(caisse_aide);
 
-    change_table();
-});
-
-caisse_credit.addEventListener('click',(event) => {
-    caisse_credit.style.border = "5px solid orange";
-    make_border(caisse_credit);
     change_table();
 });
 
@@ -114,7 +116,18 @@ caisse_remb.addEventListener('click',(event) => {
     caisse_remb.style.border = "5px solid orange";
     make_border(caisse_remb);
 
-    change_table();
+    var element1=document.getElementById("Contain_caisse");
+    element1.style.display="none";
+
+    var element2=document.getElementById("contain_caisse_epargne");
+    element2.style.display="none";
+    
+    var element3=document.getElementById("contain_caisse_emprunt");
+    element3.style.display="none";
+
+    var element3=document.getElementById("Contain_rembourssement");
+    element3.style.display="inline";
+
 });
 
 caisse_ration.addEventListener('click',(event) => {
@@ -147,6 +160,9 @@ function change_table() {
     element2.style.display="none";
 
     var element3=document.getElementById("contain_caisse_emprunt");
+    element3.style.display="none";
+
+    var element3=document.getElementById("Contain_rembourssement");
     element3.style.display="none";
 }
 

@@ -69,8 +69,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-primary"
-                                                        id="caisse_emprunt">
+                                                    <div class="btn p-1 text-center  bg-primary" id="caisse_emprunt">
                                                         <h4 class="mt-5">Caisse emprunt</h4>
                                                     </div>
                                                 </div>
@@ -85,22 +84,17 @@
                                     <div class="carousel-item p-3">
                                         <div class="container">
                                             <div class="row gx-5">
-                                                <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-info" id="caisse_credit">
-                                                        <h4 class="mt-5">Caisse crédit accordé</h4>
-                                                    </div>
-                                                </div>
-                                                <div class="col-3">
+                                                <div class="col-4">
                                                     <div class="btn p-1 text-center  bg-primary" id="caisse_cotisation">
                                                         <h4 class="mt-5">Caisse cotisation</h4>
                                                     </div>
                                                 </div>
-                                                <div class="col-3">
+                                                <div class="col-4">
                                                     <div class="btn p-1 text-center  bg-info" id="caisse_collation">
                                                         <h4 class="mt-5">Caisse collation</h4>
                                                     </div>
                                                 </div>
-                                                <div class="col-3">
+                                                <div class="col-4">
                                                     <div class="btn p-1 text-center  bg-primary" id="caisse_aide">
                                                         <h4 class="mt-5">Caisse Aide</h4>
                                                     </div>
@@ -205,6 +199,60 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <div id="Contain_rembourssement" class="container">
+                        <div class="row mt-2 m-4 p-5 justify-content-between">
+                            <div class="col-6" style="color: #FFA500;">
+                                <p>Total caisse: <span>60000</span></p>
+                            </div>
+                            <div class="col-3">
+                                <input type="text" name="" id="" class="form-control" placeholder="search...">
+                            </div>
+                        </div>
+                        <!-- la table de la caisse rembourssement-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="container-fluid">
+                                    <ul class="responsive-table"
+                                        style=" font-size: 12px; overflow: scroll; overflow-x: hidden; height: 70vh;">
+                                        <li style="font-size: 11px;"
+                                            class="table-header text-center align-items-center">
+                                            <div class="col col-1"></div>
+                                            <div class="col col-2">Profil</div>
+                                            <div class="col col-2">Nom et prénoms</div>
+                                            <div class="col col-1">Montant à remboursser</div>
+                                            <div class="col col-3">Champ de transaction</div>
+                                            <div class="col col-3">Actions sur la caisse</div>
+                                        </li>
+                                        <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                            <div class="col col-1" data-label="checkbox">
+                                                <input type="checkbox" name="" id="">
+                                            </div>
+                                            <div class="col col-2" data-label="Profil">
+                                                <img id="profile_membre1" class="img-thumbnail" src="img/user.png"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                            <div class="col col-1" data-label="Montant">6555</div>
+                                            <div class="col col-3" data-label="Champ de transaction"><input
+                                                    class="input-montant" type="text" name="" id=""></div>
+                                            <div class="col col-3" data-label="Actions sur la caisse">
+                                                <div class="container text-align justify-content-center d-flex">
+                                                    <button id="btn-entre" class="button" type="button" class="button"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#ValidEnter">Payer</button>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                     <div id="contain_caisse_epargne" class="container">
                         <!-- la table de la caisse epargne-->
                         <div class="row mt-2 m-4 p-5 justify-content-between">
@@ -277,14 +325,21 @@
                             <div class="col-4 justify-items-center justify-content-center d-flex"
                                 style="color: #FFA500; font-weight: bold;">
                                 <p class="pt-3">Total caisse: <span>60000</span></p>
-                                <button id="" type="button" data-bs-toggle="modal" data-bs-target="#editTaux"
+                                <button id="" type="button" data-bs-toggle="modal" data-bs-target="#emprunter"
                                     class="btn"
-                                    style="width: 200px; background-color: #2099C1; color: white; border: none; border-radius: 25px; box-shadow: 2px 4px 4px gainsboro;">
+                                    style="left: 15px; position: relative; width: 250px; background-color: #2099C1; color: white; border: none; border-radius: 25px; box-shadow: 2px 4px 4px gainsboro;">
                                     <h3>Emprunter</h3>
                                 </button>
                             </div>
-                            <div class="col-5"></div>
-                            <div class="col-3">
+                            <div class="col-4 justify-items-center justify-content-center d-flex"
+                                style="color: #FFA500; font-weight: bold;">
+                                <button id="" type="button" data-bs-toggle="modal" data-bs-target="#editTaux1"
+                                    class="btn pt-2"
+                                    style=" width: 150px; background-color: white; color: gray; border: none; border-radius: 25px; box-shadow: 2px 4px 4px gainsboro;">
+                                    <p><span>taux: 20%</span> <img src="img/icons8-edit-16.png" alt="" srcset=""> </p>
+                                </button>
+                            </div>
+                            <div class="col-4">
                                 <input type="text" name="" id="" class="form-control" placeholder="search...">
                             </div>
                         </div>
@@ -302,8 +357,6 @@
                                             <div class="col col-1">Mnt à payer</div>
                                             <div class="col col-1">Date E</div>
                                             <div class="col col-1">Date S</div>
-                                            <div class="col col-2">Champ de transaction</div>
-                                            <div class="col col-1">Actions sur la caisse</div>
                                         </li>
                                         <li style="font-size:11px;" class="table-row text-center align-items-center">
                                             <div class="col col-1" data-label="checkbox">
@@ -319,14 +372,6 @@
                                             <div class="col col-1" data-label="Montant">15555</div>
                                             <div class="col col-1" data-label="Montant">12/05/25</div>
                                             <div class="col col-1" data-label="Montant">12/02/12</div>
-                                            <div class="col col-2" data-label="Champ de transaction"><input
-                                                    class="input-montant" type="text" name="" id=""></div>
-                                            <div class="col col-1" data-label="Actions sur la caisse">
-                                                <div class="container text-align justify-content-center d-flex">
-                                                    <button id="payer" class="btn" style="color: white; padding: 1px; background-color: rgb(96, 199, 96);">Payer</button>
-
-                                                </div>
-                                            </div>
                                         </li>
 
                                     </ul>
@@ -336,7 +381,7 @@
                         </div>
                     </div>
 
-                    <!-- modal to confirm transaction -->
+                    <!-- modal du taux de 1.5 -->
                     <!-- Modal -->
                     <div class="modal" tabindex="-1" id="editTaux" tabindex="-1" aria-labelledby="editcaisses"
                         aria-hidden="true">
@@ -379,6 +424,53 @@
 
                         </div>
                     </div>
+
+                    <!-- modal du taux de 20% -->
+                    <!-- Modal -->
+                    <div class="modal" tabindex="-1" id="editTaux1" tabindex="-1" aria-labelledby="editcaisses"
+                        aria-hidden="true">
+                        <div id="modal-edit" class="modal-dialog">
+                            <div class="modal-content">
+                                <div id="modal-edit-header" class="modal-header">
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <div class="container">
+                                            <form action="">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <p>Entrer la novelle valeur du taux</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="modal-body">
+                                                    <input type="text" name="" id="" class="form-control"
+                                                        placeholder="ex: 20%">
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <div class="row justify-content-between">
+                                                        <div class="col-6">
+                                                            <input id="btn_modal" type="submit" class="btn btn-success"
+                                                                value="valider">
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Annuler</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
                     <!-- modal to edit taux -->
                     <!-- Modal -->
                     <div class="modal" tabindex="-1" id="ValidEnter" tabindex="-1" aria-labelledby="editcaisses"
@@ -417,13 +509,92 @@
 
                         </div>
                     </div>
-            </div>
 
-            </main>
+
+                    <!-- modal pour l'emprunt -->
+
+                    <div id="emprunter" class="modal fade">
+                        <div class="modal-dialog" style="height: 30%">
+                            <div class="modal-content">
+                                <form>
+                                    <div class="modal-header text-center justify-content-center"
+                                        style="background-color: #FFA500; color: white; font-size: 18px;">
+                                        <P class="modal-title"><i class="fa-solid fa-user-plus"
+                                                style="color: #ffffff;"></i> Faire un emprunt</P>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row pb-1">
+                                            <div class="col-12 text-center justify-content-center">
+                                                <div>
+                                                    <div class="avatar-upload mb-2">
+                                                        <div class="avatar-preview">
+                                                            <div id="imagePreview"
+                                                                style="background-image: url(img/logo.png);">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group pt-2">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="" selected>choisir un membre</option>
+                                                        <option value="">membre1</option>
+                                                        <option value="">membre2</option>
+                                                        <option value="">...</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group pt-2">
+                                                    <input id="montant_payer" name="montant_payer" type="text"
+                                                        class="form-control" placeholder="montant à payer" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group pt-2">
+                                                    <label for="dateNais">Date d'emprunt</label>
+                                                    <input id="dateNais" name="dateNais" type="date"
+                                                        class="form-control" placeholder="Date d'emprunt" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group pt-2">
+                                                    <label for="dateNais">Rembourssement</label>
+                                                    <input id="dateRembourssement" name="dateRembourssement" type="date"
+                                                        class="form-control" placeholder="Date de rembourssement"
+                                                        required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="row justify-content-between pb-4">
+                                            <div class="col-6 text-center justify-content-center">
+                                                <input style="background-color: #2099C1;" id="btn_modal" type="submit"
+                                                    class="btn btn-success" value="valider l'emprunt">
+
+                                            </div>
+                                            <div class="col-6">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Annuler</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </main>
 
         </section>
-
-        </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
