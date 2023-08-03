@@ -39,8 +39,11 @@ caisse_assurance.addEventListener('click',(event) => {
     var element3=document.getElementById("contain_caisse_emprunt");
     element3.style.display="none";
 
-    var element3=document.getElementById("Contain_rembourssement");
-    element3.style.display="none";
+    var element4=document.getElementById("Contain_rembourssement");
+    element4.style.display="none";
+
+    var element5=document.getElementById("contain_caisse_sanction");
+    element5.style.display="none";
 
 });
 
@@ -57,8 +60,11 @@ caisse_epargne.addEventListener('click',(event) => {
     var element3=document.getElementById("contain_caisse_emprunt");
     element3.style.display="none";
 
-    var element3=document.getElementById("Contain_rembourssement");
-    element3.style.display="none";
+    var element4=document.getElementById("Contain_rembourssement");
+    element4.style.display="none";
+
+    var element5=document.getElementById("contain_caisse_sanction");
+    element5.style.display="none";
 
 });
 
@@ -76,8 +82,11 @@ caisse_emprunt.addEventListener('click',(event) => {
     var element3=document.getElementById("Contain_rembourssement");
     element3.style.display="none";
     
-    var element3=document.getElementById("contain_caisse_emprunt");
-    element3.style.display="inline";
+    var element4=document.getElementById("contain_caisse_emprunt");
+    element4.style.display="inline";
+
+    var element5=document.getElementById("contain_caisse_sanction");
+    element5.style.display="none";
 
 });
 
@@ -85,7 +94,21 @@ caisse_emprunt.addEventListener('click',(event) => {
 caisse_sanction.addEventListener('click',(event) => {
     caisse_sanction.style.border = "5px solid orange";
     make_border(caisse_sanction);
-    change_table();
+
+    var element1=document.getElementById("Contain_caisse");
+    element1.style.display="none";
+
+    var element2=document.getElementById("contain_caisse_epargne");
+    element2.style.display="none";
+
+    var element3=document.getElementById("Contain_rembourssement");
+    element3.style.display="none";
+    
+    var element4=document.getElementById("contain_caisse_emprunt");
+    element4.style.display="none";
+
+    var element5=document.getElementById("contain_caisse_sanction");
+    element5.style.display="inline";
 });
 
 caisse_aide.addEventListener('click',(event) => {
