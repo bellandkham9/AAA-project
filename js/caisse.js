@@ -49,6 +49,9 @@ caisse_assurance.addEventListener('click',(event) => {
 
     var element7 = document.getElementById("Contain_caisse_cotisation");
     element7.style.display="none";
+
+    var element8 = document.getElementById("contain_caisse_collation");
+    element8.style.display="none";
 });
 
 caisse_epargne.addEventListener('click',(event) => {
@@ -74,6 +77,10 @@ caisse_epargne.addEventListener('click',(event) => {
     
     var element7 = document.getElementById("Contain_caisse_cotisation");
     element7.style.display="none";
+
+    var element8 = document.getElementById("contain_caisse_collation");
+    element8.style.display="none";
+    
 });
 
 
@@ -101,6 +108,9 @@ caisse_emprunt.addEventListener('click',(event) => {
     var element7 = document.getElementById("Contain_caisse_cotisation");
     element7.style.display="none";
 
+    var element8 = document.getElementById("contain_caisse_collation");
+    element8.style.display="none";
+
 });
 
 
@@ -127,6 +137,9 @@ caisse_sanction.addEventListener('click',(event) => {
 
     var element7 = document.getElementById("Contain_caisse_cotisation");
     element7.style.display="none";
+
+    var element8 = document.getElementById("contain_caisse_collation");
+    element8.style.display="none";
 });
 
 caisse_aide.addEventListener('click',(event) => {
@@ -152,6 +165,9 @@ caisse_aide.addEventListener('click',(event) => {
     var element7 = document.getElementById("Contain_caisse_cotisation");
     element7.style.display="none";
 
+    var element8 = document.getElementById("contain_caisse_collation");
+    element8.style.display="none";
+
 });
 
 caisse_cotisation.addEventListener('click',(event) => {
@@ -168,6 +184,9 @@ caisse_cotisation.addEventListener('click',(event) => {
     var element4=document.getElementById("Contain_rembourssement");
     element4.style.display="none";
 
+    var element5=document.getElementById("contain_caisse_sanction");
+    element5.style.display="none";
+
     var element6 = document.getElementById("Contain_caisse_aide");
     element6.style.display="none";
 
@@ -176,17 +195,48 @@ caisse_cotisation.addEventListener('click',(event) => {
 
     var element7 = document.getElementById("Contain_caisse_cotisation");
     element7.style.display="inline";
+
+    var element8 = document.getElementById("contain_caisse_collation");
+    element8.style.display="none";
 });
 
 caisse_collation.addEventListener('click',(event) => {
     make_border(caisse_collation);
-    change_table();
+
+    var element1=document.getElementById("Contain_caisse");
+    element1.style.display="none";
+
+    var element2=document.getElementById("contain_caisse_epargne");
+    element2.style.display="none";
+    
+    var element3=document.getElementById("contain_caisse_emprunt");
+    element3.style.display="none";
+
+    var element4=document.getElementById("Contain_rembourssement");
+    element4.style.display="none";
+
+    var element5=document.getElementById("contain_caisse_sanction");
+    element5.style.display="none";
+
+    var element6 = document.getElementById("Contain_caisse_aide");
+    element6.style.display="none";
+
+    var btn = document.getElementById('btn-sortie-ass');
+    btn.style.display="none";
+
+    var element7 = document.getElementById("Contain_caisse_cotisation");
+    element7.style.display="none";
+
+    var element8 = document.getElementById("contain_caisse_collation");
+    element8.style.display="inline";
 });
 
 caisse_secours.addEventListener('click',(event) => {
     make_border(caisse_secours);
     change_table();
 });
+
+
 caisse_remb.addEventListener('click',(event) => {
     make_border(caisse_remb);
 
@@ -199,14 +249,20 @@ caisse_remb.addEventListener('click',(event) => {
     var element3=document.getElementById("contain_caisse_emprunt");
     element3.style.display="none";
 
-    var element3=document.getElementById("Contain_rembourssement");
-    element3.style.display="inline";
+    var element4=document.getElementById("Contain_rembourssement");
+    element4.style.display="inline";
+
+    var element5=document.getElementById("contain_caisse_sanction");
+    element5.style.display="none";
 
     var element6 = document.getElementById("Contain_caisse_aide");
     element6.style.display="none";
 
     var element7 = document.getElementById("Contain_caisse_cotisation");
     element7.style.display="none";
+
+    var element8 = document.getElementById("contain_caisse_collation");
+    element8.style.display="none";
 
 });
 
@@ -221,8 +277,11 @@ caisse_ration.addEventListener('click',(event) => {
     var element3=document.getElementById("contain_caisse_emprunt");
     element3.style.display="none";
 
-    var element3=document.getElementById("Contain_rembourssement");
-    element3.style.display="none";
+    var element4=document.getElementById("Contain_rembourssement");
+    element4.style.display="none";
+
+    var element5=document.getElementById("contain_caisse_sanction");
+    element5.style.display="none";
 
     var element6 = document.getElementById("Contain_caisse_aide");
     element6.style.display="none";
@@ -232,7 +291,9 @@ caisse_ration.addEventListener('click',(event) => {
 
     var element7 = document.getElementById("Contain_caisse_cotisation");
     element7.style.display="none";
-    //btn.remove();
+    
+    var element8 = document.getElementById("contain_caisse_collation");
+    element8.style.display="none";
     
 });
 
@@ -250,6 +311,9 @@ caissse_projet.addEventListener('click',(event) => {
     var element4=document.getElementById("Contain_rembourssement");
     element4.style.display="none";
 
+    var element5=document.getElementById("contain_caisse_sanction");
+    element5.style.display="none";
+    
     var element6 = document.getElementById("Contain_caisse_aide");
     element6.style.display="none";
 
@@ -258,6 +322,9 @@ caissse_projet.addEventListener('click',(event) => {
 
     var element7 = document.getElementById("Contain_caisse_cotisation");
     element7.style.display="none";
+
+    var element8 = document.getElementById("contain_caisse_collation");
+    element8.style.display="none";
     
 });
 
@@ -289,6 +356,9 @@ function change_table() {
 
     var element7 = document.getElementById("Contain_caisse_cotisation");
     element7.style.display="none";
+
+    var element8 = document.getElementById("contain_caisse_collation");
+    element8.style.display="none";
 }
 
 

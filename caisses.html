@@ -59,22 +59,22 @@
                                         <div class="container">
                                             <div class="row gx-5">
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-info" id="ciasse_ass">
+                                                    <div class="btn p-1 text-center  bg-info pt-4" id="ciasse_ass">
                                                         <h4 class="mt-3">Caisse Assurance</h4>
                                                     </div>
                                                 </div>
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-primary" id="caisse_epar">
+                                                    <div class="btn p-1 text-center  bg-primary pt-4" id="caisse_epar">
                                                         <h4 class="mt-3">Caisse Epargne</h4>
                                                     </div>
                                                 </div>
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-primary" id="caisse_emprunt">
+                                                    <div class="btn p-1 text-center  bg-primary pt-4" id="caisse_emprunt">
                                                         <h4 class="mt-3">Caisse emprunt</h4>
                                                     </div>
                                                 </div>
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-info" id="caisse_sanc">
+                                                    <div class="btn p-1 text-center  bg-info pt-4" id="caisse_sanc">
                                                         <h4 class="mt-3">Caisse Sanction</h4>
                                                     </div>
                                                 </div>
@@ -85,17 +85,17 @@
                                         <div class="container">
                                             <div class="row gx-5">
                                                 <div class="col-4">
-                                                    <div class="btn p-1 text-center  bg-primary" id="caisse_cotisation">
+                                                    <div class="btn p-1 text-center  bg-primary pt-4" id="caisse_cotisation">
                                                         <h4 class="mt-3">Caisse cotisation</h4>
                                                     </div>
                                                 </div>
                                                 <div class="col-4">
-                                                    <div class="btn p-1 text-center  bg-info" id="caisse_collation">
+                                                    <div class="btn p-1 text-center  bg-info pt-4" id="caisse_collation">
                                                         <h4 class="mt-3">Caisse collation</h4>
                                                     </div>
                                                 </div>
                                                 <div class="col-4">
-                                                    <div class="btn p-1 text-center  bg-primary" id="caisse_aide">
+                                                    <div class="btn p-1 text-center  bg-primary pt-4" id="caisse_aide">
                                                         <h4 class="mt-3">Caisse Aide</h4>
                                                     </div>
                                                 </div>
@@ -106,22 +106,22 @@
                                         <div class="container">
                                             <div class="row gx-5">
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-info" id="caisse_secours">
+                                                    <div class="btn p-1 text-center  bg-info pt-4" id="caisse_secours">
                                                         <h4 class="mt-3">Caisse secours</h4>
                                                     </div>
                                                 </div>
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-primary" id="caisse_remb">
+                                                    <div class="btn p-1 text-center  bg-primary pt-4" id="caisse_remb">
                                                         <h4 class="mt-3">Caisse remboursement</h4>
                                                     </div>
                                                 </div>
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-info" id="caissse_projet">
+                                                    <div class="btn p-1 text-center  bg-info pt-4" id="caissse_projet">
                                                         <h4 class="mt-3">Caisse projet</h4>
                                                     </div>
                                                 </div>
                                                 <div class="col-3">
-                                                    <div class="btn p-1 text-center  bg-primary" id="caisse_ration">
+                                                    <div class="btn p-1 text-center  bg-primary pt-4" id="caisse_ration">
                                                         <h4 class="mt-3">Caisse ration</h4>
                                                     </div>
                                                 </div>
@@ -559,6 +559,72 @@
                         </div>
                     </div>
 
+                    <div id="contain_caisse_collation" class="container">
+                        <!-- la table de la caisse sanction-->
+                        <div class="row mt-2 m-4 p-5 justify-content-between">
+                            <div class="col-6 justify-items-center justify-content-center d-flex"
+                                style="color: #FFA500; font-weight: bold;">
+                                <p class="pt-3">Total caisse: <span>60000</span></p>
+                                <button id="" type="button" data-bs-toggle="modal" data-bs-target="#collation"
+                                    class="btn"
+                                    style="left: 15px; position: relative; width: 250px; background-color: #2099C1; color: white; border: none; border-radius: 25px; box-shadow: 2px 4px 4px gainsboro;">
+                                    <h3>Enregistrer sortie</h3>
+                                </button>
+                            </div>
+                            <div class="col-2"></div>
+                            <div class="col-4">
+                                <input type="text" name="" id="" class="form-control" placeholder="search...">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="container-fluid">
+                                    <ul class="responsive-table"
+                                        style=" font-size: 12px; overflow: scroll; overflow-x: hidden; height: 70vh;">
+                                        <li style="font-size: 11px;"
+                                            class="table-header text-center align-items-center">
+                                            <div class="col col-1"></div>
+                                            <div class="col col-1">Profil</div>
+                                            <div class="col col-2">Nom et prénoms</div>
+                                            <div class="col col-1">Mnt entré</div>
+                                            <div class="col col-1">Date entré</div>
+                                            <div class="col col-1">Mnt sortie</div>
+                                            <div class="col col-1">Date sortie</div>
+                                            <div class="col col-2">Champ de transaction</div>
+                                            <div class="col col-2">Action</div>
+                                        </li>
+                                        <li style="font-size:11px;" class="table-row text-center align-items-center">
+                                            <div class="col col-1" data-label="checkbox">
+                                                <input type="checkbox" name="" id="">
+                                            </div>
+                                            <div class="col col-1" data-label="Profil">
+                                                <img id="profile_membre1" class="img-thumbnail" src="img/user.png"
+                                                    alt="">
+                                            </div>
+
+                                            <div class="col col-2" data-label="Nom et prénoms">emitek sarl</div>
+                                            <div class="col col-1" data-label="Mnt entré">6555</div>
+                                            <div class="col col-1" data-label="Date entré">12/05/25</div>
+                                            <div class="col col-1" data-label="Mnt sortie">6555</div>
+                                            <div class="col col-1" data-label="Date sortie">12/05/25</div>
+                                            <div class="col col-2" data-label="Champ de transaction"><input
+                                                class="input-montant" type="text" name="" id=""></div>
+                                            <div class="col col-2" data-label="Actions sur la caisse">
+                                                <div class="container text-align justify-content-center d-flex">
+                                                    <button id="btn-entre" class="button" type="button" class="button"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#ValidEnter">Entré</button>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- modal du taux de 1.5 -->
                     <!-- Modal -->
                     <div class="modal" tabindex="-1" id="editTaux" tabindex="-1" aria-labelledby="editcaisses"
@@ -812,6 +878,62 @@
                         </div>
                     </div>
 
+                    <!-- modal pour la collation -->
+
+                    <div id="collation" class="modal fade">
+                        <div class="modal-dialog" style="height: 40%">
+                            <div class="modal-content">
+                                <form>
+                                    <div class="modal-header text-center justify-content-center"
+                                        style="background-color: #FFA500; color: white; font-size: 18px;">
+                                        <P class="modal-title">Enregistrer collation</P>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <div class="form-group pt-2">
+                                                    <select name="" id="" class="form-select">
+                                                        <option value="" selected>membre</option>
+                                                        <option value="">membre1</option>
+                                                        <option value="">membre2</option>
+                                                        <option value="">...</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-6">
+                                                <div class="form-group pt-2">
+                                                    <input id="montant_sanc" name="montant_sanc" type="text"
+                                                        class="form-control" placeholder="montant" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group pt-2">
+                                                    <label for="dateSanc">Date de la sanction</label>
+                                                    <input id="dateSanc" name="dateSanc" type="date"
+                                                        class="form-control" placeholder="Date de sanction" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="row justify-content-between pb-4">
+                                            <div class="col-6 text-center justify-content-center">
+                                                <input style="background-color: #2099C1;" id="btn_modal" type="submit"
+                                                    class="btn btn-success" value="valider">
+                                            </div>
+                                            <div class="col-6">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Annuler</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
 
                 </main>
 
