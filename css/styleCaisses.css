@@ -37,6 +37,11 @@ h4{
     left: 4px;
     background-color: red;
 }
+#btn-sortie-ass{
+    position: relative;
+    left: 4px;
+    background-color: red;
+}
 .input-montant{
     border-radius: 5px;
     border: none;
