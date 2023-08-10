@@ -125,3 +125,16 @@ h2 {
     #contain_caisse_epargne,#contain_caisse_emprunt{
         display: none;
     }
+
+
+/* cacher les autres caisses quand la page caisse charge */
+#Contain_caisse_aide,
+#Contain_caisse_cotisation,
+#Contain_rembourssement,
+#contain_caisse_emprunt,
+#contain_caisse_sanction,
+#contain_caisse_collation{
+    display: none;
+}
+
+
